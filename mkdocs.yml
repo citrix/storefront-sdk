@@ -1,0 +1,18 @@
+site_name: Citrix XenApp and XenDesktop SDK
+site_description: Reference guide for Citrix XenApp and XenDesktop SDK
+theme_dir: theme
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+     anchorlink: True
+
+pages:
+- Overview: index.md
+- Understanding the XenDesktop Administration Model: understanding-xendesktop-administration-model.md
+- Getting Started Guide: getting-started.md
+- Examples:
+  - Example 1: creating-a-catalog.md
+  - Example 2: creating-and-configuring-a-host.md
+  - Example 3: creating-a-pvd-desktop.md
+  - Example 4: getting-load-balancing-information.md
