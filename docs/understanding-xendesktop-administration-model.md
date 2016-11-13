@@ -1,5 +1,3 @@
-## Understanding the XenDesktop Administration Model
-
 XenDesktop 7 has an administration model that is defined by a set of objects and their interconnections, as shown in the following illustration.
 
 ![Flow](flow.png)
