@@ -16,6 +16,18 @@ h3, h4, h5, h6 {
  *
  * https://github.com/mkdocs/mkdocs/issues/175
  */
+
+.expli{
+    display: inline-table !important;
+    padding-left: 5px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+}
+.current{
+	display: inline-table !important;
+	padding-left:5px !important;
+}
+
 .wy-menu-vertical span {
     line-height: 18px;
     padding: 0.4045em 1.618em;
@@ -191,7 +203,7 @@ nav.stickynav {background-image: url('../img/grey_calm.png');background-repeat:n
 	transform: scale3d(1, 1, 1);
 	color: #37474f
 }
-.rst-content .section h1, .rst-content .section h2 {padding-top: 80px}
+
 img {padding: 20px 0}
 @media screen and (max-width:768px){
 .header-top-left {width: auto}

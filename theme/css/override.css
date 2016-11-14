@@ -86,9 +86,7 @@ nav.stickynav{
 .header-top-right{
   float: right;padding-top: 10px;padding-right: 10px
 }
-.rst-content .section h1, .rst-content .section h2{
-  padding-top: 10px
-}
+
 .text-content{
   line-height: 30px;
 }
@@ -178,3 +176,4 @@ nav.stickynav{
    font-size: 15px;
    line-height: 25px;
 }
+
