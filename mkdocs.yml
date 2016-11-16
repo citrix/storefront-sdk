@@ -1,6 +1,6 @@
 site_name: Citrix XenApp and XenDesktop SDK
 site_description: Reference guide for Citrix XenApp and XenDesktop SDK
-theme_dir: theme
+theme_dir: theme_multi
 markdown_extensions:
   - admonition
   - codehilite
