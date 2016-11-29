@@ -1,5 +1,5 @@
-site_name: Citrix XenApp and XenDesktop SDK
-site_description: Reference guide for Citrix XenApp and XenDesktop SDK
+site_name: StoreFront SDK Documentation
+site_description: StoreFront SDK Reference
 theme_dir: theme_multi
 markdown_extensions:
   - admonition
@@ -8,11 +8,8 @@ markdown_extensions:
      anchorlink: True
 
 pages:
-- Overview: index.md
-- Understanding the XenDesktop Administration Model: understanding-xendesktop-administration-model.md
-- Getting Started Guide: getting-started.md
-- Examples:
-  - Creating a catalog: creating-a-catalog.md
-  - Creating and configuring a host: creating-and-configuring-a-host.md
-  - Creating a PvD Desktop: creating-a-pvd-desktop.md
-  - Getting load balancing information: getting-load-balancing-information.md
+- StoreFront SDK: index.md
+- Overview: overview.md
+- How the API works: how-the-api-works.md
+- Requests: requests.md
+- Using configuration elements: using-configuration-elements.md
