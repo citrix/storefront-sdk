@@ -13,3 +13,8 @@ pages:
 - How the API works: how-the-api-works.md
 - Requests: requests.md
 - Using configuration elements: using-configuration-elements.md
+- StoreFront Customization SDK: customization-sdk.md
+- Getting started with the SDK: getting-started-with-the-sdk.md
+- Customization interfaces: customization-interfaces.md
+- Known issues: known-issues.md
+- Samples: samples.md
