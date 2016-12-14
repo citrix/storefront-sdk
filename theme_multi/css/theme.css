@@ -3604,7 +3604,7 @@ article ol li ul li {
 .wy-menu-vertical header,
 .wy-menu-vertical li.current>a,
 .wy-menu-vertical li.on a {
-    font-weight: 500
+    font-weight: 700
 }
 .codeblock-example:after {
     content: "Example";
@@ -3910,6 +3910,7 @@ div[class^=highlight] pre {
     color: #404040;
     padding: .4045em 1.618em;
     position: relative;
+    background: #fcfcfc;
     border: none;
     border-bottom: solid 1px #c9c9c9;
     border-top: solid 1px #c9c9c9

@@ -65,15 +65,10 @@ p code {
 }
 
 nav.stickynav{
-    background-image: linear-gradient(to top,#fff,#f4f4f4);
+  background-image: none !important;
+  background: #fff !important
 }
-.toctree-l4{font-size:13px !important;color:#6d6d6d !important;}
 
-.wy-menu-vertical li.current ul li a {
-   padding: 0 2em;
-   font-size: 15px;
-   line-height: 25px;
-}
 .wy-nav-content{
   background: #fff !important;  padding:0px !important;max-width: 1000px
 }
@@ -139,7 +134,7 @@ nav.stickynav{
   color: #000 !important
 }
 .wy-menu-vertical li.on a, .wy-menu-vertical li.current a{
-      color: #227be3 ;
+      color: #227be3 !important;
 }
 @media screen and (min-width: 1400px){
 .wy-nav-content {
@@ -178,10 +173,14 @@ nav.stickynav{
   border-radius: 5px !important;
   width: 100px;
   padding-top: 15px;
-  padding-bottom: 30px;
-  height: 35px;
+  padding-bottom: 30px;height: 35px
 }
 
 }
 
+.wy-menu-vertical li.current ul li a {
+   padding: 0 2em;
+   font-size: 15px;
+   line-height: 25px;
+}
 
