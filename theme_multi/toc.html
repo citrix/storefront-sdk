@@ -1,7 +1,6 @@
 {% if nav_item.children %}
     <ul class="subnav">
-    <li><span>{{ nav_item.title }}</span></li>
-
+    <li><span class="expul"><i class="fa fa-plus-square-o" aria-hidden="true"></i>{{ nav_item.title }}</span></li>
         {% for nav_item in nav_item.children %}
             {% include 'toc.html' %}
         {% endfor %}
@@ -12,10 +11,14 @@
         {% if nav_item == current_page %}
             <ul style="display:none">
             {% for toc_item in toc %}
-                <li class="toctree-l3"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+				{% if toc_item.children%}
+                <li class="toctree-l3"><span class="expcli" style="margin-left: 10px;"><i class="fa fa-plus-square-o" aria-hidden="true"></i></span><a href="{{ toc_item.url }}" style="display: inline-table;padding-left: 3px;width:240px;">{{ toc_item.title }}</a></li>
+				<ul style="display:none">
                 {% for toc_item in toc_item.children %}
                     <li><a class="toctree-l4" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
                 {% endfor %}
+				</ul>
+				{% endif %}
             {% endfor %}
             </ul>
         {% endif %}

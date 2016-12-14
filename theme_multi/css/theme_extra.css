@@ -17,17 +17,21 @@ h3, h4, h5, h6 {
  * https://github.com/mkdocs/mkdocs/issues/175
  */
 
-.expli{
+.expli,.expul,.expcli{
     display: inline-table !important;
     padding-left: 5px !important;
     padding-right: 0px !important;
     padding-bottom: 0px !important;
 }
 .current{
-	display: inline-table !important;
 	padding-left:5px !important;
 }
-
+.expul i.fa{
+	padding-right:5px !important;
+}
+.subnav li.toctree-l1 {
+	display:none;
+}
 .wy-menu-vertical span {
     line-height: 18px;
     padding: 0.4045em 1.618em;
@@ -166,9 +170,10 @@ nav.stickynav {background-image: url('../img/grey_calm.png');background-repeat:n
 .header-top-left img{padding: 0}
 .header-top-right {float:left;padding-left:30px ; padding-top: 30px}
 .wy-grid-for-nav {top:70px} 
-.wy-menu-vertical a:hover, .wy-menu-vertical li.current {background:#fff}
-.wy-menu-vertical li.on a, .wy-menu-vertical li.current a{border:0;color:#0C447C}
-.wy-menu-vertical li.current ul li a{padding:0 2em;font-size:11px}
+.wy-menu-vertical li.current>a:hover, .wy-menu-vertical li.on a:hover { background: #d6d6d6;}
+.wy-menu-vertical li.current {background:transparent}
+.wy-menu-vertical li.current>a, .wy-menu-vertical li.on a {background:transparent}
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current a{border:0;}
 .built-with {display:none}
 .wy-menu-vertical a {color: #404545}
 .wy-side-nav-search {display: none}
