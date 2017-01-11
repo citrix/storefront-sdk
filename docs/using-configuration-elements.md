@@ -34,10 +34,10 @@ This topic describes the elements and attributes of the XML document that is ret
 | logoffURL        | **Sessions/Logoff**          | URL to log off the user's sessions.             |
 
 ##Plugin AssistantXPath: /clientSettings/pluginAssistant
-| Attribute      | Values       | Description                                                                                                         |
+| Attribute      | Values (default in bold)       | Description                                                                                                         |
 |----------------|--------------|---------------------------------------------------------------------------------------------------------------------|
-| enabled        | **true** | false | Whether to show Receiver download information or not when HDX engine is not detected and when upgrade is available. |
-| upgradeAtLogin | true | **false** | Whether to detect if a Receiver upgrade is available or not.                                                        |
+| enabled        | **true**/false | Whether to show Receiver download information or not when HDX engine is not detected and when upgrade is available. |
+| upgradeAtLogin | true/**false** | Whether to detect if a Receiver upgrade is available or not.                                                        |
 
 XPath: /configuration/citrix.deliveryservices/webReceiver/clientSettings/ pluginAssistant/win32
 
