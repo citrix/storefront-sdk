@@ -1,0 +1,24 @@
+{% if nav_item.children %}
+    <ul class="subnav">
+    <li><span class="expul"><i class="fa fa-plus-square-o" aria-hidden="true"></i>{{ nav_item.title }}</span></li>
+        {% for nav_item in nav_item.children %}
+            {% include 'toc.html' %}
+        {% endfor %}
+    </ul>
+{% else %}
+    <li class="toctree-l1 {% if nav_item.active%}current{%endif%}">
+        
+		<span style="display:none" class="expli"><i class="fa fa-plus-square-o" aria-hidden="true"></i></span>
+		
+		<a class="{% if nav_item.active%}current{%endif%}" style="width:232px;" href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+        
+            <ul style="display:none">
+            {% for toc_item in toc %}
+				{% if toc_item.children %}
+                <li class="toctree-l3"><a href="{{ toc_item.url }}" style="display: inline-table;padding-left: 3px;width:240px;">{{ toc_item.title }}</a></li>
+				{% endif %}
+            {% endfor %}
+            </ul>
+        
+    </li>
+{% endif %}

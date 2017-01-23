@@ -3,18 +3,213 @@ site_description: StoreFront SDK Reference
 theme_dir: theme_multi
 markdown_extensions:
   - admonition
-  - codehilite
-  - toc:
-     anchorlink: True
+  - codehilite(guess_lang=false)
+  - toc(permalink=true)
+  - footnotes
+  - meta
 
 pages:
-- StoreFront SDK: index.md
-- Overview: overview.md
-- How the API works: how-the-api-works.md
-- Requests: requests.md
-- Using configuration elements: using-configuration-elements.md
-- StoreFront Customization SDK: customization-sdk.md
-- Getting started with the SDK: getting-started-with-the-sdk.md
-- Customization interfaces: customization-interfaces.md
-- Known issues: known-issues.md
-- Samples: samples.md
+- Overview: index.md
+- StoreFront Web API:
+   - Overview: overview.md
+   - How the API works: how-the-api-works.md
+   - Requests: requests.md
+   - Using configuration elements: using-configuration-elements.md
+- StoreFront Store Service SDK:
+   - StoreFront Customization SDK: customization-sdk.md
+   - Getting started with the SDK: getting-started-with-the-sdk.md
+   - Customization interfaces: customization-interfaces.md
+   - Known issues: known-issues.md
+   - Samples: samples.md
+- StoreFront Authentication SDK:
+   - Authentication Software Development Kit: storefront-services-authentication-sdk.md
+   - Citrix Common Forms Authentication API: citrix-common-forms-authentication-api.md
+   - CitrixAuth Authentication Scheme: citrixauth-authentication-scheme.md
+   - Citrix Common Authentication Forms Language: common-authentication-forms-language.md
+   - Security Token Services API: security-token-services-api.md
+   - StoreFront Authentication Form Generation: authentication-form-generation.md
+   - Known Issues: known-issues-auth.md
+   - Third Party Notices: storeFront-authentication-sdk-thirdparty.md
+   - Sample Certificate Identity Declaration: sample-certificate-identity-declaration.md
+   - Sample Magic Word: magic-word-sample.md
+   - Sample Test Forms: sample-test-forms.md
+- StoreFront SDK PowerShell Modules:
+    - Citrix.StoreFront:
+        - Overview: Citrix.StoreFront\Citrix.StoreFront.md
+        - Export-STFConfiguration: Citrix.StoreFront\Export-STFConfiguration.md
+        - Import-STFConfiguration: Citrix.StoreFront\Import-STFConfiguration.md
+        - Unprotect-STFConfigurationExport: Citrix.StoreFront\Unprotect-STFConfigurationExport.md
+        - Add-STFDeployment: Citrix.StoreFront\Add-STFDeployment.md
+        - Set-STFDeployment: Citrix.StoreFront\Set-STFDeployment.md
+        - Get-STFDeployment: Citrix.StoreFront\Get-STFDeployment.md
+        - Clear-STFDeployment: Citrix.StoreFront\Clear-STFDeployment.md
+        - Set-STFDiagnostics: Citrix.StoreFront\Set-STFDiagnostics.md
+        - Install-STFFeature: Citrix.StoreFront\Install-STFFeature.md
+        - Uninstall-STFFeature: Citrix.StoreFront\Uninstall-STFFeature.md
+        - Set-STFFeatureState: Citrix.StoreFront\Set-STFFeatureState.md
+        - Remove-STFFeatureState: Citrix.StoreFront\Remove-STFFeatureState.md
+        - New-STFFeatureState: Citrix.StoreFront\New-STFFeatureState.md
+        - Get-STFFeatureState: Citrix.StoreFront\Get-STFFeatureState.md
+        - Add-STFFeatureState: Citrix.StoreFront\Add-STFFeatureState.md
+        - Get-STFFeatureStateNames: Citrix.StoreFront\Get-STFFeatureStateNames.md
+        - New-STFFeatureStateProperty: Citrix.StoreFront\New-STFFeatureStateProperty.md
+        - Reset-STFFeatureStates: Citrix.StoreFront\Reset-STFFeatureStates.md
+        - Get-STFInstalledFeatures: Citrix.StoreFront\Get-STFInstalledFeatures.md
+        - Get-STFPackage: Citrix.StoreFront\Get-STFPackage.md
+        - Get-STFPeerResolutionService: Citrix.StoreFront\Get-STFPeerResolutionService.md
+        - Wait-STFPublishServerGroupConfiguration: Citrix.StoreFront\Wait-STFPublishServerGroupConfiguration.md
+        - Get-STFServerGroup: Citrix.StoreFront\Get-STFServerGroup.md
+        - Publish-STFServerGroupConfiguration: Citrix.StoreFront\Publish-STFServerGroupConfiguration.md
+        - Start-STFServerGroupJoin: Citrix.StoreFront\Start-STFServerGroupJoin.md
+        - Wait-STFServerGroupJoin: Citrix.StoreFront\Wait-STFServerGroupJoin.md
+        - Stop-STFServerGroupJoin: Citrix.StoreFront\Stop-STFServerGroupJoin.md
+        - Get-STFServerGroupJoinState: Citrix.StoreFront\Get-STFServerGroupJoinState.md
+        - Remove-STFServerGroupMember: Citrix.StoreFront\Remove-STFServerGroupMember.md
+        - Save-STFService: Citrix.StoreFront\Save-STFService.md
+        - Get-STFServiceMonitor: Citrix.StoreFront\Get-STFServiceMonitor.md
+        - Set-STFServiceMonitor: Citrix.StoreFront\Set-STFServiceMonitor.md
+        - Get-STFVersion: Citrix.StoreFront\Get-STFVersion.md   
+    - Citrix.StoreFront.Authentication:    
+        - Overview: Citrix.StoreFront.Authentication\Citrix.StoreFront.Authentication.md
+        - Get-STFAuthenticationProtocolsAvailable: Citrix.StoreFront.Authentication\Get-STFAuthenticationProtocolsAvailable.md
+        - Add-STFAuthenticationService: Citrix.StoreFront.Authentication\Add-STFAuthenticationService.md
+        - Get-STFAuthenticationService: Citrix.StoreFront.Authentication\Get-STFAuthenticationService.md
+        - Remove-STFAuthenticationService: Citrix.StoreFront.Authentication\Remove-STFAuthenticationService.md
+        - Add-STFAuthenticationServiceProtocol: Citrix.StoreFront.Authentication\Add-STFAuthenticationServiceProtocol.md
+        - Remove-STFAuthenticationServiceProtocol: Citrix.StoreFront.Authentication\Remove-STFAuthenticationServiceProtocol.md
+        - Get-STFAuthenticationServiceProtocol: Citrix.StoreFront.Authentication\Get-STFAuthenticationServiceProtocol.md
+        - Enable-STFAuthenticationServiceProtocol: Citrix.StoreFront.Authentication\Enable-STFAuthenticationServiceProtocol.md
+        - Disable-STFAuthenticationServiceProtocol: Citrix.StoreFront.Authentication\Disable-STFAuthenticationServiceProtocol.md
+    - Citrix.StoreFront.Authentication.AccountSelfService:
+        - Overview: Citrix.StoreFront.Authentication.AccountSelfService\Citrix.StoreFront.Authentication.AccountSelfService.md
+        - Set-STFAccountSelfService: Citrix.StoreFront.Authentication.AccountSelfService\Set-STFAccountSelfService.md
+        - Get-STFAccountSelfService: Citrix.StoreFront.Authentication.AccountSelfService\Get-STFAccountSelfService.md
+    - Citrix.StoreFront.Authentication.CitrixAGBasic:
+        - Overview: Citrix.StoreFront.Authentication.CitrixAGBasic\Citrix.StoreFront.Authentication.CitrixAGBasic.md
+        - Set-STFCitrixAGBasicOptions: Citrix.StoreFront.Authentication.CitrixAGBasic\Set-STFCitrixAGBasicOptions.md
+        - Get-STFCitrixAGBasicOptions: Citrix.StoreFront.Authentication.CitrixAGBasic\Get-STFCitrixAGBasicOptions.md
+    - Citrix.StoreFront.Authentication.Explicit:
+        - Overview: Citrix.StoreFront.Authentication.Explicit\Citrix.StoreFront.Authentication.Explicit.md
+        - Set-STFExplicitCommonOptions: Citrix.StoreFront.Authentication.Explicit\Set-STFExplicitCommonOptions.md
+        - Get-STFExplicitCommonOptions: Citrix.StoreFront.Authentication.Explicit\Get-STFExplicitCommonOptions.md
+    - Citrix.StoreFront.Authentication.PasswordManager:
+        - Overview: Citrix.StoreFront.Authentication.PasswordManager\Citrix.StoreFront.Authentication.PasswordManager.md
+        - Set-STFPasswordManagerAccountSelfService: Citrix.StoreFront.Authentication.PasswordManager\Set-STFPasswordManagerAccountSelfService.md
+        - Get-STFPasswordManagerAccountSelfService: Citrix.StoreFront.Authentication.PasswordManager\Get-STFPasswordManagerAccountSelfService.md
+    - Citrix.StoreFront.Authentication.PasswordValidator:
+        - Overview: Citrix.StoreFront.Authentication.PasswordValidator\Citrix.StoreFront.Authentication.PasswordValidator.md
+        - Set-STFExplicitAuthenticator: Citrix.StoreFront.Authentication.PasswordValidator\Set-STFExplicitAuthenticator.md
+        - Get-STFExplicitAuthenticator: Citrix.StoreFront.Authentication.PasswordValidator\Get-STFExplicitAuthenticator.md
+    - Citrix.StoreFront.Authentication.XmlServiceValidator:
+        - Overview: Citrix.StoreFront.Authentication.XmlServiceValidator\Citrix.StoreFront.Authentication.XmlServiceValidator.md
+        - Enable-STFXmlServiceAuthentication: Citrix.StoreFront.Authentication.XmlServiceValidator\Enable-STFXmlServiceAuthentication.md
+    - Citrix.StoreFront.Roaming:
+        - Overview: Citrix.StoreFront.Roaming\Citrix.StoreFront.Roaming.md
+        - Get-STFRoamingAccount: Citrix.StoreFront.Roaming\Get-STFRoamingAccount.md
+        - Get-STFRoamingBeacon: Citrix.StoreFront.Roaming\Get-STFRoamingBeacon.md
+        - Set-STFRoamingBeacon: Citrix.StoreFront.Roaming\Set-STFRoamingBeacon.md
+        - Clear-STFRoamingBeacon: Citrix.StoreFront.Roaming\Clear-STFRoamingBeacon.md
+        - New-STFRoamingGateway: Citrix.StoreFront.Roaming\New-STFRoamingGateway.md
+        - Remove-STFRoamingGateway: Citrix.StoreFront.Roaming\Remove-STFRoamingGateway.md
+        - Add-STFRoamingGateway: Citrix.StoreFront.Roaming\Add-STFRoamingGateway.md
+        - Set-STFRoamingGateway: Citrix.StoreFront.Roaming\Set-STFRoamingGateway.md
+        - Get-STFRoamingGateway: Citrix.StoreFront.Roaming\Get-STFRoamingGateway.md
+        - Get-STFRoamingService: Citrix.StoreFront.Roaming\Get-STFRoamingService.md
+        - Get-STFRoamingServiceRecord: Citrix.StoreFront.Roaming\Get-STFRoamingServiceRecord.md
+    - Citrix.StoreFront.Stores:
+        - Overview: Citrix.StoreFront.Stores\Citrix.StoreFront.Stores.md
+        - Clear-STFDefaultPnaStore: Citrix.StoreFront.Stores\Clear-STFDefaultPnaStore.md
+        - Get-STFStoreEnumerationOptions: Citrix.StoreFront.Stores\Get-STFStoreEnumerationOptions.md
+        - Set-STFStoreEnumerationOptions: Citrix.StoreFront.Stores\Set-STFStoreEnumerationOptions.md
+        - Set-STFStoreFarm: Citrix.StoreFront.Stores\Set-STFStoreFarm.md
+        - Get-STFStoreFarm: Citrix.StoreFront.Stores\Get-STFStoreFarm.md
+        - New-STFStoreFarm: Citrix.StoreFront.Stores\New-STFStoreFarm.md
+        - Remove-STFStoreFarm: Citrix.StoreFront.Stores\Remove-STFStoreFarm.md
+        - Add-STFStoreFarm: Citrix.StoreFront.Stores\Add-STFStoreFarm.md
+        - Set-STFStoreFarmConfiguration: Citrix.StoreFront.Stores\Set-STFStoreFarmConfiguration.md
+        - Get-STFStoreFarmConfiguration: Citrix.StoreFront.Stores\Get-STFStoreFarmConfiguration.md
+        - Register-STFStoreGateway: Citrix.StoreFront.Stores\Register-STFStoreGateway.md
+        - Unregister-STFStoreGateway: Citrix.StoreFront.Stores\Unregister-STFStoreGateway.md
+        - Get-STFStoreGatewayService: Citrix.StoreFront.Stores\Get-STFStoreGatewayService.md
+        - Set-STFStoreGatewayService: Citrix.StoreFront.Stores\Set-STFStoreGatewayService.md
+        - Get-STFStoreLaunchOptions: Citrix.StoreFront.Stores\Get-STFStoreLaunchOptions.md
+        - Set-STFStoreLaunchOptions: Citrix.StoreFront.Stores\Set-STFStoreLaunchOptions.md
+        - Register-STFStoreOptimalLaunchGateway: Citrix.StoreFront.Stores\Register-STFStoreOptimalLaunchGateway.md
+        - Unregister-STFStoreOptimalLaunchGateway: Citrix.StoreFront.Stores\Unregister-STFStoreOptimalLaunchGateway.md
+        - Get-STFStorePna: Citrix.StoreFront.Stores\Get-STFStorePna.md
+        - Enable-STFStorePna: Citrix.StoreFront.Stores\Enable-STFStorePna.md
+        - Disable-STFStorePna: Citrix.StoreFront.Stores\Disable-STFStorePna.md
+        - Get-STFStoreRegisteredGateway: Citrix.StoreFront.Stores\Get-STFStoreRegisteredGateway.md
+        - Get-STFStoreRegisteredOptimalLaunchGateway: Citrix.StoreFront.Stores\Get-STFStoreRegisteredOptimalLaunchGateway.md
+        - Set-STFStoreService: Citrix.StoreFront.Stores\Set-STFStoreService.md
+        - Add-STFStoreService: Citrix.StoreFront.Stores\Add-STFStoreService.md
+        - Remove-STFStoreService: Citrix.StoreFront.Stores\Remove-STFStoreService.md
+        - Get-STFStoreService: Citrix.StoreFront.Stores\Get-STFStoreService.md
+        - Get-STFStoreSubscriptionsDatabase: Citrix.StoreFront.Stores\Get-STFStoreSubscriptionsDatabase.md
+        - Set-STFStoreSubscriptionsDatabase: Citrix.StoreFront.Stores\Set-STFStoreSubscriptionsDatabase.md
+    - Citrix.StoreFront.Stores.MultiSite:
+        - Overview: Citrix.StoreFront.Stores.MultiSite\Citrix.StoreFront.Stores.MultiSite.md
+        - Get-STFEquivalentFarmset: Citrix.StoreFront.Stores.MultiSite\Get-STFEquivalentFarmset.md
+        - New-STFEquivalentFarmset: Citrix.StoreFront.Stores.MultiSite\New-STFEquivalentFarmset.md
+        - Set-STFUserFarmMapping: Citrix.StoreFront.Stores.MultiSite\Set-STFUserFarmMapping.md
+        - Remove-STFUserFarmMapping: Citrix.StoreFront.Stores.MultiSite\Remove-STFUserFarmMapping.md
+        - Add-STFUserFarmMapping: Citrix.StoreFront.Stores.MultiSite\Add-STFUserFarmMapping.md
+        - Get-STFUserFarmMapping: Citrix.StoreFront.Stores.MultiSite\Get-STFUserFarmMapping.md
+        - New-STFUserFarmMappingGroup: Citrix.StoreFront.Stores.MultiSite\New-STFUserFarmMappingGroup.md
+        - Clear-STFUserFarmMappings: Citrix.StoreFront.Stores.MultiSite\Clear-STFUserFarmMappings.md
+    - Citrix.StoreFront.SubscriptionsStore:
+        - Overview: Citrix.StoreFront.SubscriptionsStore\Citrix.StoreFront.SubscriptionsStore.md
+        - Get-STFComputerSynchronizationPermission: Citrix.StoreFront.SubscriptionsStore\Get-STFComputerSynchronizationPermission.md
+        - Grant-STFComputerSynchronizationPermission: Citrix.StoreFront.SubscriptionsStore\Grant-STFComputerSynchronizationPermission.md
+        - Revoke-STFComputerSynchronizationPermission: Citrix.StoreFront.SubscriptionsStore\Revoke-STFComputerSynchronizationPermission.md
+        - Import-STFStoreSubscriptions: Citrix.StoreFront.SubscriptionsStore\Import-STFStoreSubscriptions.md
+        - Export-STFStoreSubscriptions: Citrix.StoreFront.SubscriptionsStore\Export-STFStoreSubscriptions.md
+        - Restore-STFStoreSubscriptions: Citrix.StoreFront.SubscriptionsStore\Restore-STFStoreSubscriptions.md
+        - Get-STFSubscriptionStoreService: Citrix.StoreFront.SubscriptionsStore\Get-STFSubscriptionStoreService.md
+        - Clear-STFSubscriptionSynchronizationSchedule: Citrix.StoreFront.SubscriptionsStore\Clear-STFSubscriptionSynchronizationSchedule.md
+        - Add-STFSubscriptionSynchronizationSchedule: Citrix.StoreFront.SubscriptionsStore\Add-STFSubscriptionSynchronizationSchedule.md
+        - Get-STFSubscriptionSynchronizationSchedule: Citrix.StoreFront.SubscriptionsStore\Get-STFSubscriptionSynchronizationSchedule.md
+        - Add-STFSubscriptionSynchronizationSource: Citrix.StoreFront.SubscriptionsStore\Add-STFSubscriptionSynchronizationSource.md
+        - Clear-STFSubscriptionSynchronizationSource: Citrix.StoreFront.SubscriptionsStore\Clear-STFSubscriptionSynchronizationSource.md
+        - Get-STFSubscriptionSynchronizationSource: Citrix.StoreFront.SubscriptionsStore\Get-STFSubscriptionSynchronizationSource.md
+        - Remove-STFSubscriptionSynchronizationSource: Citrix.StoreFront.SubscriptionsStore\Remove-STFSubscriptionSynchronizationSource.md
+    - Citrix.StoreFront.WebReceiver:
+        - Overview: Citrix.StoreFront.WebReceiver\Citrix.StoreFront.WebReceiver.md
+        - Remove-STFDesktopApplianceService: Citrix.StoreFront.WebReceiver\Remove-STFDesktopApplianceService.md
+        - Set-STFDesktopApplianceService: Citrix.StoreFront.WebReceiver\Set-STFDesktopApplianceService.md
+        - Get-STFDesktopApplianceService: Citrix.StoreFront.WebReceiver\Get-STFDesktopApplianceService.md
+        - Add-STFDesktopApplianceService: Citrix.StoreFront.WebReceiver\Add-STFDesktopApplianceService.md
+        - Get-STFWebReceiverApplicationShortcuts: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverApplicationShortcuts.md
+        - Set-STFWebReceiverApplicationShortcuts: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverApplicationShortcuts.md
+        - Get-STFWebReceiverAuthenticationManager: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverAuthenticationManager.md
+        - Set-STFWebReceiverAuthenticationManager: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverAuthenticationManager.md
+        - Get-STFWebReceiverAuthenticationMethods: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverAuthenticationMethods.md
+        - Set-STFWebReceiverAuthenticationMethods: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverAuthenticationMethods.md
+        - Get-STFWebReceiverAuthenticationMethodsAvailable: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverAuthenticationMethodsAvailable.md
+        - Get-STFWebReceiverClientPlugin: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverClientPlugin.md
+        - Set-STFWebReceiverClientPlugin: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverClientPlugin.md
+        - Remove-STFWebReceiverClientPlugin: Citrix.StoreFront.WebReceiver\Remove-STFWebReceiverClientPlugin.md
+        - New-STFWebReceiverClientPlugin: Citrix.StoreFront.WebReceiver\New-STFWebReceiverClientPlugin.md
+        - Add-STFWebReceiverClientPlugin: Citrix.StoreFront.WebReceiver\Add-STFWebReceiverClientPlugin.md
+        - Clear-STFWebReceiverClientPlugin: Citrix.StoreFront.WebReceiver\Clear-STFWebReceiverClientPlugin.md
+        - Set-STFWebReceiverCommunication: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverCommunication.md
+        - Get-STFWebReceiverCommunication: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverCommunication.md
+        - Get-STFWebReceiverDefaultSiteStyle: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverDefaultSiteStyle.md
+        - Get-STFWebReceiverDiscoveryService: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverDiscoveryService.md
+        - Set-STFWebReceiverDiscoveryService: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverDiscoveryService.md
+        - Add-STFWebReceiverFeature: Citrix.StoreFront.WebReceiver\Add-STFWebReceiverFeature.md
+        - New-STFWebReceiverFeaturedAppGroup: Citrix.StoreFront.WebReceiver\New-STFWebReceiverFeaturedAppGroup.md
+        - Add-STFWebReceiverFeaturedAppGroup: Citrix.StoreFront.WebReceiver\Add-STFWebReceiverFeaturedAppGroup.md
+        - Remove-STFWebReceiverFeaturedAppGroup: Citrix.StoreFront.WebReceiver\Remove-STFWebReceiverFeaturedAppGroup.md
+        - Get-STFWebReceiverFeaturedAppGroup: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverFeaturedAppGroup.md
+        - Clear-STFWebReceiverFeaturedAppGroup: Citrix.StoreFront.WebReceiver\Clear-STFWebReceiverFeaturedAppGroup.md
+        - Set-STFWebReceiverFeaturedAppGroup: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverFeaturedAppGroup.md
+        - Set-STFWebReceiverFeaturedAppGroups: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverFeaturedAppGroups.md
+        - Get-STFWebReceiverFeaturedAppGroupTiles: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverFeaturedAppGroupTiles.md
+        - Get-STFWebReceiverPluginAssistant: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverPluginAssistant.md
+        - Set-STFWebReceiverPluginAssistant: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverPluginAssistant.md
+        - Get-STFWebReceiverResourcesService: Citrix.StoreFront.WebReceiver\Get-STFWebReceiverResourcesService.md
+        - Set-STFWebReceiverResourcesService: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverResourcesService.md
+        - Remove-STFWebReceiverService: Citrix.StoreFront.WebReceiver\Remove-STFWebReceiverService.md
+        - Add-STFWebReceiverService: Citrix.StoreFront.WebReceiver\Add-STFWebReceiverService.md
+        - Set-STFWebReceiverService: Citrix.StoreFront.WebReceiver\Set-STFWebReceiverService.md

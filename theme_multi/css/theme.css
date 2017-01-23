@@ -2182,7 +2182,7 @@ button {
     display: block;
     color: #fff;
     background: #6ab0de;
-    margin: -12px -12px 12px;
+    margin-bottom: 12px;
     padding: 6px 12px
 }
 .rst-content .danger,
@@ -3604,7 +3604,7 @@ article ol li ul li {
 .wy-menu-vertical header,
 .wy-menu-vertical li.current>a,
 .wy-menu-vertical li.on a {
-    font-weight: 700
+    font-weight: 500
 }
 .codeblock-example:after {
     content: "Example";
@@ -3908,9 +3908,11 @@ div[class^=highlight] pre {
 .wy-menu-vertical li.current>a,
 .wy-menu-vertical li.on a {
     color: #404040;
-    padding: .4045em 1.618em;
+    padding-top: .4045em;
+	padding-bottom: 0px;
+	padding-left: 1.618em;
+	padding-right: 1.618em;
     position: relative;
-    background: #fcfcfc;
     border: none;
     border-bottom: solid 1px #c9c9c9;
     border-top: solid 1px #c9c9c9
@@ -3940,14 +3942,17 @@ div[class^=highlight] pre {
 }
 .wy-menu-vertical a {
     line-height: 18px;
-    padding: .4045em 1.618em;
+    padding-top: .4045em;
+	padding-bottom: 0px;
+	padding-left: 1.618em;
+	padding-right: 1.618em;
     display: inline-block;
     position: relative;
     font-size: 90%;
     color: #b3b3b3
 }
 .wy-menu-vertical a:hover {
-    background-color: #4e4a4a;
+    background-color: #d6d6d6;
     cursor: pointer
 }
 .wy-menu-vertical a:active {

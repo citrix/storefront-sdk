@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+
 	var expedli = $('.toctree-l1.current');
 	var expedlis = $('.toctree-l1.current').siblings(".toctree-l1");
 	expedli.show();
@@ -22,6 +22,19 @@ $(document).ready(function(){
 			ul.hide(300);
 		}
 	})
+	
+	$(".expcli").click(function(){
+	var ul = $(this).parent().next();
+	if ( ul.css('display') == 'none' ){
+		$(this).children('.fa').removeClass('fa-plus-square-o').addClass('fa-minus-square-o');
+		ul.show(300);
+	}
+	else{	
+		$(this).children('.fa').removeClass('fa-minus-square-o').addClass('fa-plus-square-o');
+		ul.hide(300);
+	}
+	})
+	
 	$(".expul >i.fa").click(function(){
 		var lis = $(this).parent().parent().siblings(".toctree-l1 ");
 		if ( $(this).hasClass('fa-plus-square-o')){
@@ -35,4 +48,8 @@ $(document).ready(function(){
 			lis.hide(300);
 		}
 	})
+	if ($('li .toctree-l1 >span').length) {
+	var nav = $('li .toctree-l1 >span').offset().top;
+	$(".wy-nav-side").scrollTop(nav-80);
+	}
 });

@@ -43,7 +43,7 @@ h1[id]:before, h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before, h6[id
 }
 pre {
     display: block;
-    padding: 9.5px;
+    padding: 0px;
     margin: 0 0 10px;
 	overflow-x: auto;
     font-size: 13px;
@@ -65,10 +65,15 @@ p code {
 }
 
 nav.stickynav{
-  background-image: none !important;
-  background: #fff !important
+    background-image: linear-gradient(to top,#fff,#f4f4f4);
 }
+.toctree-l4{font-size:13px !important;color:#6d6d6d !important;}
 
+.wy-menu-vertical li.current ul li a {
+   padding: 0 2em;
+   font-size: 15px;
+   line-height: 25px;
+}
 .wy-nav-content{
   background: #fff !important;  padding:0px !important;max-width: 1000px
 }
@@ -117,12 +122,16 @@ nav.stickynav{
     left: -20px;
 }
 .wy-nav-side {
-    width: 300px;
+    width: 370px;
 }
 .wy-nav-content-wrap {
-    margin-left: 310px;
+    margin-left: 380px;
     max-width: none;
     background: #ffffff;
+}
+li.nochildli >a{
+	
+	font-size: 80%;
 }
 .searchdocs{
   border-radius: 5px !important;
@@ -134,7 +143,7 @@ nav.stickynav{
   color: #000 !important
 }
 .wy-menu-vertical li.on a, .wy-menu-vertical li.current a{
-      color: #227be3 !important;
+      color: #227be3 ;
 }
 @media screen and (min-width: 1400px){
 .wy-nav-content {
@@ -173,14 +182,10 @@ nav.stickynav{
   border-radius: 5px !important;
   width: 100px;
   padding-top: 15px;
-  padding-bottom: 30px;height: 35px
+  padding-bottom: 30px;
+  height: 35px;
 }
 
 }
 
-.wy-menu-vertical li.current ul li a {
-   padding: 0 2em;
-   font-size: 15px;
-   line-height: 25px;
-}
 

@@ -17,33 +17,38 @@ h3, h4, h5, h6 {
  * https://github.com/mkdocs/mkdocs/issues/175
  */
 
-.expli , .expul{
+.admonition.info{
+	background-color: azure;
+}
+ 
+.expli,.expul,.expcli{
     display: inline-table !important;
     padding-left: 5px !important;
     padding-right: 0px !important;
     padding-bottom: 0px !important;
 }
-.current{
-	padding-left:5px !important;
-}
+
 .expul i.fa{
 	padding-right:5px !important;
 }
 .subnav li.toctree-l1 {
 	display:none;
 }
+.wy-menu-vertical a {
+    font-size: 85%;
+}
+
 .wy-menu-vertical span {
-    line-height: 18px;
+    line-height: 20px;
     padding: 0.4045em 1.618em;
     display: block;
     position: relative;
-    font-size: 90%;
+    font-size: 78%;
     color: #404545;
 	font-weight: bold;
 }
 
 .wy-menu-vertical .subnav a {
-    padding: 0.4045em 2.427em;
 	color: #404545;
 }
 
@@ -106,6 +111,13 @@ code.cs, code.c {
  *
  * https://github.com/mkdocs/mkdocs/issues/319
  */
+.language-no-highlight{
+	padding-left: 0px;
+	color: black;
+    background: transparent;
+    border: none;
+}
+ 
 .no-highlight {
   display: block;
   padding: 0.5em;
@@ -166,13 +178,14 @@ nav.stickynav {background-image: url('../img/grey_calm.png');background-repeat:n
 .wy-side-nav-search {margin:0;background:#cdcece;}
 #rtd-search-form i {position:absolute;top:17px;left:30px;color: #B9C1C1}
 .header-top {width:100%;position:fixed;top:0;left:0;height:70px;border-bottom:2px solid #2A5B8C;background:#ffffff;z-index:400}
-.header-top-left {float:left;padding:3px 0 3px 25px;width:270px}
+.header-top-left {float:left;padding:3px 0 3px 25px;width:300px}
 .header-top-left img{padding: 0}
 .header-top-right {float:left;padding-left:30px ; padding-top: 30px}
 .wy-grid-for-nav {top:70px} 
-.wy-menu-vertical a:hover, .wy-menu-vertical li.current {background:#fff}
-.wy-menu-vertical li.on a, .wy-menu-vertical li.current a{border:0;color:#0C447C}
-.wy-menu-vertical li.current ul li a{padding:0 2em;font-size:11px}
+.wy-menu-vertical li.current>a:hover, .wy-menu-vertical li.on a:hover { background: #d6d6d6;}
+.wy-menu-vertical li.current {background:transparent}
+.wy-menu-vertical li.current>a, .wy-menu-vertical li.on a {background:transparent}
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current a{border:0;}
 .built-with {display:none}
 .wy-menu-vertical a {color: #404545}
 .wy-side-nav-search {display: none}
@@ -202,6 +215,24 @@ nav.stickynav {background-image: url('../img/grey_calm.png');background-repeat:n
     width: 100%;
     z-index: -1;
 }
+
+ul.subnav >li.toctree-l1 >a{
+
+	padding-left:0px;
+	padding-right:0px;
+}
+ul.subnav >li.toctree-l1{
+	
+	padding-left:1.4em;
+}
+ul.current >li.toctree-l1 >a{
+	padding-left:0px;
+	padding-right:0px;
+}
+li.nochildli{
+	padding-left:1.4em;
+}
+
 .animated_button:hover::before {
 	box-shadow: 0 0 0 2px #37474f inset;
 	transform: scale3d(1, 1, 1);
@@ -211,6 +242,7 @@ nav.stickynav {background-image: url('../img/grey_calm.png');background-repeat:n
 img {padding: 20px 0}
 @media screen and (max-width:768px){
 .header-top-left {width: auto}
+.wy-nav-side.stickynav {display:None}
 .header-top-left img{height: 60px; width: auto}
 .header-top-right {float: right; padding-left: 0; padding-right:10px}
 .wy-nav-content-wrap {margin-left: 0;width: 100%}

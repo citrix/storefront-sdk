@@ -34,10 +34,10 @@ This topic describes the elements and attributes of the XML document that is ret
 | logoffURL        | **Sessions/Logoff**          | URL to log off the user's sessions.             |
 
 ##Plugin AssistantXPath: /clientSettings/pluginAssistant
-| Attribute      | Values (default in bold)       | Description                                                                                                         |
+| Attribute      | Values       | Description                                                                                                         |
 |----------------|--------------|---------------------------------------------------------------------------------------------------------------------|
-| enabled        | **true**/false | Whether to show Receiver download information or not when HDX engine is not detected and when upgrade is available. |
-| upgradeAtLogin | true/**false** | Whether to detect if a Receiver upgrade is available or not.                                                        |
+| enabled        | **true** | false | Whether to show Receiver download information or not when HDX engine is not detected and when upgrade is available. |
+| upgradeAtLogin | true | **false** | Whether to detect if a Receiver upgrade is available or not.                                                        |
 
 XPath: /configuration/citrix.deliveryservices/webReceiver/clientSettings/ pluginAssistant/win32
 
@@ -57,7 +57,7 @@ XPath: /configuration/citrix.deliveryservices/webReceiver/clientSettings/ plugin
 | Attribute        | Values                                                                                     | Description                                                                                                                                            |
 |------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | enabled          | Always/Fallback/Never                                                                  | Whether to enable Receiver for HTML5 or not.                                                                                                           |
-| platforms        | Semicolon separated list of regular expressions. **Firefox;Chrome;Version/ ([6-9]\d\d).*Safari;MSIE \d\d;Trident; Android;iPad;iPhone;iPod** ;                                         | Regular expressions to search the UserAgent string to identify supported browsers.                                                                                                                                                                                                                                            |
+| platforms        | Semi-column separated list of regular expressions. **Firefox;Chrome;Version/ ([6-9]\d\d).*Safari;MSIE \d\d;Trident; Android;iPad;iPhone;iPod** ;                                         | Regular expressions to search the UserAgent string to identify supported browsers.                                                                                                                                                                                                                                            |
 | launchURL        | Relative URL                                                                               | Location of the Receiver for HTML5 launch page.                                                                                                        |
 | singleTabLaunch  | true / **false**                                                                               | Whether to launch applications on the same browser tab as the Citrix Receiver for Web home screen or not.                                              |
 | chromeAppOrigins | **chrome-extension:// bgiigkppjadidglloadcadeih lnbpagp**                                      | List of origin URLs identifying official releases of the Citrix Chrome App in the Google Chrome web store. Each URL is separated by a pipe (|) symbol. |
