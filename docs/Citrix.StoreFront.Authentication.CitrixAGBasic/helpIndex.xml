@@ -1,0 +1,9 @@
+<helpIndex ModuleName="Citrix.StoreFront.Authentication.CitrixAGBasic" ModuleFullName="Citrix.StoreFront.Authentication.CitrixAGBasic" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Authentication.CitrixAGBasic.html">Citrix.StoreFront.Authentication.CitrixAGBasic</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Set-STFCitrixAGBasicOptions.html">Set-STFCitrixAGBasicOptions</reference>
+    <reference name="Get-STFCitrixAGBasicOptions.html">Get-STFCitrixAGBasicOptions</reference>
+  </cmdlets>
+</helpIndex>

@@ -1,0 +1,63 @@
+﻿<html>
+    <head>
+        <title>Publish-STFServerGroupConfiguration</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Publish-STFServerGroupConfiguration</h1>
+        <div>Publish the configuration from the server to the group</div>
+
+        <h2> Syntax </h2>
+        <code>Publish-STFServerGroupConfiguration [[-AsBackgroundJob] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Publishes the configuration of the server on which the command is executed to the other servers within the group.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Wait-STFPublishServerGroupConfiguration.html'>Wait-STFPublishServerGroupConfiguration</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AsBackgroundJob&nbsp;</td>
+                <td>Do not show the publishing progress or wait for completion before exiting.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter AsBackgroundJob: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3>SynchronisationState</h3>
+        <div>The .NET 'Citrix.DeliveryServices.ConfigurationReplication.Contract.ServiceStatus.SynchronisationState' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Publish configuration without progress</h3>
+                <pre><code>Publish-STFServerGroupConfiguration -Confirm:$false -AsBackgroundJob
+Write-Host 'Publish is going on in the background'</code></pre>
+                <div>REMAR</div>
+                <pre><code>KS
+
+
+
+
+Publishes the configuration to servers within the group as a background job. A message is output without waiting for 
+publish to complete.</code></pre>
+    </body>
+</html>

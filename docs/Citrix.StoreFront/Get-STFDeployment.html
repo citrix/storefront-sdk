@@ -1,0 +1,68 @@
+﻿<html>
+    <head>
+        <title>Get-STFDeployment</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFDeployment</h1>
+        <div>Get details of an existing deployment</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFDeployment [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get details of the StoreFront deployment on the current server.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFDeployment.html'>Add-STFDeployment</a><br/>
+           * <a href='Clear-STFDeployment.html'>Clear-STFDeployment</a><br/>
+           * <a href='Set-STFDeployment.html'>Set-STFDeployment</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>The IIS site id of the deployment&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h2> Return Values </h2>
+        <h3>StoreFrontDeployment[]</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.StoreFrontDeployment' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get the StoreFront deployment</h3>
+                <pre><code>Get-STFDeployment</code></pre>
+                <div>REMARKS<br>Get the StoreFront deployment details<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+HostbaseUrl             : http://example.storefront.com
+IISSiteId               : 1
+DeploymentExists        : True
+InstalledFeatureClasses : {WebApplication, WING, XmlServiceAuthentication, ResourcesCommon...}
+FeatureClassInstances   : {82545fc5-2809-4d69-941f-21163d8bca30, a56e0a1b-661b-4cd9-8802-89e34c0e989f,
+                          64058d2a-15d7-4b0e-943b-ab05b7bb5cc3, 0b771665-9eb0-453f-a9bc-70df7db6f847...}</code></pre>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+﻿<html>
+    <head>
+        <title>Enable-STFStorePna</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Enable-STFStorePna</h1>
+        <div>Enable PNA (XenApp Services) for a Store</div>
+
+        <h2> Syntax </h2>
+        <code>Enable-STFStorePna [-StoreService] &lt;StoreService&gt; [[-AllowUserPasswordChange] &lt;SwitchParameter&gt;] [[-LogonMethod] &lt;Anonymous | Prompt | SSON | Smartcard_SSON | Smartcard_Prompt&gt;] [[-DefaultPnaService] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Enable PNA (XenApp Services) for a Store so it can be accessed clients using the PNA protocol.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Disable-STFStorePna.html'>Disable-STFStorePna</a><br/>
+           * <a href='Clear-STFDefaultPnaStore.html'>Clear-STFDefaultPnaStore</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>A Store to be configured to support PNA&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllowUserPasswordChange&nbsp;</td>
+                <td>Allow the PNA clients to change password&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LogonMethod&nbsp;</td>
+                <td>The PNA logon method. A Store supports only one method at a time&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DefaultPnaService&nbsp;</td>
+                <td>Configure the Store to be the default PNA site hosted at http://example.storefront.com/Citrix/Store/PNAgent/config.xml&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter AllowUserPasswordChange: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>Citrix.StoreFront.Model.Store.LogonMethod</h3>
+        <div>Parameter LogonMethod: The .NET 'Citrix.StoreFront.Model.Store.LogonMethod' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter DefaultPnaService: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Enable PNA for the only Store</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Enable-STFStorePna $storeService -AllowUserPasswordChange -DefaultPnaService</code></pre>
+                <div>REMARKS<br>Enable PNA on the only Store, allow users to change password and make it the deafult PNA site.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

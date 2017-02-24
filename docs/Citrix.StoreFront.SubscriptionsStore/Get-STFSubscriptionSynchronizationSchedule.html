@@ -1,0 +1,46 @@
+﻿<html>
+    <head>
+        <title>Get-STFSubscriptionSynchronizationSchedule</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFSubscriptionSynchronizationSchedule</h1>
+        <div>Get the subscription synchronization schedule</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFSubscriptionSynchronizationSchedule [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Gets a summary of the current subscription synchronization schedule.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFSubscriptionSynchronizationSchedule.html'>Add-STFSubscriptionSynchronizationSchedule</a><br/>
+           * <a href='Clear-STFSubscriptionSynchronizationSchedule.html'>Clear-STFSubscriptionSynchronizationSchedule</a><br/>
+        <h2> Input Type </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Return Values </h2>
+        <h3>SynchronizationSchedule</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.WindowsServices.SubscriptionStore.SynchronizationSchedule' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get the current schedule</h3>
+                <pre><code>Get-STFSubscriptionSynchronizationSchedule</code></pre>
+                <div>REMARKS<br>Get the currently configured synchronization schedule.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+ScheduleName                            Start                                                            IntervalRepeat
+------------                            -----                                                            --------------
+60 minute interval                      10:00:00                                                                     60</code></pre>
+    </body>
+</html>

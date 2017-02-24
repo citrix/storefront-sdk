@@ -1,0 +1,63 @@
+﻿<html>
+    <head>
+        <title>Set-STFFeatureState</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFFeatureState</h1>
+        <div>Sets a FeatureState Object</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFFeatureState [-FeatureStates] &lt;FeatureState[]&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Sets a FeatureState Object</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFFeatureState.html'>Add-STFFeatureState</a><br/>
+           * <a href='Get-STFFeatureState.html'>Get-STFFeatureState</a><br/>
+           * <a href='Get-STFFeatureStateNames.html'>Get-STFFeatureStateNames</a><br/>
+           * <a href='New-STFFeatureState.html'>New-STFFeatureState</a><br/>
+           * <a href='New-STFFeatureStateProperty.html'>New-STFFeatureStateProperty</a><br/>
+           * <a href='Remove-STFFeatureState.html'>Remove-STFFeatureState</a><br/>
+           * <a href='Reset-STFFeatureData.html'>Reset-STFFeatureData</a><br/>
+           * <a href='Clear-STFFeatureStates.html'>Clear-STFFeatureStates</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FeatureStates&nbsp;</td>
+                <td>A list of FeatureState objects&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.DeliveryServices.Framework.FeatureToggle.FeatureState[]</h3>
+        <div>Parameter FeatureStates: The .NET 'Citrix.DeliveryServices.Framework.FeatureToggle.FeatureState' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set FeatureState</h3>
+                <pre><code>Set-STFFeatureState -FeatureStates @(featureStateObj1,featureStateObj2)</code></pre>
+                <div>REMARKS<br>Saves two FeatureState objects</div>
+                <pre><code></code></pre>
+    </body>
+</html>

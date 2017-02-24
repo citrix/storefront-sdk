@@ -1,0 +1,9 @@
+<helpIndex ModuleName="Citrix.StoreFront.Authentication.PasswordManager" ModuleFullName="Citrix.StoreFront.Authentication.PasswordManager" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Authentication.PasswordManager.html">Citrix.StoreFront.Authentication.PasswordManager</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Set-STFPasswordManagerAccountSelfService.html">Set-STFPasswordManagerAccountSelfService</reference>
+    <reference name="Get-STFPasswordManagerAccountSelfService.html">Get-STFPasswordManagerAccountSelfService</reference>
+  </cmdlets>
+</helpIndex>

@@ -1,0 +1,70 @@
+﻿<html>
+    <head>
+        <title>Get-STFUserFarmMapping</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFUserFarmMapping</h1>
+        <div>Get the UserFarmMappings for a Store</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFUserFarmMapping [-StoreService] &lt;StoreService&gt; [[-Name] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the UserFarmMappings configured for a Store or a specific UserFarmMapping matching the supplied name.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Set-STFUserFarmMapping.html'>Set-STFUserFarmMapping</a><br/>
+           * <a href='Clear-STFUserFarmMappings.html'>Clear-STFUserFarmMappings</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store service output the UserFarmMappings from.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>Filter the UserFarmMappings by name.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>UserFarmMapping</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Store.UserFarmMapping' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get all UserFarmMappings</h3>
+                <pre><code>Get-STFUserFarmMapping -StoreService $store</code></pre>
+                <div>REMARKS<br>Gets all existing UserFarmMappings on the Store service $store.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Get specific UserFarmMappings</h3>
+                <pre><code>Get-STFUserFarmMapping -StoreService $store -Name "EUUsers"</code></pre>
+                <div>REMARKS<br>Gets the EUUsers UserFarmMapping from the Store $store.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

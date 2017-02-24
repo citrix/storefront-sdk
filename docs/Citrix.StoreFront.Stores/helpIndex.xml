@@ -1,0 +1,43 @@
+<helpIndex ModuleName="Citrix.StoreFront.Stores" ModuleFullName="Citrix.StoreFront.Stores" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Stores.html">Citrix.StoreFront.Stores</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Clear-STFDefaultPnaStore.html">Clear-STFDefaultPnaStore</reference>
+    <reference name="Add-STFSessionManagerTrustedIssuer.html">Add-STFSessionManagerTrustedIssuer</reference>
+    <reference name="Remove-STFSessionManagerTrustedIssuer.html">Remove-STFSessionManagerTrustedIssuer</reference>
+    <reference name="New-STFSessionManagerTrustedIssuer.html">New-STFSessionManagerTrustedIssuer</reference>
+    <reference name="Set-STFStoreEnumerationOptions.html">Set-STFStoreEnumerationOptions</reference>
+    <reference name="Get-STFStoreEnumerationOptions.html">Get-STFStoreEnumerationOptions</reference>
+    <reference name="New-STFStoreFarm.html">New-STFStoreFarm</reference>
+    <reference name="Set-STFStoreFarm.html">Set-STFStoreFarm</reference>
+    <reference name="Remove-STFStoreFarm.html">Remove-STFStoreFarm</reference>
+    <reference name="Add-STFStoreFarm.html">Add-STFStoreFarm</reference>
+    <reference name="Get-STFStoreFarm.html">Get-STFStoreFarm</reference>
+    <reference name="Set-STFStoreFarmConfiguration.html">Set-STFStoreFarmConfiguration</reference>
+    <reference name="Get-STFStoreFarmConfiguration.html">Get-STFStoreFarmConfiguration</reference>
+    <reference name="Unregister-STFStoreGateway.html">Unregister-STFStoreGateway</reference>
+    <reference name="Register-STFStoreGateway.html">Register-STFStoreGateway</reference>
+    <reference name="Set-STFStoreGatewayService.html">Set-STFStoreGatewayService</reference>
+    <reference name="Get-STFStoreGatewayService.html">Get-STFStoreGatewayService</reference>
+    <reference name="Get-STFStoreLaunchOptions.html">Get-STFStoreLaunchOptions</reference>
+    <reference name="Set-STFStoreLaunchOptions.html">Set-STFStoreLaunchOptions</reference>
+    <reference name="Register-STFStoreOptimalLaunchGateway.html">Register-STFStoreOptimalLaunchGateway</reference>
+    <reference name="Unregister-STFStoreOptimalLaunchGateway.html">Unregister-STFStoreOptimalLaunchGateway</reference>
+    <reference name="Enable-STFStorePna.html">Enable-STFStorePna</reference>
+    <reference name="Get-STFStorePna.html">Get-STFStorePna</reference>
+    <reference name="Disable-STFStorePna.html">Disable-STFStorePna</reference>
+    <reference name="Get-STFStorePnaSmartAccess.html">Get-STFStorePnaSmartAccess</reference>
+    <reference name="Grant-STFStorePnaSmartAccess.html">Grant-STFStorePnaSmartAccess</reference>
+    <reference name="Set-STFStorePnaSmartAccess.html">Set-STFStorePnaSmartAccess</reference>
+    <reference name="Revoke-STFStorePnaSmartAccess.html">Revoke-STFStorePnaSmartAccess</reference>
+    <reference name="Get-STFStoreRegisteredGateway.html">Get-STFStoreRegisteredGateway</reference>
+    <reference name="Get-STFStoreRegisteredOptimalLaunchGateway.html">Get-STFStoreRegisteredOptimalLaunchGateway</reference>
+    <reference name="Set-STFStoreService.html">Set-STFStoreService</reference>
+    <reference name="Add-STFStoreService.html">Add-STFStoreService</reference>
+    <reference name="Remove-STFStoreService.html">Remove-STFStoreService</reference>
+    <reference name="Get-STFStoreService.html">Get-STFStoreService</reference>
+    <reference name="Get-STFStoreSubscriptionsDatabase.html">Get-STFStoreSubscriptionsDatabase</reference>
+    <reference name="Set-STFStoreSubscriptionsDatabase.html">Set-STFStoreSubscriptionsDatabase</reference>
+  </cmdlets>
+</helpIndex>

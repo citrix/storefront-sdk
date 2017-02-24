@@ -1,0 +1,56 @@
+﻿<html>
+    <head>
+        <title>Uninstall-STFFeature</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Uninstall-STFFeature</h1>
+        <div>Un-install a StoreFront Feature</div>
+
+        <h2> Syntax </h2>
+        <code>Uninstall-STFFeature [-PackageName] &lt;String&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Un-install a StoreFront feature that is not installed by default as part of a new deployment or when joining an existing server group.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Install-STFFeature.html'>Install-STFFeature</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PackageName&nbsp;</td>
+                <td>Name of the feature to uninstall. The name of the feature is usually the same as the package&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter PackageName: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Uninstall a custom feature</h3>
+                <pre><code>Uninstall-STFFeature -PackageName CustomAuthentication</code></pre>
+                <div>REMARKS<br>Uninstalls the feature named 'CustomAuthentication'.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<helpIndex ModuleName="Citrix.StoreFront.Authentication.PasswordValidator" ModuleFullName="Citrix.StoreFront.Authentication.PasswordValidator" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Authentication.PasswordValidator.html">Citrix.StoreFront.Authentication.PasswordValidator</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Set-STFExplicitAuthenticator.html">Set-STFExplicitAuthenticator</reference>
+    <reference name="Get-STFExplicitAuthenticator.html">Get-STFExplicitAuthenticator</reference>
+  </cmdlets>
+</helpIndex>

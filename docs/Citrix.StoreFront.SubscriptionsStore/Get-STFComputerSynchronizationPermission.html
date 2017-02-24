@@ -1,0 +1,47 @@
+﻿<html>
+    <head>
+        <title>Get-STFComputerSynchronizationPermission</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFComputerSynchronizationPermission</h1>
+        <div>Get the computers with permission to synchronize</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFComputerSynchronizationPermission [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the Active Directory computer accounts with permission to synchronize subscriptions from this server.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFSubscriptionSynchronizationSource.html'>Add-STFSubscriptionSynchronizationSource</a><br/>
+           * <a href='Clear-STFSubscriptionSynchronizationSource.html'>Clear-STFSubscriptionSynchronizationSource</a><br/>
+        <h2> Input Type </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Return Values </h2>
+        <h3>String</h3>
+        <div>The .NET 'System.String' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get permitted synchronization accounts</h3>
+                <pre><code>Get-ComputerSynchronizationPermission</code></pre>
+                <div>REMARKS<br>Get the Active Directory accounts of the StoreFront servers with permissions to synchronize.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+SFDomain\SFEUServer1
+SFDomain\SFEUServer2
+SFDomain\SFUSServer1
+SFDomain\SFUSServer2</code></pre>
+    </body>
+</html>

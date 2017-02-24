@@ -1,0 +1,15 @@
+<helpIndex ModuleName="Citrix.StoreFront.Stores.MultiSite" ModuleFullName="Citrix.StoreFront.Stores.MultiSite" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Stores.MultiSite.html">Citrix.StoreFront.Stores.MultiSite</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Get-STFEquivalentFarmset.html">Get-STFEquivalentFarmset</reference>
+    <reference name="New-STFEquivalentFarmset.html">New-STFEquivalentFarmset</reference>
+    <reference name="Set-STFUserFarmMapping.html">Set-STFUserFarmMapping</reference>
+    <reference name="Remove-STFUserFarmMapping.html">Remove-STFUserFarmMapping</reference>
+    <reference name="Add-STFUserFarmMapping.html">Add-STFUserFarmMapping</reference>
+    <reference name="Get-STFUserFarmMapping.html">Get-STFUserFarmMapping</reference>
+    <reference name="New-STFUserFarmMappingGroup.html">New-STFUserFarmMappingGroup</reference>
+    <reference name="Clear-STFUserFarmMappings.html">Clear-STFUserFarmMappings</reference>
+  </cmdlets>
+</helpIndex>

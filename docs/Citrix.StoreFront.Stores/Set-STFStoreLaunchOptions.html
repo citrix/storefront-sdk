@@ -1,0 +1,188 @@
+﻿<html>
+    <head>
+        <title>Set-STFStoreLaunchOptions</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFStoreLaunchOptions</h1>
+        <div>Set Store launch options</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFStoreLaunchOptions [-StoreService] &lt;StoreService&gt; [[-AddressResolutionType] &lt;Dns | DnsPort | IPV4 | IPV4Port | Dot | DotPort | Uri | NoChange&gt;] [[-RequestIcaClientSecureChannel] &lt;SSLAnyCiphers | TLSGovCipers | DetectAnyCiphers&gt;] [[-AllowSpecialFolderRedirection] &lt;Boolean&gt;] [[-AllowFontSmoothing] &lt;Boolean&gt;] [[-RequireLaunchReference] &lt;Boolean&gt;] [[-OverrideIcaClientName] &lt;Boolean&gt;] [[-OverlayAutoLoginCredentialsWithTicket] &lt;Boolean&gt;] [[-IgnoreClientProvidedClientAddress] &lt;Boolean&gt;] [[-SetNoLoadBiasFlag] &lt;Boolean&gt;] [[-RDPOnly] &lt;Boolean&gt;] [[-IcaTemplateName] &lt;String&gt;] [[-VdaLogonDataProvider] &lt;String&gt;] [[-Force] &lt;SwitchParameter&gt;] [[-PassThru] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the options used by a Store when launching an application or desktop on XenApp and XenDesktop.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFStoreLaunchOptions.html'>Get-STFStoreLaunchOptions</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AddressResolutionType&nbsp;</td>
+                <td>Specifies the type of address to use in the .ica launch file&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RequestIcaClientSecureChannel&nbsp;</td>
+                <td>Specifies TLS settings&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllowSpecialFolderRedirection&nbsp;</td>
+                <td>Redirect special folders such as Documents, Computer and the Desktop&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllowFontSmoothing&nbsp;</td>
+                <td>Specifies whether or not font smoothing is permitted for ICA sessions&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RequireLaunchReference&nbsp;</td>
+                <td>Specifies whether or not the use of launch references is enforced&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>OverrideIcaClientName&nbsp;</td>
+                <td>Specifies whether or not a Web Interface-generated ID must be passed in the clientname entry of an .ica launch file&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>OverlayAutoLoginCredentialsWithTicket&nbsp;</td>
+                <td>Specifies whether a logon ticket must be duplicated in a logon ticket entry or placed in a separate .ica launch file ticket entry only&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IgnoreClientProvidedClientAddress&nbsp;</td>
+                <td>Specifies whether or not to ignore the address provided by the Citrix client&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SetNoLoadBiasFlag&nbsp;</td>
+                <td>Specifies whether XenApp load bias should be used&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RDPOnly&nbsp;</td>
+                <td>Configure the Store to only launch use the RDP protocol&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IcaTemplateName&nbsp;</td>
+                <td>Ica template to use when launching an application or desktop&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>VdaLogonDataProvider&nbsp;</td>
+                <td>The Vda logon data provider to use during launch&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Force&nbsp;</td>
+                <td>Force update without confirmation&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PassThru&nbsp;</td>
+                <td>The resulting Store service&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>Citrix.StoreFront.Model.Store.AddressResolutionType</h3>
+        <div>Parameter AddressResolutionType: The .NET 'Citrix.StoreFront.Model.Store.AddressResolutionType' value type</div>
+        <h3>Citrix.StoreFront.Model.Store.RequestICAClientSecureChannel</h3>
+        <div>Parameter RequestIcaClientSecureChannel: The .NET 'Citrix.StoreFront.Model.Store.RequestICAClientSecureChannel' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter AllowSpecialFolderRedirection: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter AllowFontSmoothing: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter RequireLaunchReference: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter OverrideIcaClientName: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter OverlayAutoLoginCredentialsWithTicket: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter IgnoreClientProvidedClientAddress: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter SetNoLoadBiasFlag: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter RDPOnly: The .NET 'System.Boolean' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter IcaTemplateName: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter VdaLogonDataProvider: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter Force: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter PassThru: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set Store launch options</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Set-STFStoreLaunchOptions $storeService -AddressResolutionType Dns -RequestIcaClientSecureChannel DetectAnyCiphers -AllowSpecialFolderRedirection $true -AllowFontSmoothing $true</code></pre>
+                <div>REMARKS<br>Set the Store to use Dns address resolution type, Ica secure channel to DetectAnyCiphers, allow folder redirection and <br>font smoothing.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Set the Vda logon data provider</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Set-STFStoreLaunchOptions -StoreService $storeService -VdaLogonDataProvider 'FASLogonDataProvider'</code></pre>
+                <div>REMARKS<br>Set the Store to use the Federated Authentication Service Vda logon data provider during launch.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

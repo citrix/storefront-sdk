@@ -1,0 +1,108 @@
+﻿<html>
+    <head>
+        <title>Set-STFUserFarmMapping</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFUserFarmMapping</h1>
+        <div>Update the Store UserFarmMappings</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFUserFarmMapping [-StoreService] &lt;StoreService&gt; [-UserFarmMapping] &lt;UserFarmMapping&gt; [[-GroupMembers] &lt;Hashtable[]&gt;] [[-EquivalentFarmSet] &lt;EquivalentFarmSet[]&gt;] [[-IndexNumber] &lt;Int32&gt;] [[-PassThru] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>A UserFarmMapping is used to configure a specified group of users to use the EquivalentFarmSets defined within the UserFarmMapping. A UserFarmMapping can be used to partition users between defferent XenApp\XenDesktop servers.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The StoreService to which the UserFarmMapping relates.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>UserFarmMapping&nbsp;</td>
+                <td>The UserFarmMapping to add to the StoreService UserFarmMappings.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>GroupMembers&nbsp;</td>
+                <td>Assign the UserFarmMapping to the specified GroupMembers.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>EquivalentFarmSet&nbsp;</td>
+                <td>The EquivalentFarmSets to add to the UserFarmMapping.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IndexNumber&nbsp;</td>
+                <td>The position within the UserFarmMappings to insert the suppied UserFarmMapping.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PassThru&nbsp;</td>
+                <td>Output the UserFarmMappings saved to the StoreService.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>Citrix.StoreFront.Model.Store.UserFarmMapping</h3>
+        <div>Parameter UserFarmMapping: The .NET 'Citrix.StoreFront.Model.Store.UserFarmMapping' reference type</div>
+        <h3>System.Collections.Hashtable[]</h3>
+        <div>Parameter GroupMembers: The .NET 'System.Collections.Hashtable' reference type</div>
+        <h3>Citrix.StoreFront.Model.Store.EquivalentFarmSet[]</h3>
+        <div>Parameter EquivalentFarmSet: The .NET 'Citrix.StoreFront.Model.Store.EquivalentFarmSet' reference type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter IndexNumber: The .NET 'System.Int32' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter PassThru: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3>UserFarmMapping</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Store.UserFarmMapping' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set Store UserFarmMapping</h3>
+                <pre><code>Set-STFUserFarmMapping -UserFarmMapping $userMappingUS -EquivalentFarmSet $us1Farmset</code></pre>
+                <div>REMARKS<br>Update the configured UserFarmMapping for the Store service.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Set Store UserFarmMapping 2</h3>
+                <pre><code>$store = get-STFStoreService -VirtualPath /Citrix/Store
+$userMappingEU = Get-STFStoreUserFarmMapping -StoreService $store -Name "EUUsers"
+$eu1Farmset = New-STFEquivalentFarmset -Name "EU1" -AggregationGroupName "EUUsers" -PrimaryFarms XenApp1, XenApp2 -BackupFarms XenAppBackup -LoadBalanceMode LoadBalanced -FarmsAreIdentical $true
+$eu2Farmset = New-STFEquivalentFarmset -Name "EU1" -AggregationGroupName "EUUsers" -PrimaryFarms XenApp3, XenApp4 -BackupFarms XenAppBackup -LoadBalanceMode LoadBalanced -FarmsAreIdentical $true
+Set-STFUserFarmMapping -UserFarmMapping $userMappingEU -EquivalentFarmSet $us1Farmset, $eu2Farmset</code></pre>
+                <div>REMARKS<br>Update the configured UserFarmMapping $userMappingEU for the Store service.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

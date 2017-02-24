@@ -1,0 +1,8 @@
+<helpIndex ModuleName="Citrix.StoreFront.Authentication.XmlServiceValidator" ModuleFullName="Citrix.StoreFront.Authentication.XmlServiceValidator" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Authentication.XmlServiceValidator.html">Citrix.StoreFront.Authentication.XmlServiceValidator</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Enable-STFXmlServiceAuthentication.html">Enable-STFXmlServiceAuthentication</reference>
+  </cmdlets>
+</helpIndex>

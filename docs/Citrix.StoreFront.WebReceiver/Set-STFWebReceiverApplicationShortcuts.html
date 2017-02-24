@@ -1,0 +1,84 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverApplicationShortcuts</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverApplicationShortcuts</h1>
+        <div>Set the WebReceiver application shortcuts</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverApplicationShortcuts [-WebReceiverService] &lt;WebReceiverService&gt; [[-PromptForUntrustedShortcuts] &lt;Boolean&gt;] [[-TrustedUrls] &lt;Uri[]&gt;] [[-GatewayUrls] &lt;Uri[]&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the WebReceiver trusted Urls for application shortcuts.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFWebReceiverApplicationShortcuts.html'>Get-STFWebReceiverApplicationShortcuts</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PromptForUntrustedShortcuts&nbsp;</td>
+                <td>Display confirmation dialog when Receiver for Web cannot determine if an app shortcut originated from a trusted internal site&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>TrustedUrls&nbsp;</td>
+                <td>List of internal web sites that will provide app shortcuts to users&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>GatewayUrls&nbsp;</td>
+                <td>List of gateways through which shortcuts will be provided to users&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter PromptForUntrustedShortcuts: The .NET 'System.Boolean' value type</div>
+        <h3>System.Uri[]</h3>
+        <div>Parameter TrustedUrls: The .NET 'System.Uri' reference type</div>
+        <h3>System.Uri[]</h3>
+        <div>Parameter GatewayUrls: The .NET 'System.Uri' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Configure the Application Shortcuts</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService "/Citrix/StoreWeb"
+Set-STFWebReceiverApplicationShortcuts -WebReceiverService $webReceiver -TrustedUrls "https://mycompany.net"</code></pre>
+                <div>REMARKS<br>Set the WebReceiver trusted urls for shortcuts that users can launch.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

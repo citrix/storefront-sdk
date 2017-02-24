@@ -1,0 +1,72 @@
+﻿<html>
+    <head>
+        <title>Get-STFRoamingService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFRoamingService</h1>
+        <div>Get the Roaming Service</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFRoamingService [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the Roaming Service. The Roaming Service is where the list of global gateways, account and service records and account redirect rules are configured.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>The IIS Site to which the Roaming service should belong&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h2> Return Values </h2>
+        <h3>RoamingService</h3>
+        <div>A .NET class representing the configuration of a StoreFront Roaming service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get the Roaming Service</h3>
+                <pre><code>Get-STFRoamingService</code></pre>
+                <div>REMARKS<br>Get the roaming service<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Roaming           : Gateways:0, Data:2, Accounts:0, Records:0, Beacons:Internal:0, External:0
+SiteId            : 1
+VirtualPath       : /Citrix/Roaming
+FriendlyName      : RoamingFeature
+Name              : Roaming
+Hmacs             : {}
+Certificates      : {5B9386733F1227C4B1104E6AEB55DBEE9A16B304}
+TokenManagers     : {Roaming Consumer}
+Routing           : :
+ServiceRef        : 1__Citrix_Roaming
+PhysicalPath      : C:\inetpub\wwwroot\Citrix\Roaming
+ConfigurationFile : C:\inetpub\wwwroot\Citrix\Roaming\web.config
+TenantId          : 860e9401-39c8-4f2c-928d-34251102b840</code></pre>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+﻿<html>
+    <head>
+        <title>Add-STFDeployment</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Add-STFDeployment</h1>
+        <div>Create a new StoreFront deployment</div>
+
+        <h2> Syntax </h2>
+        <code>Add-STFDeployment [[-SiteId] &lt;Int64&gt;] [[-HostBaseUrl] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Creates a new StoreFront deployment with the required features installed and configured.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>The IIS site id of the deployment&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>HostBaseUrl&nbsp;</td>
+                <td>Url used to access the StoreFront server group&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter HostBaseUrl: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>StoreFrontDeployment</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.StoreFrontDeployment' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Create a new deployment</h3>
+                <pre><code>Add-STFDeployment https://example.storefront.com -Confirm:$false</code></pre>
+                <div>REMARKS<br>Creates a new StoreFront server that will be accessed by Receivers using the url https://example.storefront.com.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+HostbaseUrl             : https://example.storefront.com/
+IISSiteId               : 1
+DeploymentExists        : True
+InstalledFeatureClasses : {WebApplication, WING, XmlServiceAuthentication, ResourcesCommon...}
+FeatureClassInstances   : {82545fc5-2809-4d69-941f-21163d8bca30, a56e0a1b-661b-4cd9-8802-89e34c0e989f,
+                          ad5777f8-573c-4b1c-b608-32e16068f80b, 1406c90b-095f-4ea4-9b24-ec3ccc590cc1...}</code></pre>
+    </body>
+</html>

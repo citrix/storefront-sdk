@@ -1,0 +1,89 @@
+﻿<html>
+    <head>
+        <title>Add-STFWebReceiverFeature</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Add-STFWebReceiverFeature</h1>
+        <div>Add a feature to the WebReceiver service</div>
+
+        <h2> Syntax </h2>
+        <code>Add-STFWebReceiverFeature [-Name] &lt;String&gt; [-WebReceiverService] &lt;WebReceiverService&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Add-STFWebReceiverFeature [-FeatureClassId] &lt;Guid&gt; [-WebReceiverService] &lt;WebReceiverService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Adds a single feature to the specified WebReceiver service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Remove-STFWebReceiverFeature.html'>Remove-STFWebReceiverFeature</a><br/>
+           * <a href='Get-STFWebReceiverFeature.html'>Get-STFWebReceiverFeature</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>The name of the WebReceiver feature.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FeatureClassId&nbsp;</td>
+                <td>The type id of the WebReceiver feature.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service to add the feature to.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h3>System.Guid</h3>
+        <div>Parameter FeatureClassId: The .NET 'System.Guid' value type</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Add a WebReceiver feature</h3>
+                <pre><code>$rfw = Get-STFWebReceiverService -VirtualPath /Citrix/StoreWeb
+Add-STFWebReceiverFeature -Name CustomSDK -WebReceiverService $rfw</code></pre>
+                <div>REMARKS<br>Add the feature "CustomSDK" to the WebReceiver service /Citrix/StoreWeb</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Add the AuthSDK U2F WebReceiver feature</h3>
+                <pre><code>$webReceiverPackage = Get-STFPackage | Where-Object { $_.Title -eq "WebReceiver" }
+# Get features that can be added to WebReceiver
+$webReceiverFeatures = Get-STFPackage | Where-Object { $_.ParentIdentifier -eq $webReceiverPackage.Identifier }
+# Verify the U2F Receiver Plugin is installed
+$u2f = $webReceiverFeatures | Where-Object { $_.Title -eq "U2FReceiverPlugin" }
+if($u2f)
+{
+    $rfw = Get-STFWebReceiverService -VirtualPath /Citrix/StoreWeb
+    Add-STFWebReceiverFeature -Name $u2f.Title -WebReceiverService $rfw
+}</code></pre>
+                <div>REMARKS<br>Add the AuthSDK feature "U2FReceiverPlugin" to the WebReceiver service /Citrix/StoreWeb</div>
+                <pre><code></code></pre>
+    </body>
+</html>

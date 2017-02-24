@@ -1,0 +1,121 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverCommunication</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverCommunication</h1>
+        <div>Set the WebReceiver communication settings</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverCommunication [-WebReceiverService] &lt;WebReceiverService&gt; [[-Attempts] &lt;Int32&gt;] [[-Timeout] &lt;TimeSpan&gt;] [[-Loopback] &lt;On | Off | OnUsingHttp&gt;] [[-LoopbackPortUsingHttp] &lt;Int32&gt;] [[-ProxyEnabled] &lt;Boolean&gt;] [[-ProxyPort] &lt;Int32&gt;] [[-ProxyProcessName] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the communication settings used for the WebReceiver proxy.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFWebReceiverAuthenticationMethods.html'>Get-STFWebReceiverAuthenticationMethods</a><br/>
+           * <a href='Get-STFWebReceiverAuthenticationMethodsAvailable.html'>Get-STFWebReceiverAuthenticationMethodsAvailable</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Attempts&nbsp;</td>
+                <td>How many attempts WebReceiver should make to contact StoreFront before it gives up.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Timeout&nbsp;</td>
+                <td>Timeout value for communicating with StoreFront.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Loopback&nbsp;</td>
+                <td>Whether to use the loopback address for communications with the store service, rather than the actual StoreFront server URL. This can optimize performance in most deployments where the store service and web proxy are located on the same box. if “OnUsingHttp” is used, then HTTP (rather than HTTPS) is always used.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LoopbackPortUsingHttp&nbsp;</td>
+                <td>When loopback is set to “OnUsingHttp”, the port number to use for loopback communications.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ProxyEnabled&nbsp;</td>
+                <td>Is the communications proxy enabled.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ProxyPort&nbsp;</td>
+                <td>The port to use for the communications proxy.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ProxyProcessName&nbsp;</td>
+                <td>The name of the process acting as proxy.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.Int32</h3>
+        <div>Parameter Attempts: The .NET 'System.Int32' value type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter Timeout: The .NET 'System.TimeSpan' value type</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.LoopbackOption</h3>
+        <div>Parameter Loopback: The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.LoopbackOption' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter LoopbackPortUsingHttp: The .NET 'System.Int32' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter ProxyEnabled: The .NET 'System.Boolean' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter ProxyPort: The .NET 'System.Int32' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter ProxyProcessName: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Configure the communication timeout</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService "/Citrix/StoreWeb"
+Set-STFWebReceiverCommunication -WebReceiverService $webReceiver -Timeout 240</code></pre>
+                <div>REMARKS<br>Set the current WebReceiver communication timeout to four minutes for /Citrix/StoreWeb.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

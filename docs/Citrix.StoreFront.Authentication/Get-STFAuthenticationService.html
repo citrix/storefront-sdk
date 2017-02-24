@@ -1,0 +1,177 @@
+﻿<html>
+    <head>
+        <title>Get-STFAuthenticationService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFAuthenticationService</h1>
+        <div>Get a StoreFront Authentication service.</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFAuthenticationService [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Get-STFAuthenticationService [-StoreService] &lt;StoreService&gt; [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Get-STFAuthenticationService [-WebReceiverService] &lt;WebReceiverService&gt; [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Gets an Authentication service that matches the supplied criteria. An Authentication service can be retrieved by supplying a linked StoreFront service or service details.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFAuthenticationService.html'>Add-STFAuthenticationService</a><br/>
+           * <a href='Remove-STFAuthenticationService.html'>Remove-STFAuthenticationService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>VirtualPath&nbsp;</td>
+                <td>Virtual path to the Authentication service website. Excluding the parameter will match on any virtual path&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>IIS site id of the web site in which the Autentication service is hosted&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store used by the Authentication service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The Web Receiver used by the Authentication service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter VirtualPath: The .NET 'System.String' reference type</div>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h2> Return Values </h2>
+        <h3>AuthenticationService</h3>
+        <div>A .NET class representing the configuration of a StoreFront Authentication service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get all Authentication services</h3>
+                <pre><code>Get-STFAuthenticationService</code></pre>
+                <div>REMARKS<br>Get all configured Authentication services.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+ProducerService         : Authentication Token Producer
+ServiceTokenCertificate : BD1A9D3C2948EC8EFAA153EFEEDB23351F8B80D1
+TokenValidationService  : Default Token Validation Service
+TokenIssuerUrl          : http://example.storefront.com/Citrix/StoreAuth/auth/v1/token
+AuthenticationOptions   : Logging Level:None, Hide Errors:False
+Authentication          : TokenServiceId:707a864e-90d2-408a-9111-404e1e705d10, Protocol Choices:7
+AuthenticationProtocols : {[citrixAGBasicAuthentication,
+                          Citrix.StoreFront.Model.Authentication.NetscalerAuthentication], [formsProtocol,
+                          Citrix.StoreFront.Model.Authentication.FormsProtocol], [explicitBL,
+                          Citrix.StoreFront.Model.Authentication.ExplicitAuthentication],
+                          [delegatedDirectoryClaimFactory,
+                          Citrix.StoreFront.Model.Authentication.DelegatedDirectorySettings]}
+PnaAuthentication       : Citrix.StoreFront.Model.Authentication.PnaAuthentication
+SiteId                  : 1
+VirtualPath             : /Citrix/StoreAuth
+FriendlyName            : StoreAuth
+Hmacs                   : {}
+Certificates            : {BD1A9D3C2948EC8EFAA153EFEEDB23351F8B80D1, A02C8391926A23C3547D8D34EB654240FE9BC3FA,
+                          333131FF3C2F74E4F786BD3CCBB6967FDFA30795}
+TokenManagers           : {Authentication Token Producer, Default Token Validation Service}
+Routing                 : StoreAuth:http://example.storefront.com/
+ServiceRef              : 1__Citrix_StoreAuth
+ConfigurationFile       : C:\inetpub\wwwroot\Citrix\StoreAuth\web.config
+TenantId                : 860e9401-39c8-4f2c-928d-34251</code></pre>
+        <h3> EXAMPLE 2 Get an authentication service</h3>
+                <pre><code>Get-STFAuthenticationService -VirtualPath /Citrix/StoreAuth</code></pre>
+                <div>REMARKS<br>Get an Authentication service configured at a specific virtual path.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+ProducerService         : Authentication Token Producer
+ServiceTokenCertificate : BD1A9D3C2948EC8EFAA153EFEEDB23351F8B80D1
+TokenValidationService  : Default Token Validation Service
+TokenIssuerUrl          : http://example.storefront.com/Citrix/StoreAuth/auth/v1/token
+AuthenticationOptions   : Logging Level:None, Hide Errors:False
+Authentication          : TokenServiceId:707a864e-90d2-408a-9111-404e1e705d10, Protocol Choices:7
+AuthenticationProtocols : {[citrixAGBasicAuthentication,
+                          Citrix.StoreFront.Model.Authentication.NetscalerAuthentication], [formsProtocol,
+                          Citrix.StoreFront.Model.Authentication.FormsProtocol], [explicitBL,
+                          Citrix.StoreFront.Model.Authentication.ExplicitAuthentication],
+                          [delegatedDirectoryClaimFactory,
+                          Citrix.StoreFront.Model.Authentication.DelegatedDirectorySettings]}
+PnaAuthentication       : Citrix.StoreFront.Model.Authentication.PnaAuthentication
+SiteId                  : 1
+VirtualPath             : /Citrix/StoreAuth
+FriendlyName            : StoreAuth
+Hmacs                   : {}
+Certificates            : {BD1A9D3C2948EC8EFAA153EFEEDB23351F8B80D1, A02C8391926A23C3547D8D34EB654240FE9BC3FA,
+                          333131FF3C2F74E4F786BD3CCBB6967FDFA30795}
+TokenManagers           : {Authentication Token Producer, Default Token Validation Service}
+Routing                 : StoreAuth:http://example.storefront.com/
+ServiceRef              : 1__Citrix_StoreAuth
+ConfigurationFile       : C:\inetpub\wwwroot\Citrix\StoreAuth\web.config
+TenantId                : 860e9401-39c8-4f2c-928d-34251</code></pre>
+        <h3> EXAMPLE 3 Get a Stores Authentication service</h3>
+                <pre><code>$store = Get-STFStoreService
+Get-STFAuthenticationService -StoreService $storeService</code></pre>
+                <div>REMARKS<br>Get the Authentication service responsible for authenticating a store.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+ProducerService         : Authentication Token Producer
+ServiceTokenCertificate : BD1A9D3C2948EC8EFAA153EFEEDB23351F8B80D1
+TokenValidationService  : Default Token Validation Service
+TokenIssuerUrl          : http://example.storefront.com/Citrix/StoreAuth/auth/v1/token
+AuthenticationOptions   : Logging Level:None, Hide Errors:False
+Authentication          : TokenServiceId:707a864e-90d2-408a-9111-404e1e705d10, Protocol Choices:7
+AuthenticationProtocols : {[citrixAGBasicAuthentication,
+                          Citrix.StoreFront.Model.Authentication.NetscalerAuthentication], [formsProtocol,
+                          Citrix.StoreFront.Model.Authentication.FormsProtocol], [explicitBL,
+                          Citrix.StoreFront.Model.Authentication.ExplicitAuthentication],
+                          [delegatedDirectoryClaimFactory,
+                          Citrix.StoreFront.Model.Authentication.DelegatedDirectorySettings]}
+PnaAuthentication       : Citrix.StoreFront.Model.Authentication.PnaAuthentication
+SiteId                  : 1
+VirtualPath             : /Citrix/StoreAuth
+FriendlyName            : StoreAuth
+Hmacs                   : {}
+Certificates            : {BD1A9D3C2948EC8EFAA153EFEEDB23351F8B80D1, A02C8391926A23C3547D8D34EB654240FE9BC3FA,
+                          333131FF3C2F74E4F786BD3CCBB6967FDFA30795}
+TokenManagers           : {Authentication Token Producer, Default Token Validation Service}
+Routing                 : StoreAuth:http://example.storefront.com/
+ServiceRef              : 1__Citrix_StoreAuth
+ConfigurationFile       : C:\inetpub\wwwroot\Citrix\StoreAuth\web.config
+TenantId                : 860e9401-39c8-4f2c-928d-34251102b840</code></pre>
+    </body>
+</html>

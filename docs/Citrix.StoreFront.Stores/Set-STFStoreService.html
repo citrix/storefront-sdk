@@ -1,0 +1,175 @@
+﻿<html>
+    <head>
+        <title>Set-STFStoreService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFStoreService</h1>
+        <div>Configure the Store service</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFStoreService [-StoreService] &lt;StoreService&gt; [[-RDPOnly] &lt;Boolean&gt;] [[-IcaTemplateName] &lt;String&gt;] [[-IcaFileSigning] &lt;Boolean&gt;] [[-IcaFileSigningCertificateThumbprint] &lt;String&gt;] [[-IcaFileSigningHashAlgorithm] &lt;String&gt;] [[-AuthenticationService] &lt;AuthenticationService&gt;] [[-KerberosDelegation] &lt;Boolean&gt;] [[-Force] &lt;SwitchParameter&gt;] [[-AllowSessionReconnect] &lt;Boolean&gt;] [[-SubstituteDesktopImage] &lt;Boolean&gt;] [[-UnifiedReceiver] &lt;WebReceiverService&gt;] [[-LockedDown] &lt;Boolean&gt;] [[-PassThru] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configure high level options on the Store service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFStoreService.html'>Get-STFStoreService</a><br/>
+           * <a href='Remove-STFStoreService.html'>Remove-STFStoreService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RDPOnly&nbsp;</td>
+                <td>Configure the Store to launch all requests using the RDP protocol.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IcaTemplateName&nbsp;</td>
+                <td>Ica template to use when launching an application or desktop.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IcaFileSigning&nbsp;</td>
+                <td>Sign the ica file used for launch.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IcaFileSigningCertificateThumbprint&nbsp;</td>
+                <td>Thumbprint of the certificate to use for signing the ica file.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IcaFileSigningHashAlgorithm&nbsp;</td>
+                <td>Algorithm used to sign the ica file. The setting should not normally require changing from the default.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>The Authentication service and the Store should use. Will result in the Store using the authentication protocols of the service.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>KerberosDelegation&nbsp;</td>
+                <td>Turn on Kerberos delegation for the Store to support XenApp 6.5 and earlier constrained delegation.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Force&nbsp;</td>
+                <td>Force settings to be applied ignoring confirmation prompts.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllowSessionReconnect&nbsp;</td>
+                <td>Allow sessions to be reconnected.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SubstituteDesktopImage&nbsp;</td>
+                <td>Substitute the desktop image provided by XenApp\XenDesktop with the StoreFront default.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>UnifiedReceiver&nbsp;</td>
+                <td>Choose the classic of unified Receiver experience.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LockedDown&nbsp;</td>
+                <td>All the resources delivered by locked-down Store are auto subscribed and do not allow for un-subscription.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PassThru&nbsp;</td>
+                <td>Output the resulting Store service.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter RDPOnly: The .NET 'System.Boolean' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter IcaTemplateName: The .NET 'System.String' reference type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter IcaFileSigning: The .NET 'System.Boolean' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter IcaFileSigningCertificateThumbprint: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter IcaFileSigningHashAlgorithm: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter KerberosDelegation: The .NET 'System.Boolean' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter Force: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter AllowSessionReconnect: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter SubstituteDesktopImage: The .NET 'System.Boolean' value type</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter UnifiedReceiver: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter LockedDown: The .NET 'System.Boolean' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter PassThru: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Sign Ica files</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Set-STFStoreService $storeService -IcaFileSigning $true -IcaFileSigningCertificateThumbprint a909502dd82ae41433e6f83886b00d4277a32a7b</code></pre>
+                <div>REMARKS<br>Configure the Store to sign ica files using the certificate with the supplied thumbprint.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

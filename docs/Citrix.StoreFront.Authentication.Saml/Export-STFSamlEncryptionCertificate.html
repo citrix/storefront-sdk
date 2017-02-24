@@ -1,0 +1,65 @@
+﻿<html>
+    <head>
+        <title>Export-STFSamlEncryptionCertificate</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Export-STFSamlEncryptionCertificate</h1>
+        <div>Export the encryption certificate to be used by SAML Identity Providers</div>
+
+        <h2> Syntax </h2>
+        <code>Export-STFSamlEncryptionCertificate [-AuthenticationService] &lt;AuthenticationService&gt; [[-FilePath] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Export, from the specified authentication service, the encryption certificate to be used by SAML Identity Providers</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>The Authentication service from which to export the certificate.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FilePath&nbsp;</td>
+                <td>The path of the file to export to.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h3>System.String</h3>
+        <div>Parameter FilePath: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Export the encryption certificate to be used by the SAML IdentityProvider.</h3>
+                <pre><code>$authentication = Get-STFAuthenticationService
+Export-STFSamlEncryptionCertificate -AuthenticationService $authentication -FilePath C:\windows\temp\EncryptionCertificate.cer</code></pre>
+                <div>REMARKS<br>Export the encryption certificate to be used by the SAML Identity Provider.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

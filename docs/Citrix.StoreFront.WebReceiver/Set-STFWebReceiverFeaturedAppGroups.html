@@ -1,0 +1,75 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverFeaturedAppGroups</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverFeaturedAppGroups</h1>
+        <div>Sets the Featured App groups within the specified WebReceiver.</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverFeaturedAppGroups [-WebReceiverService] &lt;WebReceiverService&gt; [-FeaturedAppGroup] &lt;FeaturedAppGroup[]&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Sets the Featured App groups within the specified WebReceiver.<br><br><br>Any existing Featured App groups are replaced with the Featured App groups specified.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='New-STFWebReceiverFeaturedAppGroup.html'>New-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Add-STFWebReceiverFeaturedAppGroup.html'>Add-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Remove-STFWebReceiverFeaturedAppGroup.html'>Remove-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Clear-STFWebReceiverFeaturedAppGroup.html'>Clear-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Set-STFWebReceiverFeaturedAppGroup.html'>Set-STFWebReceiverFeaturedAppGroup</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>WebReceiver service to set the Featured Application groups on&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FeaturedAppGroup&nbsp;</td>
+                <td>The Featured Application groups to set&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.FeaturedAppGroup[]</h3>
+        <div>Parameter FeaturedAppGroup: The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.FeaturedAppGroup' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set the Feature Application group</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService
+$group = New-STFWebReceiverFeaturedAppGroup -Title "Worx Suite" `
+-Description "Improve productivity with a suite of secure mobile apps made for business." `
+-TileId appBundle1 `
+-ContentType Keyword `
+-Contents Worx
+Set-STFWebReceiverFeaturedAppGroups -WebReceiverService $webReceiver -FeaturedAppGroup $group</code></pre>
+                <div>REMARKS<br>Set the Featured Application group for the Worx Suite.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

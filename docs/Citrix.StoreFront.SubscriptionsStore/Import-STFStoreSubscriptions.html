@@ -1,0 +1,78 @@
+﻿<html>
+    <head>
+        <title>Import-STFStoreSubscriptions</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Import-STFStoreSubscriptions</h1>
+        <div>Import subscriptions from a given Store</div>
+
+        <h2> Syntax </h2>
+        <code>Import-STFStoreSubscriptions [-StoreService] &lt;StoreService&gt; [-FilePath] &lt;String&gt; [-StoreService] &lt;StoreService&gt; [-FilePath] &lt;String&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Import-STFStoreSubscriptions [-FilePath] &lt;String&gt; [-StoreService] &lt;StoreService&gt; [-FilePath] &lt;String&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Import user subscriptions to a Store from a csv formatted text file.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Export-STFStoreSubscriptions.html'>Export-STFStoreSubscriptions</a><br/>
+           * <a href='Restore-STFStoreSubscriptions.html'>Restore-STFStoreSubscriptions</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store service to process subscriptions for&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FilePath&nbsp;</td>
+                <td>Path of csv file&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ChunkSize&nbsp;</td>
+                <td>Chunk size for splitting data. Only appropriate for very large datasets if connectivity issues are seen.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.String</h3>
+        <div>Parameter FilePath: The .NET 'System.String' reference type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter ChunkSize: The .NET 'System.Int32' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Notes </h2>
+        <div>The cmdlet appends the entries to the existing data.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Import subscriptions</h3>
+                <pre><code>$store = Get-STFStoreService
+Import-STFStoreSubscriptions -Store $store -FilePath "$env:userprofile\desktop\Export.txt"</code></pre>
+                <div>REMARKS<br>Import subscriptions into the only configured Store.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

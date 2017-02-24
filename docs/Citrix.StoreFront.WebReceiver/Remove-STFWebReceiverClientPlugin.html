@@ -1,0 +1,70 @@
+﻿<html>
+    <head>
+        <title>Remove-STFWebReceiverClientPlugin</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Remove-STFWebReceiverClientPlugin</h1>
+        <div>Remove a WebReceiver client plug-in</div>
+
+        <h2> Syntax </h2>
+        <code>Remove-STFWebReceiverClientPlugin [-WebReceiverService] &lt;WebReceiverService&gt; [-ClientPlugin] &lt;ClientPlugin[]&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Remove WebReceiver script and branding customizations.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFWebReceiverClientPlugin.html'>Add-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Get-STFWebReceiverClientPlugin.html'>Get-STFWebReceiverClientPlugin</a><br/>
+           * <a href='New-STFWebReceiverClientPlugin.html'>New-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Clear-STFWebReceiverClientPlugin.html'>Clear-STFWebReceiverClientPlugin</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>WebReceiver from which the client plug-in will be removed&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ClientPlugin&nbsp;</td>
+                <td>The ClientPlugin to remove&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.ClientPlugin[]</h3>
+        <div>Parameter ClientPlugin: The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.ClientPlugin' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Remove a client plugin</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService
+$plugin = Get-STFWebReceiverClientPlugin -WebReceiverService $webReceiver | Where-Object { $_.Name -eq "NetScaler" }
+Remove-STFWebReceiverClientPlugin -WebReceiverService $webReceiver</code></pre>
+                <div>REMARKS<br>Removes the NetScaler client plug-in from $webReceiver.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+﻿<html>
+    <head>
+        <title>Set-STFDomainService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFDomainService</h1>
+        <div>Update the Domain service</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFDomainService [-DomainService] &lt;DomainService&gt; [[-KerberosDomainHint] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Update the configuration of the Domain service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFDomainService.html'>Get-STFDomainService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DomainService&nbsp;</td>
+                <td>The Domain Service to configure.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>KerberosDomainHint&nbsp;</td>
+                <td>The Kerberos domain hint.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.WindowsServices.Domain.DomainService</h3>
+        <div>Parameter DomainService: The .NET 'Citrix.StoreFront.Model.WindowsServices.Domain.DomainService' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter KerberosDomainHint: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Change the Domain service Kerberos domain hint</h3>
+                <pre><code>Set-STFDomainService -DomainService "domain.test.com"</code></pre>
+                <div>REMARKS<br>Configure the Domain service with a Kerberos domain hint.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

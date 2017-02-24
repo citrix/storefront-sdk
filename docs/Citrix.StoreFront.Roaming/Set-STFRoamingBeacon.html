@@ -1,0 +1,86 @@
+﻿<html>
+    <head>
+        <title>Set-STFRoamingBeacon</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFRoamingBeacon</h1>
+        <div>Set the internal and external beacons</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFRoamingBeacon [-Internal] &lt;Uri&gt; [-Internal] &lt;Uri&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Set-STFRoamingBeacon [-Internal &lt;Uri&gt;] [-External &lt;Uri[]&gt;] [-Internal] &lt;Uri&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Set-STFRoamingBeacon [-External] &lt;Uri[]&gt; [-Internal] &lt;Uri&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Set-STFRoamingBeacon [-RefreshServiceRecordOnly] &lt;SwitchParameter&gt; [-Internal] &lt;Uri&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configure the internal and external roaming beacons.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Internal&nbsp;</td>
+                <td>Internal beacon address.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>External&nbsp;</td>
+                <td>External beacons address.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RefreshServiceRecordOnly&nbsp;</td>
+                <td>Refresh the Store service record with any out-of-band changes.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RoamingService&nbsp;</td>
+                <td>The Roaming service&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.Uri</h3>
+        <div>Parameter Internal: The .NET 'System.Uri' reference type</div>
+        <h3>System.Uri[]</h3>
+        <div>Parameter External: The .NET 'System.Uri' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter RefreshServiceRecordOnly: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>Citrix.StoreFront.Model.Roaming.RoamingService</h3>
+        <div>Parameter RoamingService: A .NET class representing the configuration of a StoreFront Roaming service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set the internal beacon</h3>
+                <pre><code>Set-STFRoamingBeacon -Internal http://myinternalbeacon.com</code></pre>
+                <div>REMARKS<br>Set the internal beacon to http://myinternalbeacon.com.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Set the external beacons</h3>
+                <pre><code>Set-STFRoamingBeacon -External http://external1.com,http://external2.com</code></pre>
+                <div>REMARKS<br>Set the external beacons to http://external1.com and http://external2.com.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

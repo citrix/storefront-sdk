@@ -1,0 +1,202 @@
+﻿<html>
+    <head>
+        <title>Add-STFStoreService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Add-STFStoreService</h1>
+        <div>Creates a new StoreFront Store Service at the supplied IIS VirtualPath and optional SiteId.</div>
+
+        <h2> Syntax </h2>
+        <code>Add-STFStoreService [-AuthenticationService] &lt;AuthenticationService&gt; [-VirtualPath] &lt;String&gt; [[-SiteId] &lt;Int64&gt;] [[-FarmName] &lt;String&gt;] [[-FarmType] &lt;XenApp | XenDesktop | AppController | VDIinaBox | Store&gt;] [[-Servers] &lt;String[]&gt;] [[-ServiceUrls] &lt;String[]&gt;] [[-Port] &lt;Int32&gt;] [[-TransportType] &lt;HTTP | HTTPS | SSL&gt;] [[-SSLRelayPort] &lt;Int32&gt;] [[-LoadBalance] &lt;Boolean&gt;] [[-AllFailedBypassDuration] &lt;Int32&gt;] [[-BypassDuration] &lt;Int32&gt;] [[-FriendlyName] &lt;String&gt;] [[-Zones] &lt;String[]&gt;] [[-ConnectionString] &lt;String&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Add-STFStoreService [-Anonymous] &lt;SwitchParameter&gt; [-VirtualPath] &lt;String&gt; [[-SiteId] &lt;Int64&gt;] [[-FarmName] &lt;String&gt;] [[-FarmType] &lt;XenApp | XenDesktop | AppController | VDIinaBox | Store&gt;] [[-Servers] &lt;String[]&gt;] [[-ServiceUrls] &lt;String[]&gt;] [[-Port] &lt;Int32&gt;] [[-TransportType] &lt;HTTP | HTTPS | SSL&gt;] [[-SSLRelayPort] &lt;Int32&gt;] [[-LoadBalance] &lt;Boolean&gt;] [[-AllFailedBypassDuration] &lt;Int32&gt;] [[-BypassDuration] &lt;Int32&gt;] [[-FriendlyName] &lt;String&gt;] [[-Zones] &lt;String[]&gt;] [[-ConnectionString] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>StoreFront stores aggregate desktops and applications, making them available to users. Stores appear in Citrix Receiver under users' accounts, so choose a VirtualPath that gives users information about the content of the store.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFStoreService.html'>Get-STFStoreService</a><br/>
+           * <a href='Remove-STFStoreService.html'>Remove-STFStoreService</a><br/>
+           * <a href='Set-STFStoreService.html'>Set-STFStoreService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>VirtualPath&nbsp;</td>
+                <td>The IIS VirtualPath at which the Store will be configured to be accessed by Receivers&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>The IIS Site to configure the Store Service within&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>The StoreFront Authentication Service to use for authenticating users&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Anonymous&nbsp;</td>
+                <td>Anonymous Store not requiring authentication&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FarmName&nbsp;</td>
+                <td>The Farm name to use for the supplied XenApp\XenDesktop servers&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FarmType&nbsp;</td>
+                <td>The type of farm being configured for the servers supplied&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Servers&nbsp;</td>
+                <td>The servers to configure for the initial XenApp\XenDesktop farm&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ServiceUrls&nbsp;</td>
+                <td>The url to the service location used to provide web and SaaS apps via this farm.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Port&nbsp;</td>
+                <td>The XML service port used for communicating with the XenApp\XenDesktop servers&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>TransportType&nbsp;</td>
+                <td>The type of transport to use for the Xml service communication&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SSLRelayPort&nbsp;</td>
+                <td>The XenApp SSLRelay port used for the XML service. Only applicable to XenApp 6.5 servers and earlier&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LoadBalance&nbsp;</td>
+                <td>Load balance the servers or use in failover order if specifying more than one&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllFailedBypassDuration&nbsp;</td>
+                <td>The period in minutes to wait before retrying communicating will all servers should they all fail.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>BypassDuration&nbsp;</td>
+                <td>Time period in minutes to bypass a server when resources are unavailable&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FriendlyName&nbsp;</td>
+                <td>Friendly name to identify the Store&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Zones&nbsp;</td>
+                <td>List of Zone names associated with the initial XenApp\XenDesktop farm&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ConnectionString&nbsp;</td>
+                <td>Specify the Sql Server connection string to use for the Subscriptions database&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter VirtualPath: The .NET 'System.String' reference type</div>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter Anonymous: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter FarmName: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.Store.FarmType</h3>
+        <div>Parameter FarmType: The .NET 'Citrix.StoreFront.Model.Store.FarmType' value type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter Servers: The .NET 'System.String' reference type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter ServiceUrls: The .NET 'System.String' reference type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter Port: The .NET 'System.Int32' value type</div>
+        <h3>Citrix.StoreFront.Model.Store.TransportType</h3>
+        <div>Parameter TransportType: The .NET 'Citrix.StoreFront.Model.Store.TransportType' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter SSLRelayPort: The .NET 'System.Int32' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter LoadBalance: The .NET 'System.Boolean' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter AllFailedBypassDuration: The .NET 'System.Int32' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter BypassDuration: The .NET 'System.Int32' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter FriendlyName: The .NET 'System.String' reference type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter Zones: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter ConnectionString: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>StoreService</h3>
+        <div>A .NET class representing the configuration of a StoreFront Store service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Create a new Store</h3>
+                <pre><code>Add-STFStoreService -VirtualPath /Citrix/Store -AuthenticationService $authenticationService -FarmName "Controller" -FarmType XenApp -Servers xenapp1, xenapp2</code></pre>
+                <div>REMARKS<br>Creates a new Store using an existing Authentication Service</div>
+                <pre><code></code></pre>
+    </body>
+</html>

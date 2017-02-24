@@ -1,0 +1,74 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverClientPlugin</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverClientPlugin</h1>
+        <div>Sets the plug-ins definitions configured within the WebReceiver</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverClientPlugin [-WebReceiverService] &lt;WebReceiverService&gt; [-ClientPlugin] &lt;ClientPlugin[]&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>The cmdlet sets the plug-ins definitions as configured within the specified WebReceiver.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='New-STFWebReceiverClientPlugin.html'>New-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Clear-STFWebReceiverClientPlugin.html'>Clear-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Add-STFWebReceiverClientPlugin.html'>Add-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Get-STFWebReceiverClientPlugin.html'>Get-STFWebReceiverClientPlugin</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>WebReceiver service to set the client plug-ins on&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ClientPlugin&nbsp;</td>
+                <td>The client plug-ins to set&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.ClientPlugin[]</h3>
+        <div>Parameter ClientPlugin: The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.ClientPlugin' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set the WebReceiver ClientPlugins</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService
+$plugin = New-STFWebReceiverClientPlugin -Name "NetScaler" `
+- Source "/plugins/netscalar/script1.js" `
+-Scripts @("/plugins/netscalar/script2.js","/plugins/netscalar/script1.js") `
+-Styles @("/plugins/netscalar/script2.css","/plugins/netscalar/script1.css") `
+-Parameters @{"param1" = "value1";"param2" = "value2"}
+Set-STFWebReceiverClientPlugins -WebReceiverService $webReceiver -ClientPlugin $plugin</code></pre>
+                <div>REMARKS<br>Gets the configured WebReceiver and sets the NetScaler Client plug-in.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

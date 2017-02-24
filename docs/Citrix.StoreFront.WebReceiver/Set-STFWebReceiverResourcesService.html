@@ -1,0 +1,93 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverResourcesService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverResourcesService</h1>
+        <div>Set the WebReceiver Resources Service settings</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverResourcesService [-WebReceiverService] &lt;WebReceiverService&gt; [[-PersistentIconCacheEnabled] &lt;Boolean&gt;] [[-IcaFileCacheExpiry] &lt;Int32&gt;] [[-IconSize] &lt;Int32&gt;] [[-ShowDesktopViewer] &lt;Boolean&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the WebReceiver Resources Service settings.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFWebReceiverResourcesService.html'>Get-STFWebReceiverResourcesService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PersistentIconCacheEnabled&nbsp;</td>
+                <td>Whether to cache icon data in the local file system.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IcaFileCacheExpiry&nbsp;</td>
+                <td>How long the ICA file data is cached in the memory of the Web Proxy.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IconSize&nbsp;</td>
+                <td>The desired icon size sent to the Store Service in icon requests.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ShowDesktopViewer&nbsp;</td>
+                <td>Shows the Citrix Desktop Viewer window and toolbar when users access their desktops from legacy clients. This setting may fix problems where the Desktop Viewer is not displayed. Default: Off.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter PersistentIconCacheEnabled: The .NET 'System.Boolean' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter IcaFileCacheExpiry: The .NET 'System.Int32' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter IconSize: The .NET 'System.Int32' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter ShowDesktopViewer: The .NET 'System.Boolean' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Configure the Desktop viewer</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService "/Citrix/StoreWeb"
+Set-STFWebReceiverResourcesService -WebReceiverService $webReceiver -ShowDesktopViewer $true</code></pre>
+                <div>REMARKS<br>Set the Desktop Viewer to be shown for the WebReceiver located at /Citrix/StoreWeb.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+﻿<html>
+    <head>
+        <title>Get-STFDomainService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFDomainService</h1>
+        <div>Get the Domain Service Service</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFDomainService [[-DomainServiceName] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the Domain Service. The Domain Service is responsible for authentication with the Windows domain.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Set-STFDomainService.html'>Set-STFDomainService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DomainServiceName&nbsp;</td>
+                <td>The name of the domain service&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter DomainServiceName: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>DomainService</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.WindowsServices.Domain.DomainService' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get Domain Service</h3>
+                <pre><code>Get-STFDomainService</code></pre>
+                <div>REMARKS<br>Get the Domain service configuration<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Name              : DefaultDomainService
+KerberosSettings  : DomainHint:
+FeatureInstanceId : 9f3bbb87-3c15-4cd6-9d20-0b78682f7126
+ConfigurationFile : C:\Program Files\Citrix\Receiver StoreFront\Services\DefaultDomainServices\Citrix.DeliveryServices.
+                    DomainServices.ServiceHost.exe.config
+TenantId          : 860e9401-39c8-4f2c-928d-34251102b840</code></pre>
+    </body>
+</html>

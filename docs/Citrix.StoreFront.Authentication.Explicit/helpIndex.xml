@@ -1,0 +1,9 @@
+<helpIndex ModuleName="Citrix.StoreFront.Authentication.Explicit" ModuleFullName="Citrix.StoreFront.Authentication.Explicit" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Authentication.Explicit.html">Citrix.StoreFront.Authentication.Explicit</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Set-STFExplicitCommonOptions.html">Set-STFExplicitCommonOptions</reference>
+    <reference name="Get-STFExplicitCommonOptions.html">Get-STFExplicitCommonOptions</reference>
+  </cmdlets>
+</helpIndex>

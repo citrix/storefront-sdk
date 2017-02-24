@@ -1,0 +1,57 @@
+<helpIndex ModuleName="Citrix.StoreFront.WebReceiver" ModuleFullName="Citrix.StoreFront.WebReceiver" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.WebReceiver.html">Citrix.StoreFront.WebReceiver</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Set-STFDesktopApplianceService.html">Set-STFDesktopApplianceService</reference>
+    <reference name="Get-STFDesktopApplianceService.html">Get-STFDesktopApplianceService</reference>
+    <reference name="Add-STFDesktopApplianceService.html">Add-STFDesktopApplianceService</reference>
+    <reference name="Remove-STFDesktopApplianceService.html">Remove-STFDesktopApplianceService</reference>
+    <reference name="Get-STFIISSitesInfo.html">Get-STFIISSitesInfo</reference>
+    <reference name="Set-STFWebReceiverApplicationShortcuts.html">Set-STFWebReceiverApplicationShortcuts</reference>
+    <reference name="Get-STFWebReceiverApplicationShortcuts.html">Get-STFWebReceiverApplicationShortcuts</reference>
+    <reference name="Set-STFWebReceiverAuthenticationManager.html">Set-STFWebReceiverAuthenticationManager</reference>
+    <reference name="Get-STFWebReceiverAuthenticationManager.html">Get-STFWebReceiverAuthenticationManager</reference>
+    <reference name="Set-STFWebReceiverAuthenticationMethods.html">Set-STFWebReceiverAuthenticationMethods</reference>
+    <reference name="Get-STFWebReceiverAuthenticationMethods.html">Get-STFWebReceiverAuthenticationMethods</reference>
+    <reference name="Get-STFWebReceiverAuthenticationMethodsAvailable.html">Get-STFWebReceiverAuthenticationMethodsAvailable</reference>
+    <reference name="New-STFWebReceiverClientPlugin.html">New-STFWebReceiverClientPlugin</reference>
+    <reference name="Remove-STFWebReceiverClientPlugin.html">Remove-STFWebReceiverClientPlugin</reference>
+    <reference name="Add-STFWebReceiverClientPlugin.html">Add-STFWebReceiverClientPlugin</reference>
+    <reference name="Get-STFWebReceiverClientPlugin.html">Get-STFWebReceiverClientPlugin</reference>
+    <reference name="Clear-STFWebReceiverClientPlugin.html">Clear-STFWebReceiverClientPlugin</reference>
+    <reference name="Set-STFWebReceiverClientPlugin.html">Set-STFWebReceiverClientPlugin</reference>
+    <reference name="Set-STFWebReceiverCommunication.html">Set-STFWebReceiverCommunication</reference>
+    <reference name="Get-STFWebReceiverCommunication.html">Get-STFWebReceiverCommunication</reference>
+    <reference name="Get-STFWebReceiverDefaultSiteStyle.html">Get-STFWebReceiverDefaultSiteStyle</reference>
+    <reference name="Get-STFWebReceiverDiscoveryService.html">Get-STFWebReceiverDiscoveryService</reference>
+    <reference name="Set-STFWebReceiverDiscoveryService.html">Set-STFWebReceiverDiscoveryService</reference>
+    <reference name="Add-STFWebReceiverFeature.html">Add-STFWebReceiverFeature</reference>
+    <reference name="Get-STFWebReceiverFeature.html">Get-STFWebReceiverFeature</reference>
+    <reference name="Remove-STFWebReceiverFeature.html">Remove-STFWebReceiverFeature</reference>
+    <reference name="Remove-STFWebReceiverFeaturedAppGroup.html">Remove-STFWebReceiverFeaturedAppGroup</reference>
+    <reference name="New-STFWebReceiverFeaturedAppGroup.html">New-STFWebReceiverFeaturedAppGroup</reference>
+    <reference name="Clear-STFWebReceiverFeaturedAppGroup.html">Clear-STFWebReceiverFeaturedAppGroup</reference>
+    <reference name="Get-STFWebReceiverFeaturedAppGroup.html">Get-STFWebReceiverFeaturedAppGroup</reference>
+    <reference name="Set-STFWebReceiverFeaturedAppGroup.html">Set-STFWebReceiverFeaturedAppGroup</reference>
+    <reference name="Add-STFWebReceiverFeaturedAppGroup.html">Add-STFWebReceiverFeaturedAppGroup</reference>
+    <reference name="Set-STFWebReceiverFeaturedAppGroups.html">Set-STFWebReceiverFeaturedAppGroups</reference>
+    <reference name="Get-STFWebReceiverFeaturedAppGroupTiles.html">Get-STFWebReceiverFeaturedAppGroupTiles</reference>
+    <reference name="Get-STFWebReceiverPluginAssistant.html">Get-STFWebReceiverPluginAssistant</reference>
+    <reference name="Set-STFWebReceiverPluginAssistant.html">Set-STFWebReceiverPluginAssistant</reference>
+    <reference name="Set-STFWebReceiverResourcesService.html">Set-STFWebReceiverResourcesService</reference>
+    <reference name="Get-STFWebReceiverResourcesService.html">Get-STFWebReceiverResourcesService</reference>
+    <reference name="Set-STFWebReceiverService.html">Set-STFWebReceiverService</reference>
+    <reference name="Remove-STFWebReceiverService.html">Remove-STFWebReceiverService</reference>
+    <reference name="Add-STFWebReceiverService.html">Add-STFWebReceiverService</reference>
+    <reference name="Get-STFWebReceiverService.html">Get-STFWebReceiverService</reference>
+    <reference name="Set-STFWebReceiverSiteStyle.html">Set-STFWebReceiverSiteStyle</reference>
+    <reference name="Clear-STFWebReceiverSiteStyle.html">Clear-STFWebReceiverSiteStyle</reference>
+    <reference name="Get-STFWebReceiverSiteStyle.html">Get-STFWebReceiverSiteStyle</reference>
+    <reference name="Get-STFWebReceiverStoreProxy.html">Get-STFWebReceiverStoreProxy</reference>
+    <reference name="Set-STFWebReceiverStrictTransportSecurity.html">Set-STFWebReceiverStrictTransportSecurity</reference>
+    <reference name="Get-STFWebReceiverStrictTransportSecurity.html">Get-STFWebReceiverStrictTransportSecurity</reference>
+    <reference name="Set-STFWebReceiverUserInterface.html">Set-STFWebReceiverUserInterface</reference>
+    <reference name="Get-STFWebReceiverUserInterface.html">Get-STFWebReceiverUserInterface</reference>
+  </cmdlets>
+</helpIndex>

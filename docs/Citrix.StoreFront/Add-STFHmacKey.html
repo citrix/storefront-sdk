@@ -1,0 +1,79 @@
+﻿<html>
+    <head>
+        <title>Add-STFHmacKey</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Add-STFHmacKey</h1>
+        <div>Add a named HMAC key stored to a web service.</div>
+
+        <h2> Syntax </h2>
+        <code>Add-STFHmacKey [-WebService] &lt;StoreFrontWebService&gt; [-Name] &lt;String&gt; [[-Key] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Add a new named HMAC key stored to a web service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebService&nbsp;</td>
+                <td>The Web Service to add the HMAC key to.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>The name of the HMAC key.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Key&nbsp;</td>
+                <td>The optional value of the HMAC key (Base64 encoded). If not specified then a new random value will be generated.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.StoreFrontWebService</h3>
+        <div>Parameter WebService: The .NET 'Citrix.StoreFront.Model.StoreFrontWebService' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Key: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Add a new HMAC key named 'test' into the specified Store service, with the specified key.</h3>
+                <pre><code>$store = $store = Get-STFStoreService -VirtualPath '/Citrix/Store'
+Add-STFHmacKey -WebService $store -Name 'test' -Key '6UA064hC8Dx/5/s0irY3Vc+tYUh2d6TqPMjC4Qy1NTtCwusyA39mXJTXXPuLaLI7x2wDhFDrsk0rqSqzjlV5Pw=='</code></pre>
+                <div>REMARKS<br>Add the new HMAC key named 'test' into the specified Store service, with the specified key.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Add a new HMAC key named 'test' into the specified Store service, with a randomly generated key.</h3>
+                <pre><code>$store = $store = Get-STFStoreService -VirtualPath '/Citrix/Store'
+Add-STFHmacKey -WebService $store -Name 'test'</code></pre>
+                <div>REMARKS<br>Add the new HMAC key named 'test' into the specified Store service, with a randomly generated key.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

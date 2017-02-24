@@ -1,0 +1,64 @@
+﻿<html>
+    <head>
+        <title>Set-STFClaimsFactoryNames</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFClaimsFactoryNames</h1>
+        <div>Sets all the claims factory names.</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFClaimsFactoryNames -ClaimsFactoryName &lt;String&gt; -AuthenticationService &lt;AuthenticationService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Sets all the claims factory names.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ClaimsFactoryName&nbsp;</td>
+                <td>The name of the claims factory to use&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>The authentication service to update&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter ClaimsFactoryName: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Simple example</h3>
+                <pre><code>Set-STFClaimsFactoryNames -AuthenticationService $authenticationService -ClaimsFactoryName 'FASClaimsFactory'</code></pre>
+                <div>REMARKS<br>This example sets all the claims factory names to be: FASClaimsFactory in the specified authentication service.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

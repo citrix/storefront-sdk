@@ -1,0 +1,192 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverPluginAssistant</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverPluginAssistant</h1>
+        <div>Set the WebReceiver Plug-in Assistant options</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverPluginAssistant [-WebReceiverService] &lt;WebReceiverService&gt; [[-Enabled] &lt;Boolean&gt;] [[-UpgradeAtLogin] &lt;Boolean&gt;] [[-ShowAfterLogin] &lt;Boolean&gt;] [[-Win32Path] &lt;String&gt;] [[-MacOSPath] &lt;String&gt;] [[-MacOSMinimumSupportedVersion] &lt;String&gt;] [[-Html5Enabled] &lt;Off | Always | Fallback&gt;] [[-Html5Platforms] &lt;String&gt;] [[-Html5Preferences] &lt;String&gt;] [[-Html5SingleTabLaunch] &lt;Boolean&gt;] [[-Html5ChromeAppOrigins] &lt;String&gt;] [[-Html5ChromeAppPreferences] &lt;String&gt;] [[-ProtocolHandlerEnabled] &lt;Boolean&gt;] [[-ProtocolHandlerPlatforms] &lt;String&gt;] [[-ProtocolHandlerSkipDoubleHopCheckWhenDisabled] &lt;Boolean&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the WebReceiver Plug-in Assistant client options.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFWebReceiverPluginAssistant.html'>Get-STFWebReceiverPluginAssistant</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Enabled&nbsp;</td>
+                <td>Enable Receiver client detection.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>UpgradeAtLogin&nbsp;</td>
+                <td>Prompt to upgrade older clients.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ShowAfterLogin&nbsp;</td>
+                <td>Show Receiver client detection after the user logs in.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Win32Path&nbsp;</td>
+                <td>Path to the Windows Receiver.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>MacOSPath&nbsp;</td>
+                <td>Path to the MacOS Receiver.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>MacOSMinimumSupportedVersion&nbsp;</td>
+                <td>Minimum version of the MacOS supported.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Html5Enabled&nbsp;</td>
+                <td>Method of deploying and using the Html5 Receiver.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Html5Platforms&nbsp;</td>
+                <td>The supported Html5 platforms.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Html5Preferences&nbsp;</td>
+                <td>Html5 Receiver preferences.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Html5SingleTabLaunch&nbsp;</td>
+                <td>Launch Html5 Receiver in the same browser tab.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Html5ChromeAppOrigins&nbsp;</td>
+                <td>The Html5 Chrome Application Origins settings.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Html5ChromeAppPreferences&nbsp;</td>
+                <td>The Html5 Chrome Application preferences.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ProtocolHandlerEnabled&nbsp;</td>
+                <td>Enable the Receiver Protocol Handler.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ProtocolHandlerPlatforms&nbsp;</td>
+                <td>The supported Protocol Handler platforms.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ProtocolHandlerSkipDoubleHopCheckWhenDisabled&nbsp;</td>
+                <td>Skip the Protocol Handle double hop check.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter Enabled: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter UpgradeAtLogin: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter ShowAfterLogin: The .NET 'System.Boolean' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter Win32Path: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter MacOSPath: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter MacOSMinimumSupportedVersion: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.Html5ClientMode</h3>
+        <div>Parameter Html5Enabled: The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.Html5ClientMode' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter Html5Platforms: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Html5Preferences: The .NET 'System.String' reference type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter Html5SingleTabLaunch: The .NET 'System.Boolean' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter Html5ChromeAppOrigins: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Html5ChromeAppPreferences: The .NET 'System.String' reference type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter ProtocolHandlerEnabled: The .NET 'System.Boolean' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter ProtocolHandlerPlatforms: The .NET 'System.String' reference type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter ProtocolHandlerSkipDoubleHopCheckWhenDisabled: The .NET 'System.Boolean' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set WebReceiver Plug-in Assistant options</h3>
+                <pre><code>$receiver = Get-STFWebReceiverService
+Set-STFWebReceiverPluginAssistant -WebReceiverService $receiver -UpgradeAtLogin $true</code></pre>
+                <div>REMARKS<br>Set the WebReceiver Plug-in Assistant client options to upgrade Receiver at login.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

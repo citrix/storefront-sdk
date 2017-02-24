@@ -1,0 +1,231 @@
+﻿<html>
+    <head>
+        <title>Set-STFStoreFarm</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFStoreFarm</h1>
+        <div>Set the details of an exiting farm</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFStoreFarm [-Farm] &lt;Farm&gt; [[-FarmType] &lt;XenApp | XenDesktop | AppController | VDIinaBox | Store&gt;] [[-Servers] &lt;String[]&gt;] [[-ServiceUrls] &lt;String[]&gt;] [[-Port] &lt;Int32&gt;] [[-TransportType] &lt;HTTP | HTTPS | SSL&gt;] [[-SSLRelayPort] &lt;Int32&gt;] [[-LoadBalance] &lt;Boolean&gt;] [[-AllFailedBypassDuration] &lt;Int32&gt;] [[-BypassDuration] &lt;Int32&gt;] [[-TicketTimeToLive] &lt;Int32&gt;] [[-RadeTicketTimeToLive] &lt;Int32&gt;] [[-MaxFailedServersPerRequest] &lt;Int32&gt;] [[-Zones] &lt;String[]&gt;] [[-Product] &lt;String&gt;] [[-RestrictPoPs] &lt;String&gt;] [[-FarmGuid] &lt;String&gt;] [[-PassThru] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Set-STFStoreFarm [-StoreService] &lt;StoreService&gt; [-FarmName] &lt;String&gt; [[-FarmType] &lt;XenApp | XenDesktop | AppController | VDIinaBox | Store&gt;] [[-Servers] &lt;String[]&gt;] [[-ServiceUrls] &lt;String[]&gt;] [[-Port] &lt;Int32&gt;] [[-TransportType] &lt;HTTP | HTTPS | SSL&gt;] [[-SSLRelayPort] &lt;Int32&gt;] [[-LoadBalance] &lt;Boolean&gt;] [[-AllFailedBypassDuration] &lt;Int32&gt;] [[-BypassDuration] &lt;Int32&gt;] [[-TicketTimeToLive] &lt;Int32&gt;] [[-RadeTicketTimeToLive] &lt;Int32&gt;] [[-MaxFailedServersPerRequest] &lt;Int32&gt;] [[-Zones] &lt;String[]&gt;] [[-Product] &lt;String&gt;] [[-RestrictPoPs] &lt;String&gt;] [[-FarmGuid] &lt;String&gt;] [[-PassThru] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the details of an existing farm.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFStoreFarm.html'>Add-STFStoreFarm</a><br/>
+           * <a href='Remove-STFStoreFarm.html'>Remove-STFStoreFarm</a><br/>
+           * <a href='Get-STFStoreFarm.html'>Get-STFStoreFarm</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Farm&nbsp;</td>
+                <td>The farm object to configure&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store service the farm options should be updated for&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FarmName&nbsp;</td>
+                <td>The name of the Farm to update&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FarmType&nbsp;</td>
+                <td>The type of farm to be added. XenDesktop or XenApp for example&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Servers&nbsp;</td>
+                <td>The hostnames or IP addresses of the xml services&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ServiceUrls&nbsp;</td>
+                <td>The url to the service location used to provide web and SaaS apps via this farm.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Port&nbsp;</td>
+                <td>Service communication port&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>TransportType&nbsp;</td>
+                <td>Type of transport to use. Http, Https, SSL for example&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SSLRelayPort&nbsp;</td>
+                <td>The SSL Relay port&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LoadBalance&nbsp;</td>
+                <td>Round robin load balance the xml service servers&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllFailedBypassDuration&nbsp;</td>
+                <td>Period of time to skip all xml service requests should all servers fail to respond&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>BypassDuration&nbsp;</td>
+                <td>Period of time to skip a server when is fails to respond&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>TicketTimeToLive&nbsp;</td>
+                <td>Period of time an ICA launch ticket is valid once requested on pre 7.0 XenApp and XenDesktop farms&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RadeTicketTimeToLive&nbsp;</td>
+                <td>Period of time a RADE launch ticket is valid once requested on pre 7.0 XenApp and XenDesktop farms&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>MaxFailedServersPerRequest&nbsp;</td>
+                <td>Maximum number of servers within a single farm that can fail before aborting a request&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Zones&nbsp;</td>
+                <td>The list of Zone names associated with the Store Farm&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Product&nbsp;</td>
+                <td>Cloud deployments only otherwise ignored. The product name of the farm configured&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RestrictPoPs&nbsp;</td>
+                <td>Cloud deployments only otherwise ignored. Restricts GWaaS traffic to the specified POP&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FarmGuid&nbsp;</td>
+                <td>Cloud deployments only otherwise ignored. A tag indicating the scope of the farm&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PassThru&nbsp;</td>
+                <td>The resulting Store Farm&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.Farm</h3>
+        <div>Parameter Farm: A .NET class representing the configuration of a Farm in StoreFront Store service</div>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.String</h3>
+        <div>Parameter FarmName: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.Store.FarmType</h3>
+        <div>Parameter FarmType: The .NET 'Citrix.StoreFront.Model.Store.FarmType' value type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter Servers: The .NET 'System.String' reference type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter ServiceUrls: The .NET 'System.String' reference type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter Port: The .NET 'System.Int32' value type</div>
+        <h3>Citrix.StoreFront.Model.Store.TransportType</h3>
+        <div>Parameter TransportType: The .NET 'Citrix.StoreFront.Model.Store.TransportType' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter SSLRelayPort: The .NET 'System.Int32' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter LoadBalance: The .NET 'System.Boolean' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter AllFailedBypassDuration: The .NET 'System.Int32' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter BypassDuration: The .NET 'System.Int32' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter TicketTimeToLive: The .NET 'System.Int32' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter RadeTicketTimeToLive: The .NET 'System.Int32' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter MaxFailedServersPerRequest: The .NET 'System.Int32' value type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter Zones: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Product: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter RestrictPoPs: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter FarmGuid: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter PassThru: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Reconfigure existing farm</h3>
+                <pre><code>$store = Get-STFStoreService
+$farm = Get-STFStoreFarm -StoreService $storeService
+Set-STFStoreFarm $farm -FarmType XenDesktop -Port 80 -TransportType HTTP -Servers Xen1,Xen2</code></pre>
+                <div>REMARKS<br>Reconfigure the settings on an existing farm.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

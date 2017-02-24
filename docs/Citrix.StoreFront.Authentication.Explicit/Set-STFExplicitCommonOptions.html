@@ -1,0 +1,120 @@
+﻿<html>
+    <head>
+        <title>Set-STFExplicitCommonOptions</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFExplicitCommonOptions</h1>
+        <div>Set the ExplicitCommon protocol options</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFExplicitCommonOptions [-AuthenticationService] &lt;AuthenticationService&gt; [[-Domains] &lt;String[]&gt;] [[-DefaultDomain] &lt;String&gt;] [[-HideDomainField] &lt;Boolean&gt;] [[-AllowUserPasswordChange] &lt;Always | ExpiredOnly | Never&gt;] [[-ShowPasswordExpiryWarning] &lt;Never | Windows | Custom&gt;] [[-PasswordExpiryWarningPeriod] &lt;Int32&gt;] [[-AllowZeroLengthPassword] &lt;Boolean&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the ExplicitCommon Authentication service protocol options.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFExplicitCommonOptions.html'>Get-STFExplicitCommonOptions</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>The Authentication service to set the ExplicitCommon options for&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Domains&nbsp;</td>
+                <td>List of trusted domains&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DefaultDomain&nbsp;</td>
+                <td>The default domain to use when omitted during login&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>HideDomainField&nbsp;</td>
+                <td>Hide the domain field on the login form&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllowUserPasswordChange&nbsp;</td>
+                <td>Configure when a user can change a password&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ShowPasswordExpiryWarning&nbsp;</td>
+                <td>Show the password expiry warning to the user&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PasswordExpiryWarningPeriod&nbsp;</td>
+                <td>The period of time in days before the expiry warning should be shown&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllowZeroLengthPassword&nbsp;</td>
+                <td>Allow a zero length password&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h3>System.String[]</h3>
+        <div>Parameter Domains: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter DefaultDomain: The .NET 'System.String' reference type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter HideDomainField: The .NET 'System.Boolean' value type</div>
+        <h3>Citrix.StoreFront.Model.Authentication.PasswordChange</h3>
+        <div>Parameter AllowUserPasswordChange: The .NET 'Citrix.StoreFront.Model.Authentication.PasswordChange' value type</div>
+        <h3>Citrix.StoreFront.Model.Authentication.PasswordExpiryWarning</h3>
+        <div>Parameter ShowPasswordExpiryWarning: The .NET 'Citrix.StoreFront.Model.Authentication.PasswordExpiryWarning' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter PasswordExpiryWarningPeriod: The .NET 'System.Int32' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter AllowZeroLengthPassword: The .NET 'System.Boolean' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set the ExplicitCommon protocol options</h3>
+                <pre><code>$authentication = Get-STFAuthenticationService
+Set-STFExplicitCommonOptions -AuthenticationService $authentication -Domains @("Alpha","Beta","Capa") -DefaultDomain Alpha -HideDomainField $true -AllowChangePassword Always -ShowPasswordExpiryWarning Windows -PasswordExpiryWarningPeriod 10</code></pre>
+                <div>REMARKS<br>Sets the ExplicitCommon options on the only configured authentication service.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

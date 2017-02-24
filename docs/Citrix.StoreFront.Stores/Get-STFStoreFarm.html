@@ -1,0 +1,94 @@
+﻿<html>
+    <head>
+        <title>Get-STFStoreFarm</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFStoreFarm</h1>
+        <div>Get farm configured for a Store</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFStoreFarm [-StoreService] &lt;StoreService&gt; [[-FarmName] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the XenApp\XenDesktop farms configured in the Store service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Remove-STFStoreFarm.html'>Remove-STFStoreFarm</a><br/>
+           * <a href='Add-STFStoreFarm.html'>Add-STFStoreFarm</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store service to query&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FarmName&nbsp;</td>
+                <td>The farm name to request settings for&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.String</h3>
+        <div>Parameter FarmName: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>Farm</h3>
+        <div>A .NET class representing the configuration of a Farm in StoreFront Store service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get all Store farms</h3>
+                <pre><code>$storeservice = Get-STFStoreService
+Get-STFStoreFarm -StoreService $storeservice</code></pre>
+                <div>REMARKS<br>Get all farms configured in a Store<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+FarmName                : Controller
+Port                    : 80
+SSLRelayPort            : 443
+TransportType           : HTTP
+LoadBalance             : True
+FarmType                : XenApp
+Servers                 : {xa65}
+AllFailedBypassDuration : 0
+BypassDuration          : 60
+TicketTimeToLive        : 100
+RadeTicketTimeToLive    : 100
+
+FarmName                : Controller2
+Port                    : 80
+SSLRelayPort            : 443
+TransportType           : HTTP
+LoadBalance             : False
+FarmType                : XenDesktop
+Servers                 : {XD75}
+AllFailedBypassDuration : 0
+BypassDuration          : 60
+TicketTimeToLive        : 100
+RadeTicketTimeToLive    : 100</code></pre>
+    </body>
+</html>

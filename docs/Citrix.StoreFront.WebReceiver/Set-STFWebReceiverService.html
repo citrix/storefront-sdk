@@ -1,0 +1,92 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverService</h1>
+        <div>Configure Receiver for Web</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverService [-WebReceiverService] &lt;WebReceiverService&gt; [[-ClassicReceiverExperience] &lt;Boolean&gt;] [[-SessionStateTimeout] &lt;Int32&gt;] [[-DefaultIISSite] &lt;SwitchParameter&gt;] [[-PassThru] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configure Receiver for Web service options.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>Receiver for Web service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ClassicReceiverExperience&nbsp;</td>
+                <td>Enable or disable the classic or unified Receiver experience&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SessionStateTimeout&nbsp;</td>
+                <td>Set the session state timeout, in minutes.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DefaultIISSite&nbsp;</td>
+                <td>Set the Receiver for Web site as the default page in IIS&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PassThru&nbsp;</td>
+                <td>Output the updated WebReceiver object&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter ClassicReceiverExperience: The .NET 'System.Boolean' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter SessionStateTimeout: The .NET 'System.Int32' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter DefaultIISSite: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter PassThru: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set Receiver for Web options</h3>
+                <pre><code>$rfw = Get-STFWebReceiverService
+Set-STFWebReceiverService $rfw -CommunicationAttempts 2 -ShowDesktopViewer $false</code></pre>
+                <div>REMARKS<br>Configure the number of communication attempts to two and disable the desktop viewer on the only configured Receiver <br>for Web service.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

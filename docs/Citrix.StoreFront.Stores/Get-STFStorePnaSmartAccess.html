@@ -1,0 +1,64 @@
+﻿<html>
+    <head>
+        <title>Get-STFStorePnaSmartAccess</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFStorePnaSmartAccess</h1>
+        <div>Get the SmartAccess settings</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFStorePnaSmartAccess [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the servers and certificates that are used to supply and verify SmartAccess conditions in PNA headers. The certificate thumbprint references a certificate in the Delivery Services certificate store. The cerificate is used to verify the signed headers to ensure a trusted source.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Grant-STFStorePnaSmartAccess.html'>Grant-STFStorePnaSmartAccess</a><br/>
+           * <a href='Revoke-STFStorePnaSmartAccess.html'>Revoke-STFStorePnaSmartAccess</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store to list the trusted SmartAccess conditions certificates for.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h2> Return Values </h2>
+        <h3>AccessConditionsTrustSettings</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Store.AccessConditionsTrustSettings' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get SmartAccess trust settings</h3>
+                <pre><code>$store = Get-STFStoreService -VirtualPath /Citrix/Store
+Get-STFStorePnaSmartAccess -StoreService $store</code></pre>
+                <div>REMARKS<br>Gets the trusted server name, certificates and validity period.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+HeaderValidity         : 300
+AccessConditionsTrusts: {MyXenMobile}</code></pre>
+    </body>
+</html>

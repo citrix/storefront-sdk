@@ -1,0 +1,85 @@
+﻿<html>
+    <head>
+        <title>Get-STFInstalledFeatures</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFInstalledFeatures</h1>
+        <div>Get the details of the Storefront features on the system</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFInstalledFeatures [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the details of the Storefront features on the system.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        <h2> Input Type </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Return Values </h2>
+        <h3>FeatureClass</h3>
+        <div>The .NET 'Citrix.DeliveryServices.Framework.Feature.FeatureClass' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get all features installed</h3>
+                <pre><code>Get-STFInstalledFeatures</code></pre>
+                <div>REMARKS<br>Get all the features that are installed.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Path                           : C:\Program Files\Citrix\Receiver StoreFront\ClusterManagement
+ConfigLocation                 : C:\Program Files\Citrix\Receiver StoreFront\ClusterManagement\feature.config
+ConfigTypeName                 : Executable
+Id                             : 82545fc5-2809-4d69-941f-21163d8bca30
+ClassType                      : 4a9f261e-db72-4980-a8ca-09e81927a766
+FrameworkController            : Citrix.DeliveryServices.Framework.FileBased.FrameworkController
+ParentInstance                 : 00000000-0000-0000-0000-000000000000
+RootInstance                   : 82545fc5-2809-4d69-941f-21163d8bca30
+TenantId                       : 860e9401-39c8-4f2c-928d-34251102b840
+Data                           : {[DeployFolder, C:\Program Files\Citrix\Receiver StoreFront\ClusterManagement],
+                                 [EventSource, ], [Name, ClusterManagement], [ConfigLocation, C:\Program
+                                 Files\Citrix\Receiver StoreFront\ClusterManagement\feature.config]...}
+ReadOnlyData                   : {[Name, ClusterManagement], [Cmdlet, Add-DSBasicFeature], [Snapin,
+                                 Citrix.DeliveryServices.Framework.Commands], [Tenant,
+                                 860e9401-39c8-4f2c-928d-34251102b840]}
+ParameterData                  : {[Folder, C:\Program Files\Citrix\Receiver StoreFront\ClusterManagement],
+                                 [RequiredInstanceId, 82545fc5-2809-4d69-941f-21163d8bca30], [FeatureClassId,
+                                 4a9f261e-db72-4980-a8ca-09e81927a766]}
+AdditionalInstanceDependencies : {}
+IsDeployed                     : True
+FeatureClass                   : Citrix.DeliveryServices.Framework.Feature.FeatureClass
+
+Path                           : C:\Program Files\Citrix\Receiver StoreFront\Services\ConfigurationReplication
+ConfigLocation                 : C:\Program Files\Citrix\Receiver StoreFront\Services\ConfigurationReplication\Citrix.D
+                                 eliveryServices.ConfigurationReplicationService.ServiceHost.exe.config
+ConfigTypeName                 : Executable
+Id                             : a56e0a1b-661b-4cd9-8802-89e34c0e989f
+ClassType                      : e6bb3590-d9bd-4e76-8d4d-a340a8635413
+FrameworkController            : Citrix.DeliveryServices.Framework.FileBased.FrameworkController
+ParentInstance                 : 00000000-0000-0000-0000-000000000000
+RootInstance                   : a56e0a1b-661b-4cd9-8802-89e34c0e989f
+TenantId                       : 860e9401-39c8-4f2c-928d-34251102b840
+Data                           : {[DeployFolder, C:\Program Files\Citrix\Receiver
+                                 StoreFront\Services\ConfigurationReplication], [EventSource, ], [StartService, True],
+                                 [WindowsServiceName, CitrixConfigurationReplication]...}
+ReadOnlyData                   : {[WindowsServiceName, CitrixConfigurationReplication], [Name,
+                                 ConfigurationReplication], [Cmdlet, Add-DSConfigurationReplication], [Snapin,
+                                 Citrix.DeliveryServices.ConfigurationReplication.Commands]...}
+ParameterData                  : {[Folder, C:\Program Files\Citrix\Receiver
+                                 StoreFront\Services\ConfigurationReplication], [StartService, ]}
+AdditionalInstanceDependencies : {}
+IsDeployed                     : True
+FeatureClass                   : Citrix.DeliveryServices.Framework.Feature.FeatureClass
+...</code></pre>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+﻿<html>
+    <head>
+        <title>Import-STFNetScalerConfiguration</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Import-STFNetScalerConfiguration</h1>
+        <div>Import a NetScaler remote access configuration</div>
+
+        <h2> Syntax </h2>
+        <code>Import-STFNetScalerConfiguration [-Configuration] &lt;NetScalerConfigurationDocument&gt; [[-PropagateChanges] &lt;SwitchParameter&gt;] [[-RoamingGatewaysToOverwrite] &lt;RoamingGateway[]&gt;] [[-CreateNew] &lt;SwitchParameter&gt;] [[-LogonType] &lt;Domain | RSA | DomainAndRSA | SMS | SmartCard | SmartCardDomain | SmartCardRSA | SmartCardDomainAndRSA | SmartCardSMS&gt;] [[-CallbackUrl] &lt;String&gt;] [[-GatewayIndex] &lt;Int32&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Import a NetScaler remote access configuration supplied by a NetScaler administrator.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Read-STFNetScalerConfiguration.html'>Read-STFNetScalerConfiguration</a><br/>
+           * <a href='Wait-STFPublishServerGroupConfiguration.html'>Wait-STFPublishServerGroupConfiguration</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Configuration&nbsp;</td>
+                <td>A NetScaler configuration to be imported into StoreFront.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PropagateChanges&nbsp;</td>
+                <td>Propagate configuration changes to other members of the cluster.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RoamingGatewaysToOverwrite&nbsp;</td>
+                <td>Specify gateways that should be overwritten if the import finds more than one matching gateway that will be overwritten by the import.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>CreateNew&nbsp;</td>
+                <td>Specify that a new gateway should be created rather than update an existing gateway.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LogonType&nbsp;</td>
+                <td>Specify the logon type for a gateway overriding whatever is specified in the configuration document.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>CallbackUrl&nbsp;</td>
+                <td>Optional callback url to replace the suggested url if it cannot be resolved.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>GatewayIndex&nbsp;</td>
+                <td>Optional ability to specify which gateway from the configuration which will be imported.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.NetScalerConfigurationDocument</h3>
+        <div>Parameter Configuration: The .NET 'Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.NetScalerConfigurationDocument' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter PropagateChanges: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>Citrix.StoreFront.Model.Roaming.RoamingGateway[]</h3>
+        <div>Parameter RoamingGatewaysToOverwrite: The .NET 'Citrix.StoreFront.Model.Roaming.RoamingGateway' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter CreateNew: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.ImportLogonType</h3>
+        <div>Parameter LogonType: The .NET 'Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.ImportLogonType' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter CallbackUrl: The .NET 'System.String' reference type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter GatewayIndex: The .NET 'System.Int32' value type</div>
+        <h2> Return Values </h2>
+        <h3>DocumentValidation</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.DocumentValidation' reference type</div>
+        <h2> Notes </h2>
+        <div>-WhatIf parameter can be used to verify the configuration consistency.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Import a NetScaler remote access configuration</h3>
+                <pre><code>$netscalerConfiguration = Read-STFNetScalerConfiguration –Path C:\NSG\Configuration.zip
+$stasToUpdate = Test-STFSecureTicketAuthority -StaConfigurationObject $netscalerConfiguration
+Import-STFNetScalerConfiguration -Configuration $netscalerConfiguration</code></pre>
+                <div>REMAR</div>
+                <pre><code>KS
+
+
+
+
+The example reads in a NetScaler configuration package, validates that the Secure Ticket Authorities can be resolved 
+and imports the configuration.
+
+If validation errors are found they are output to the pipeline. If propagating to the cluster the progress can be 
+monitored with Wait-STFPublishServerGroupConfiguration</code></pre>
+        <h3> EXAMPLE 2 Import specific vServer from NetScaler remote access configuration file.</h3>
+                <pre><code>$ImportedGateways = Read-STFNetScalerConfiguration -path "$env: USERPROFILE\desktop\GatewayConfig.zip"
+Import-STFNetScalerConfiguration -Configuration $ImportedGateways -GatewayIndex 0
+Import-STFNetScalerConfiguration -Configuration $ImportedGateways -GatewayIndex 1
+Import-STFNetScalerConfiguration -Configuration $ImportedGateways -GatewayIndex 2</code></pre>
+                <div>REMARKS<br>The example reads in a NetScaler configuration package and then imports the first gateway defined in the package, <br>followed by the second and the third.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

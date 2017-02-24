@@ -1,0 +1,204 @@
+﻿<html>
+    <head>
+        <title>Add-STFRoamingGateway</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Add-STFRoamingGateway</h1>
+        <div>Add a new Gateway that can be used for remote access and authentication.</div>
+
+        <h2> Syntax </h2>
+        <code>Add-STFRoamingGateway [-RoamingGateway] &lt;RoamingGateway&gt; [[-RoamingService] &lt;RoamingService&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Add-STFRoamingGateway [-Name] &lt;String&gt; [-LogonType] &lt;UsedForHDXOnly | Domain | RSA | DomainAndRSA | SMS | GatewayKnows | SmartCard | None&gt; [[-SmartCardFallbackLogonType] &lt;UsedForHDXOnly | Domain | RSA | DomainAndRSA | SMS | GatewayKnows | SmartCard | None&gt;] [[-Version] &lt;Version10_0_69_4 | Version9x&gt;] [-GatewayUrl] &lt;Uri&gt; [[-CallbackUrl] &lt;Uri&gt;] [[-SessionReliability] &lt;SwitchParameter&gt;] [[-RequestTicketTwoSTAs] &lt;SwitchParameter&gt;] [[-SubnetIPAddress] &lt;String&gt;] [[-SecureTicketAuthorityUrls] &lt;Uri[]&gt;] [[-StasUseLoadBalancing] &lt;SwitchParameter&gt;] [[-StasBypassDuration] &lt;TimeSpan&gt;] [[-PassThru] &lt;SwitchParameter&gt;] [[-GslbUrl] &lt;Uri&gt;] [[-RoamingService] &lt;RoamingService&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Add a new Gateway to the global gateway list. Gateways for remote access and authentication are added to Stores from the globally managed list.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFRoamingGateway.html'>Get-STFRoamingGateway</a><br/>
+           * <a href='Remove-STFRoamingGateway.html'>Remove-STFRoamingGateway</a><br/>
+           * <a href='Set-STFRoamingGateway.html'>Set-STFRoamingGateway</a><br/>
+           * <a href='New-STFRoamingGateway.html'>New-STFRoamingGateway</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RoamingGateway&nbsp;</td>
+                <td>The Gateway to add&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>The Gateway friendly name&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LogonType&nbsp;</td>
+                <td>The login type required and supported by the Gateway&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SmartCardFallbackLogonType&nbsp;</td>
+                <td>The login type to use when SmartCard fails&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Version&nbsp;</td>
+                <td>The Citrix NetScaler Gateway version&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>GatewayUrl&nbsp;</td>
+                <td>The Gateway Url&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>CallbackUrl&nbsp;</td>
+                <td>The Gateway authentication NetScaler call-back Url&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SessionReliability&nbsp;</td>
+                <td>Enable session reliability. Session Reliability keeps sessions active and on the user’s screen when network connectivity is interrupted. Users continue to see the application they are using until network connectivity resumes.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RequestTicketTwoSTAs&nbsp;</td>
+                <td>Request STA tickets from two STA servers (Requires two STA servers)&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SubnetIPAddress&nbsp;</td>
+                <td>IP address&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SecureTicketAuthorityUrls&nbsp;</td>
+                <td>Secure Ticket Authority server Urls. The Secure Ticket Authority (STA) is responsible for issuing session tickets in response to connection requests for published resources on XenApp. These session tickets form the basis of authentication and authorization for access to published resources.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StasUseLoadBalancing&nbsp;</td>
+                <td>Load balance between the configured STA servers (requires two or more STA servers)&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StasBypassDuration&nbsp;</td>
+                <td>Time before retrying a failed STA server&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PassThru&nbsp;</td>
+                <td>Output the added Gateway&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>GslbUrl&nbsp;</td>
+                <td>An optional URL which corresponds to the GSLB domain used by multiple gateways&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RoamingService&nbsp;</td>
+                <td>The Roaming service&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Roaming.RoamingGateway</h3>
+        <div>Parameter RoamingGateway: The .NET 'Citrix.StoreFront.Model.Roaming.RoamingGateway' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.Roaming.GatewayLogonType</h3>
+        <div>Parameter LogonType: The .NET 'Citrix.StoreFront.Model.Roaming.GatewayLogonType' value type</div>
+        <h3>Citrix.StoreFront.Model.Roaming.GatewayLogonType</h3>
+        <div>Parameter SmartCardFallbackLogonType: The .NET 'Citrix.StoreFront.Model.Roaming.GatewayLogonType' value type</div>
+        <h3>Citrix.StoreFront.Model.Roaming.GatewayVersion</h3>
+        <div>Parameter Version: The .NET 'Citrix.StoreFront.Model.Roaming.GatewayVersion' value type</div>
+        <h3>System.Uri</h3>
+        <div>Parameter GatewayUrl: The .NET 'System.Uri' reference type</div>
+        <h3>System.Uri</h3>
+        <div>Parameter CallbackUrl: The .NET 'System.Uri' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter SessionReliability: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter RequestTicketTwoSTAs: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter SubnetIPAddress: The .NET 'System.String' reference type</div>
+        <h3>System.Uri[]</h3>
+        <div>Parameter SecureTicketAuthorityUrls: The .NET 'System.Uri' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter StasUseLoadBalancing: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter StasBypassDuration: The .NET 'System.TimeSpan' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter PassThru: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Uri</h3>
+        <div>Parameter GslbUrl: The .NET 'System.Uri' reference type</div>
+        <h3>Citrix.StoreFront.Model.Roaming.RoamingService</h3>
+        <div>Parameter RoamingService: A .NET class representing the configuration of a StoreFront Roaming service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Add Version 10x Gateway</h3>
+                <pre><code>Add-STFRoamingGateway -Name "Netscaler10x" -LogonType Domain -Version Version10_0_69_4 -GatewayUrl https://gateway.citrix.storefront -CallbackUrl https://gateway.citrix.storefront/callback -SessionReliability:$true -RequestTicketTwoSTAs:$true -SubnetIPAddress 10.80.5.170 -SecureTicketAuthorityUrls https://XenApp1STA,https://XenApp2STA -PassThru</code></pre>
+                <div>REMARKS<br>Add a version 10 or greater Gateway.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Add Version 9 Gateway</h3>
+                <pre><code>Add-STFRoamingGateway -Name "Netscaler9" -LogonType SmartCard -SmartCardFallbackLogonType Domain -Version Version9x -GatewayUrl https://EuNetscaler -CallbackUrl https://EuNetscaler/Callback -SessionReliability -RequestTicketTwoSTAs -SubnetIPAddress 10.80.5.170 -SecureTicketAuthorityUrls https://myxs/STA -PassThru</code></pre>
+                <div>REMARKS<br>Add a version 9 Gateway.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 3 Add three GSLB Gateways</h3>
+                <pre><code>Add-STFRoamingGateway -Name "EMEAGateway" -LogonType DomainAndRSA -Version Version10_0_69_4 -GatewayUrl https://emeagateway.citrix.storefront -GslbUrl https://gslb.citrix.storefront -CallbackUrl https://emeagateway.citrix.storefront/callback -SessionReliability:$true -RequestTicketTwoSTAs:$true - SubnetIPAddress 10.80.5.170 - SecureTicketAuthorityUrls https://XenApp1STA.citrix.storefront,https://XenApp2STA.citrix.storefront -PassThru \n
+Add-STFRoamingGateway -Name "USGateway" -LogonType DomainAndRSA -Version Version10_0_69_4 -GatewayUrl https://usgateway.citrix.storefront -GslbUrl https://gslb.citrix.storefront -CallbackUrl https://usgateway.citrix.storefront/callback -SessionReliability:$true -RequestTicketTwoSTAs:$true - SubnetIPAddress 10.80.5.171 - SecureTicketAuthorityUrls https://XenApp1STA.citrix.storefront,https://XenApp2STA.citrix.storefront -PassThru \n
+Add-STFRoamingGateway -Name "APACGateway" -LogonType DomainAndRSA -Version Version10_0_69_4 -GatewayUrl https://apacgateway.citrix.storefront -GslbUrl https://gslb.citrix.storefront -CallbackUrl https://apacgateway.citrix.storefront/callback -SessionReliability:$true -RequestTicketTwoSTAs:$true - SubnetIPAddress 10.80.5.172 - SecureTicketAuthorityUrls https://XenApp1STA.citrix.storefront,https://XenApp2STA.citrix.storefront -PassThru</code></pre>
+                <div>REMARKS<br>Add Multiple GSLB Gateways.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

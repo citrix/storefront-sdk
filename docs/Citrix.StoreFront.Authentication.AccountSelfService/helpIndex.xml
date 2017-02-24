@@ -1,0 +1,9 @@
+<helpIndex ModuleName="Citrix.StoreFront.Authentication.AccountSelfService" ModuleFullName="Citrix.StoreFront.Authentication.AccountSelfService" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Authentication.AccountSelfService.html">Citrix.StoreFront.Authentication.AccountSelfService</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Set-STFAccountSelfService.html">Set-STFAccountSelfService</reference>
+    <reference name="Get-STFAccountSelfService.html">Get-STFAccountSelfService</reference>
+  </cmdlets>
+</helpIndex>

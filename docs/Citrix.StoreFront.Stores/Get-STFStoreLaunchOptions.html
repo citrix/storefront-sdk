@@ -1,0 +1,73 @@
+﻿<html>
+    <head>
+        <title>Get-STFStoreLaunchOptions</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFStoreLaunchOptions</h1>
+        <div>Get Store launch options</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFStoreLaunchOptions [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the options used by a Store when launching an application or desktop on XenApp and XenDesktop.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Set-STFStoreLaunchOptions.html'>Set-STFStoreLaunchOptions</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store service to query&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h2> Return Values </h2>
+        <h3>Launch</h3>
+        <div>A .NET class representing the configuration of Launch settings in a StoreFront Store service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get the Store launch options</h3>
+                <pre><code>$storeservice = Get-STFStoreService
+Get-STFStoreLaunchOptions -StoreService $storeservice</code></pre>
+                <div>REMARKS<br>Get the launch options used by the supplied Store service.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+SetNoLoadBiasFlag                     : False
+AddressResolutionType                 : DnsPort
+RequestICAClientSecureChannel         : DetectAnyCipers
+IgnoreClientProvidedClientAddress     : False
+OverlayAutoLoginCredentialsWithTicket : False
+OverrideIcaClientName                 : False
+RequireLaunchReference                : True
+AllowFontSmoothing                    : True
+ShowDesktopViewer                     : False
+AllowSpecialFolderRedirection         : False
+ClientProxyPolicy                     : {}
+RoutingPolicy                         : Citrix.StoreFront.Model.Store.RoutingPolicy</code></pre>
+    </body>
+</html>

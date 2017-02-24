@@ -1,0 +1,47 @@
+<helpIndex ModuleName="Citrix.StoreFront" ModuleFullName="Citrix.StoreFront" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.html">Citrix.StoreFront</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Import-STFConfiguration.html">Import-STFConfiguration</reference>
+    <reference name="Export-STFConfiguration.html">Export-STFConfiguration</reference>
+    <reference name="Unprotect-STFConfigurationExport.html">Unprotect-STFConfigurationExport</reference>
+    <reference name="Set-STFDeployment.html">Set-STFDeployment</reference>
+    <reference name="Get-STFDeployment.html">Get-STFDeployment</reference>
+    <reference name="Add-STFDeployment.html">Add-STFDeployment</reference>
+    <reference name="Clear-STFDeployment.html">Clear-STFDeployment</reference>
+    <reference name="Set-STFDiagnostics.html">Set-STFDiagnostics</reference>
+    <reference name="Set-STFDomainService.html">Set-STFDomainService</reference>
+    <reference name="Get-STFDomainService.html">Get-STFDomainService</reference>
+    <reference name="Uninstall-STFFeature.html">Uninstall-STFFeature</reference>
+    <reference name="Install-STFFeature.html">Install-STFFeature</reference>
+    <reference name="Reset-STFFeatureData.html">Reset-STFFeatureData</reference>
+    <reference name="Get-STFFeatureState.html">Get-STFFeatureState</reference>
+    <reference name="Add-STFFeatureState.html">Add-STFFeatureState</reference>
+    <reference name="Remove-STFFeatureState.html">Remove-STFFeatureState</reference>
+    <reference name="Set-STFFeatureState.html">Set-STFFeatureState</reference>
+    <reference name="New-STFFeatureState.html">New-STFFeatureState</reference>
+    <reference name="Get-STFFeatureStateNames.html">Get-STFFeatureStateNames</reference>
+    <reference name="New-STFFeatureStateProperty.html">New-STFFeatureStateProperty</reference>
+    <reference name="Clear-STFFeatureStates.html">Clear-STFFeatureStates</reference>
+    <reference name="Remove-STFHmacKey.html">Remove-STFHmacKey</reference>
+    <reference name="Add-STFHmacKey.html">Add-STFHmacKey</reference>
+    <reference name="Get-STFHmacKey.html">Get-STFHmacKey</reference>
+    <reference name="Update-STFHmacKey.html">Update-STFHmacKey</reference>
+    <reference name="Get-STFInstalledFeatures.html">Get-STFInstalledFeatures</reference>
+    <reference name="Get-STFPackage.html">Get-STFPackage</reference>
+    <reference name="Get-STFPeerResolutionService.html">Get-STFPeerResolutionService</reference>
+    <reference name="Wait-STFPublishServerGroupConfiguration.html">Wait-STFPublishServerGroupConfiguration</reference>
+    <reference name="Get-STFServerGroup.html">Get-STFServerGroup</reference>
+    <reference name="Publish-STFServerGroupConfiguration.html">Publish-STFServerGroupConfiguration</reference>
+    <reference name="Start-STFServerGroupJoin.html">Start-STFServerGroupJoin</reference>
+    <reference name="Stop-STFServerGroupJoin.html">Stop-STFServerGroupJoin</reference>
+    <reference name="Wait-STFServerGroupJoin.html">Wait-STFServerGroupJoin</reference>
+    <reference name="Get-STFServerGroupJoinState.html">Get-STFServerGroupJoinState</reference>
+    <reference name="Remove-STFServerGroupMember.html">Remove-STFServerGroupMember</reference>
+    <reference name="Save-STFService.html">Save-STFService</reference>
+    <reference name="Get-STFServiceMonitor.html">Get-STFServiceMonitor</reference>
+    <reference name="Set-STFServiceMonitor.html">Set-STFServiceMonitor</reference>
+    <reference name="Get-STFVersion.html">Get-STFVersion</reference>
+  </cmdlets>
+</helpIndex>

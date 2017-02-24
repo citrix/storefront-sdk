@@ -1,0 +1,97 @@
+﻿<html>
+    <head>
+        <title>Export-STFStoreSubscriptions</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Export-STFStoreSubscriptions</h1>
+        <div>Export subscriptions from a given Store</div>
+
+        <h2> Syntax </h2>
+        <code>Export-STFStoreSubscriptions [-UpdatedSince &lt;DateTime&gt;] [-FilePath] &lt;String&gt; [-UpdatedSince &lt;DateTime&gt;] [-StoreService] &lt;StoreService&gt; [-FilePath] &lt;String&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Export-STFStoreSubscriptions [-UpdatedSince &lt;DateTime&gt;] [-StoreService] &lt;StoreService&gt; [-FilePath] &lt;String&gt; [-UpdatedSince &lt;DateTime&gt;] [-StoreService] &lt;StoreService&gt; [-FilePath] &lt;String&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Export user subscriptions from a Store to a text file in csv format.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Import-STFStoreSubscriptions.html'>Import-STFStoreSubscriptions</a><br/>
+           * <a href='Restore-STFStoreSubscriptions.html'>Restore-STFStoreSubscriptions</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>UpdatedSince&nbsp;</td>
+                <td>Export subscriptions older than the date time last updated&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store service to process subscriptions for&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FilePath&nbsp;</td>
+                <td>Path of csv file&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ChunkSize&nbsp;</td>
+                <td>Chunk size for splitting data. Only appropriate for very large datasets if connectivity issues are seen.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.DateTime</h3>
+        <div>Parameter UpdatedSince: The .NET 'System.DateTime' value type</div>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.String</h3>
+        <div>Parameter FilePath: The .NET 'System.String' reference type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter ChunkSize: The .NET 'System.Int32' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Export from Store by friendly name</h3>
+                <pre><code>$StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
+Export-DSStoreSubscriptions -StoreName Store -FilePath "$env:userprofile\desktop\Export.txt"
+$StopWatch.Stop()
+Write-host "Total Elapsed Time: $($StopWatch.Elapsed.ToString())"</code></pre>
+                <div>REMARKS<br>Exports the subscriptions from the Store named "Store" and outputs the total time taken.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Total Elapsed Time: 00:00:05.3674858</code></pre>
+        <h3> EXAMPLE 2 Export from Store by object</h3>
+                <pre><code>$store = Get-STFStoreService
+Export-STFStoreSubscriptions -Store $store -FilePath "$env:userprofile\desktop\Export.txt"</code></pre>
+                <div>REMARKS<br>Exports all subscriptions from the only configured Store.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

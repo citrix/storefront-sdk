@@ -1,0 +1,59 @@
+﻿<html>
+    <head>
+        <title>Get-STFAccountSelfService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFAccountSelfService</h1>
+        <div>Gets the Account self-service configuration</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFAccountSelfService [-AuthenticationService] &lt;AuthenticationService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Gets the Account self-service configuration from the Authentication service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Set-STFAccountSelfService.html'>Set-STFAccountSelfService</a><br/>
+           * <a href='Get-STFPasswordManagerAccountSelfService.html'>Get-STFPasswordManagerAccountSelfService</a><br/>
+           * <a href='Set-STFPasswordManagerAccountSelfService.html'>Set-STFPasswordManagerAccountSelfService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>The Authentication service for which account self-service settings will be supplied&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h2> Return Values </h2>
+        <h3>AccountSelfServiceSummary</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Authentication.AccountSelfServiceSummary' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get Account self-service settings</h3>
+                <pre><code>$auth = Get-STFAuthenticationService
+Get-STFAuthenticationServiceAccountSelfService -AuthenticationService $auth</code></pre>
+                <div>REMARKS<br>Get the Account self-service details for the only configured Authentication service.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

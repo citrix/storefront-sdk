@@ -1,0 +1,73 @@
+﻿<html>
+    <head>
+        <title>New-STFSamlIdPCertificate</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>New-STFSamlIdPCertificate</h1>
+        <div>Create a new signing certificate to be used by a SAML Identity Provider</div>
+
+        <h2> Syntax </h2>
+        <code>New-STFSamlIdPCertificate [-SubjectName] &lt;String&gt; [-FilePath] &lt;String&gt; [[-Password] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Create a new signing certificate that is suitable to be used by a SAML Identity Provider.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SubjectName&nbsp;</td>
+                <td>The certificate subject name.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FilePath&nbsp;</td>
+                <td>The file path of the exported certificate.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Password&nbsp;</td>
+                <td>The optional password to use to protect the private key.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter SubjectName: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter FilePath: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Password: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>X509Certificate2</h3>
+        <div>The .NET 'System.Security.Cryptography.X509Certificates.X509Certificate2' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Create a new signing certificate to be used by a SAML Identity Provider.</h3>
+                <pre><code>$exported = New-STFSamlIdPCertificate -SubjectName 'Identity Provider Signing' -Path 'c:\temp\exported.pfx' -Password 'citrix'</code></pre>
+                <div>REMARKS<br>Create a new signing certificate, with subject name 'Identity Provider Signing', to be used by a SAML Identity <br>Provider in the specified authentication service, exported to the specified path with the specified password <br>protecting the private key.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

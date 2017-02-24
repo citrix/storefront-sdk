@@ -1,0 +1,178 @@
+﻿<html>
+    <head>
+        <title>Read-STFNetScalerConfiguration</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Read-STFNetScalerConfiguration</h1>
+        <div>Read a NetScaler remote access configuration</div>
+
+        <h2> Syntax </h2>
+        <code>Read-STFNetScalerConfiguration [-Path] &lt;String&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Reads a NetScaler remote access configuration package into a NetScalerConfigurationDocument object to be imported into StoreFront.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Test-STFSecureTicketAuthority.html'>Test-STFSecureTicketAuthority</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Path&nbsp;</td>
+                <td>The NetScaler configuration file path.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter Path: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>NetScalerConfigurationDocument</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.NetScalerConfigurationDocument' reference type</div>
+        <h2> Notes </h2>
+        <div>Configuration files are exported from NetScaler Gateway in .zip file format.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Read configuration package</h3>
+                <pre><code>$netscalerConfiguration = Read-STFNetScalerConfiguration –Path C:\NSG\Configuration.zip</code></pre>
+                <div>REMARKS<br>The populated object can be supplied to the related cmdlets for validation and import.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Certificate : [Subject]
+CN=Example Certificate
+
+[Issuer]
+  CN=Example NetScaler certificate
+
+[Serial Number]
+  26E230B95A8FC3BA49E5A59C8026473E
+
+[Not Before]
+  27/02/2013 09:41:26
+
+[Not After]
+  31/12/2039 23:59:59
+
+[Thumbprint]
+  96FA87705E10654AAF0A7E88BB46A7D77DC154CA
+
+Version     : 1.0
+Time        : 2016-01-25T15:37:22.34
+Document    : Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.Document</code></pre>
+        <h3> EXAMPLE 2 Read configuration package with verbose messaging</h3>
+                <pre><code>Read-STFNetScalerConfiguration –Path C:\NSG\Configuration.zip -Verbose</code></pre>
+                <div>REMARKS<br>The populated object can be supplied to the related cmdlets for validation and import. Messages related to the import <br>are output to the console<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Certificate : [Subject]
+CN=Example Certificate
+
+[Issuer]
+  CN=Example NetScaler certificate
+
+[Serial Number]
+  26E230B95A8FC3BA49E5A59C8026473E
+
+[Not Before]
+  27/02/2013 09:41:26
+
+[Not After]
+  31/12/2039 23:59:59
+
+[Thumbprint]
+  96FA87705E10654AAF0A7E88BB46A7D77DC154CA
+
+Version     : 1.0
+Time        : 2016-01-25T15:37:22.34
+Document    : Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.Document
+
+VERBOSE: The gateway id us.gateway.citrix.com:443 has no Secure Ticket Authorities defined so can only be used for
+authentication.
+VERBOSE: The gateway id uk.gateway.citrix.com:443 has no Secure Ticket Authorities defined so can only be used for
+authentication.</code></pre>
+        <h3> EXAMPLE 3 Read configuration package</h3>
+                <pre><code>$ImportedGateways = Read-STFNetScalerConfiguration -path "$env:USERPROFILE\desktop\GatewayConfig.zip" 
+                           $ImportedGateways.Document.Gateways</code></pre>
+                <div>REMARKS<br>The populated object can be inspected as shown to list all the gateway definitions. Messages related to the import are <br>output to the console<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+GatewayMode            : CVPN
+                          CallbackUrl            :
+                          GslbAddressUri         : https://gateway.domain.com/
+                          AddressUri             : https://ukgateway.domain.com/
+                          Address                : https://ukgateway.domain.com:443
+                          GslbAddress            : https://gateway.domain.com.com:443
+                          VipAddress             : 10.0.0.1
+                          Stas                   : {STA298854503, STA909374257, STA443006025, STA490101972...}
+                          StaLoadBalance         : True
+                          CertificateThumbprints : {F549AFAA29EBF61E8709F2316B3981AD503AF387}
+                          GatewayAuthType        : Domain
+                          GatewayEdition         : Enterprise
+                          ReceiverForWebSites    : 
+{Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.ReceiverForWebSite}
+
+                          GatewayMode            : CVPN
+                          CallbackUrl            :
+                          GslbAddressUri         : https://gateway.domain.com/
+                          AddressUri             : https://ukgateway.domain.com/
+                          Address                : https://ukgateway.domain.com:443
+                          GslbAddress            : https://gateway.domain.com.com:443
+                          VipAddress             : 10.0.0.2
+                          Stas                   : {STA298854503, STA909374257, STA443006025, STA490101972...}
+                          StaLoadBalance         : True
+                          CertificateThumbprints : {F549AFAA29EBF61E8709F2316B3981AD503AF387}
+                          GatewayAuthType        : DomainAndRSA
+                          GatewayEdition         : Enterprise
+                          ReceiverForWebSites    : 
+{Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.ReceiverForWebSite}</code></pre>
+        <h3> EXAMPLE 4 Read configuration package</h3>
+                <pre><code>$ImportedGateways = Read-STFNetScalerConfiguration -path "$env:USERPROFILE\desktop\GatewayConfig.zip" -GatewayIndex 0 
+                           $ImportedGateways.Document.Gateways[0]</code></pre>
+                <div>REMARKS<br>The populated object can be inspected as shown to show an individual gateway definition. Messages related to the <br>import are output to the console<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+GatewayMode            : CVPN
+                          CallbackUrl            :
+                          GslbAddressUri         : https://gateway.domain.com/
+                          AddressUri             : https://ukgateway.domain.com/
+                          Address                : https://ukgateway.domain.com:443
+                          GslbAddress            : https://gateway.domain.com.com:443
+                          VipAddress             : 10.0.0.1
+                          Stas                   : {STA298854503, STA909374257, STA443006025, STA490101972...}
+                          StaLoadBalance         : True
+                          CertificateThumbprints : {F549AFAA29EBF61E8709F2316B3981AD503AF387}
+                          GatewayAuthType        : Domain
+                          GatewayEdition         : Enterprise
+                          ReceiverForWebSites    : 
+{Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.ReceiverForWebSite}</code></pre>
+    </body>
+</html>

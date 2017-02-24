@@ -1,0 +1,17 @@
+<helpIndex ModuleName="Citrix.StoreFront.Authentication" ModuleFullName="Citrix.StoreFront.Authentication" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Authentication.html">Citrix.StoreFront.Authentication</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Get-STFAuthenticationProtocolsAvailable.html">Get-STFAuthenticationProtocolsAvailable</reference>
+    <reference name="Add-STFAuthenticationService.html">Add-STFAuthenticationService</reference>
+    <reference name="Get-STFAuthenticationService.html">Get-STFAuthenticationService</reference>
+    <reference name="Remove-STFAuthenticationService.html">Remove-STFAuthenticationService</reference>
+    <reference name="Add-STFAuthenticationServiceProtocol.html">Add-STFAuthenticationServiceProtocol</reference>
+    <reference name="Remove-STFAuthenticationServiceProtocol.html">Remove-STFAuthenticationServiceProtocol</reference>
+    <reference name="Get-STFAuthenticationServiceProtocol.html">Get-STFAuthenticationServiceProtocol</reference>
+    <reference name="Enable-STFAuthenticationServiceProtocol.html">Enable-STFAuthenticationServiceProtocol</reference>
+    <reference name="Disable-STFAuthenticationServiceProtocol.html">Disable-STFAuthenticationServiceProtocol</reference>
+    <reference name="Set-STFClaimsFactoryNames.html">Set-STFClaimsFactoryNames</reference>
+  </cmdlets>
+</helpIndex>

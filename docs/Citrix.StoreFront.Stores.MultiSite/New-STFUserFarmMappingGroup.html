@@ -1,0 +1,73 @@
+﻿<html>
+    <head>
+        <title>New-STFUserFarmMappingGroup</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>New-STFUserFarmMappingGroup</h1>
+        <div>Create a new UserFarmMapping group</div>
+
+        <h2> Syntax </h2>
+        <code>New-STFUserFarmMappingGroup [-GroupName] &lt;String&gt; [-AccountSid] &lt;String&gt; [&lt;CommonParameters&gt;]<br><br><br><br>New-STFUserFarmMappingGroup [-AllUsers] &lt;SwitchParameter&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Create a group to which a UserFarmMapping can be assigned. A UserFarmMapping is used to configure a specified group of users to use the EquivalentFarmSets defined within the UserFarmMapping. A UserFarmMapping can be used to partition users between defferent XenApp\XenDesktop servers.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>GroupName&nbsp;</td>
+                <td>A display only group name.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AccountSid&nbsp;</td>
+                <td>Output the saved UserFarmMapping.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllUsers&nbsp;</td>
+                <td>A UserFarmMapping group that is applicable to all users.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter GroupName: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter AccountSid: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter AllUsers: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3>Hashtable</h3>
+        <div>The .NET 'System.Collections.Hashtable' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 New UserFarmMappingGroup for all user</h3>
+                <pre><code>New-STFUserFarmMappingGroup -AllUsers</code></pre>
+                <div>REMARKS<br>Creates a new UserMappingGroup for a UserFarmMapping.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

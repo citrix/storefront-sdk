@@ -1,0 +1,99 @@
+﻿<html>
+    <head>
+        <title>New-STFWebReceiverFeaturedAppGroup</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>New-STFWebReceiverFeaturedAppGroup</h1>
+        <div>Creates a new Featured App group</div>
+
+        <h2> Syntax </h2>
+        <code>New-STFWebReceiverFeaturedAppGroup [-Title] &lt;String&gt; [[-Description] &lt;String&gt;] [-TileId] &lt;String&gt; [-ContentType] &lt;Keyword | Category | AppName&gt; [-Contents] &lt;String[]&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>The cmdlet gets a new Featured App group containing the data specified in the parameters.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Clear-STFWebReceiverFeaturedAppGroup.html'>Clear-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Get-STFWebReceiverFeaturedAppGroup.html'>Get-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Remove-STFWebReceiverFeaturedAppGroup.html'>Remove-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Set-STFWebReceiverFeaturedAppGroup.html'>Set-STFWebReceiverFeaturedAppGroup</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Title&nbsp;</td>
+                <td>This text is displayed as the App group header text. This text should be unique across the Featured App groups&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Description&nbsp;</td>
+                <td>This is an optional parameter and the text is displayed as the Featured App group description text.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>TileId&nbsp;</td>
+                <td>This is the unique identifier for the background style of the Featured App group. The permissible values are: 'appBundle1', 'appBundle2', 'appBundle3', 'appBundle4', 'appBundle5', 'appBundle6', 'appBundle7' or 'appBundle8'.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ContentType&nbsp;</td>
+                <td>This parameter defines the type of Contents provided in the Contents parameter. The permissible values are: 'Keyword', 'Category' or 'AppName'.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Contents&nbsp;</td>
+                <td>The parameter defines the content for the Featured App group.<br><br><br>The permissible values for this is based on the ContentType parameter:<br><br><br>1. Keyword: The list must have only 1 value. All the Apps which have keywords matching with the value in the list will appear as a Featured App group.<br><br><br>2. Category: The list must have only 1 value. All the Apps which have category defined as the value in the list will appear as a Featured App group.<br><br><br>3. AppName: The list must have 1 or more unique values. All the Apps which have names (for users) which partially or fully matches any of the values in this list will appear as a Featured App group.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter Title: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Description: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter TileId: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.FeaturedAppContentType</h3>
+        <div>Parameter ContentType: The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.FeaturedAppContentType' value type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter Contents: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>FeaturedAppGroup</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.FeaturedAppGroup' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Create a new FeaturedAppGroup</h3>
+                <pre><code>$group = New-STFWebReceiverFeaturedAppGroup -Title "Worx Suite" `
+-Description "Improve productivity with a suite of secure mobile apps made for business." `
+-TileId appBundle1 `
+-ContentType Keyword `
+-Contents Worx</code></pre>
+                <div></div>
+                <pre><code></code></pre>
+    </body>
+</html>

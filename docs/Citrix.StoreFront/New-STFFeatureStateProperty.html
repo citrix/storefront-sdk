@@ -1,0 +1,71 @@
+﻿<html>
+    <head>
+        <title>New-STFFeatureStateProperty</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>New-STFFeatureStateProperty</h1>
+        <div>Creates and returns a new FeatureStateProperty object</div>
+
+        <h2> Syntax </h2>
+        <code>New-STFFeatureStateProperty [-Properties] &lt;Hashtable&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Creates and returns a new FeatureStateProperty object</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFFeatureState.html'>Add-STFFeatureState</a><br/>
+           * <a href='Get-STFFeatureState.html'>Get-STFFeatureState</a><br/>
+           * <a href='Get-STFFeatureStateNames.html'>Get-STFFeatureStateNames</a><br/>
+           * <a href='New-STFFeatureState.html'>New-STFFeatureState</a><br/>
+           * <a href='Remove-STFFeatureState.html'>Remove-STFFeatureState</a><br/>
+           * <a href='Clear-STFFeatureStates.html'>Clear-STFFeatureStates</a><br/>
+           * <a href='Reset-STFFeatureData.html'>Reset-STFFeatureData</a><br/>
+           * <a href='Set-STFFeatureState.html'>Set-STFFeatureState</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Properties&nbsp;</td>
+                <td>A list of key value pairs&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.Collections.Hashtable</h3>
+        <div>Parameter Properties: The .NET 'System.Collections.Hashtable' reference type</div>
+        <h2> Return Values </h2>
+        <h3>FeatureStateProperty</h3>
+        <div>The .NET 'Citrix.DeliveryServices.Framework.FeatureToggle.FeatureStateProperty' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Creates a new FeatureStateProperty object</h3>
+                <pre><code>New-STFFeatureStateProperty -Properties @{'Property1' = 'Property1Value';'Property2' = 'Property2Value'}</code></pre>
+                <div>REMARKS<br>Creates a new FeatureStateProperty object<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Name                       Value              
+----                       ------               
+Property1                  Property1Value       
+Property2                  Property2Value</code></pre>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+﻿<html>
+    <head>
+        <title>Unregister-STFStoreGateway</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Unregister-STFStoreGateway</h1>
+        <div>Unregister a Gateway from a Store</div>
+
+        <h2> Syntax </h2>
+        <code>Unregister-STFStoreGateway [-Gateway] &lt;ICommonGateway&gt; [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Unregister-STFStoreGateway [-Name] &lt;String&gt; [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Unregister-STFStoreGateway [-AllGateways] &lt;SwitchParameter&gt; [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Unregister a Gateway from a Store used for authentication and launch (if configured for launch)</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Register-STFStoreOptimalLaunchGateway.html'>Register-STFStoreOptimalLaunchGateway</a><br/>
+           * <a href='Register-STFStoreGateway.html'>Register-STFStoreGateway</a><br/>
+           * <a href='Unregister-STFStoreOptimalLaunchGateway.html'>Unregister-STFStoreOptimalLaunchGateway</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Gateway&nbsp;</td>
+                <td>The Gateway object to remove, either a Roaming or Store gateway&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>Name of the Gateway to remove&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllGateways&nbsp;</td>
+                <td>Remove all Gateways&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store service to unregister from&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Common.ICommonGateway</h3>
+        <div>Parameter Gateway: The .NET 'Citrix.StoreFront.Model.Common.ICommonGateway' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter AllGateways: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Remove Gateway by name</h3>
+                <pre><code>$storeService = Get-STFStoreService
+UnRegister-STFStoreGateway -StoreService $storeService -Name Netscaler10x</code></pre>
+                <div>REMARKS<br>Remove the Gateway object by name</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Remove Gateway by object</h3>
+                <pre><code>$storeService = Get-STFStoreService
+$gateway = Get-STFRoamingGateway -Name Netscaler10x
+UnRegister-STFStoreGateway -StoreService $storeService -Gateway $gateway</code></pre>
+                <div>REMARKS<br>Remove the Gateway object Netscaler10x from the only Store</div>
+                <pre><code></code></pre>
+    </body>
+</html>

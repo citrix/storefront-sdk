@@ -1,0 +1,83 @@
+﻿<html>
+    <head>
+        <title>Remove-STFRoamingGateway</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Remove-STFRoamingGateway</h1>
+        <div>Remove a Gateway used for remote access and authentication</div>
+
+        <h2> Syntax </h2>
+        <code>Remove-STFRoamingGateway [-Gateway] &lt;RoamingGateway&gt; [[-RoamingService] &lt;RoamingService&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Remove-STFRoamingGateway [-Name] &lt;String&gt; [[-RoamingService] &lt;RoamingService&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Remove a Gateway from the global list of Gateways and from any Stores that are configured to use it for remote access or authentication.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFRoamingGateway.html'>Add-STFRoamingGateway</a><br/>
+           * <a href='Get-STFRoamingGateway.html'>Get-STFRoamingGateway</a><br/>
+           * <a href='Set-STFRoamingGateway.html'>Set-STFRoamingGateway</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Gateway&nbsp;</td>
+                <td>Remove the Gateway supplied from the global list&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>Remove the Gateway named from the global list&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RoamingService&nbsp;</td>
+                <td>The Roaming service&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Roaming.RoamingGateway</h3>
+        <div>Parameter Gateway: The .NET 'Citrix.StoreFront.Model.Roaming.RoamingGateway' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.Roaming.RoamingService</h3>
+        <div>Parameter RoamingService: A .NET class representing the configuration of a StoreFront Roaming service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Notes </h2>
+        <div>Any existing Store Service objects may be invalidated by this operation and should not be used after calling this Cmdlet.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Remove Gateway by name</h3>
+                <pre><code>Remove-STFRoamingGateway -Gateway "Netscaler10x"</code></pre>
+                <div>REMARKS<br>Removes the Gateway with the matching name.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Remove Gateway</h3>
+                <pre><code>$gateway = Get-STFRoamingGateway -Name "Netscaler10x"
+          Remove - STFRoamingGateway - Gateway $gateway</code></pre>
+                <div>REMARKS<br>Gets the Gateway named "Netscaler10x" from the global list and removes it.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

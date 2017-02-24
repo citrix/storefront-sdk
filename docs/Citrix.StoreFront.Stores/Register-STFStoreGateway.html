@@ -1,0 +1,87 @@
+﻿<html>
+    <head>
+        <title>Register-STFStoreGateway</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Register-STFStoreGateway</h1>
+        <div>Register an authentication Gateway with a Store</div>
+
+        <h2> Syntax </h2>
+        <code>Register-STFStoreGateway [-Gateway] &lt;RoamingGateway&gt; [-StoreService] &lt;StoreService&gt; [[-DefaultGateway] &lt;SwitchParameter&gt;] [[-UseFullVpn] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Register an authentication Gateway with the Store for use when users access StoreFront from the internet.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Register-STFStoreOptimalLaunchGateway.html'>Register-STFStoreOptimalLaunchGateway</a><br/>
+           * <a href='Unregister-STFStoreOptimalLaunchGateway.html'>Unregister-STFStoreOptimalLaunchGateway</a><br/>
+           * <a href='Unregister-STFStoreGateway.html'>Unregister-STFStoreGateway</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Gateway&nbsp;</td>
+                <td>Gateway to register&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store to register Gateway with&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DefaultGateway&nbsp;</td>
+                <td>Use this Gateway as the default if more than one is defined&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>UseFullVpn&nbsp;</td>
+                <td>Use full VPN access when accessing the Store through this Gateway&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Roaming.RoamingGateway</h3>
+        <div>Parameter Gateway: The .NET 'Citrix.StoreFront.Model.Roaming.RoamingGateway' reference type</div>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter DefaultGateway: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter UseFullVpn: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Register a gateway</h3>
+                <pre><code>$gateway9 = Get-STFRoamingGateway -Name Netscaler9
+$storeService = Get-STFStoreService
+Register-STFStoreGateway -Gateway $gateway9 -StoreService $storeService -DefaultGateway -UseFullVpn</code></pre>
+                <div>REMARKS<br>Get the Gateway "Netscaler9" from the global list and register it to the only Store for full VPN access.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+﻿<html>
+    <head>
+        <title>Add-STFSubscriptionSynchronizationSchedule</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Add-STFSubscriptionSynchronizationSchedule</h1>
+        <div>Add a Subscription Synchronization schedule</div>
+
+        <h2> Syntax </h2>
+        <code>Add-STFSubscriptionSynchronizationSchedule [-RecurringStartTime] &lt;TimeSpan&gt; [[-RecurringInterval] &lt;Int32&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Add-STFSubscriptionSynchronizationSchedule [-DailySchedule] &lt;TimeSpan[]&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Add a Subscription Synchronization schedule to pull self service subscription changes from a remote StoreFront server group.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Clear-STFSubscriptionSynchronizationSchedule.html'>Clear-STFSubscriptionSynchronizationSchedule</a><br/>
+           * <a href='Get-STFSubscriptionSynchronizationSchedule.html'>Get-STFSubscriptionSynchronizationSchedule</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RecurringStartTime&nbsp;</td>
+                <td>The earliest time at which the first re-occurring synchronization will commence&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RecurringInterval&nbsp;</td>
+                <td>Number of minutes between each synchronization&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DailySchedule&nbsp;</td>
+                <td>Absolute times at which synchronization will occur during a single day&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter RecurringStartTime: The .NET 'System.TimeSpan' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter RecurringInterval: The .NET 'System.Int32' value type</div>
+        <h3>System.TimeSpan[]</h3>
+        <div>Parameter DailySchedule: The .NET 'System.TimeSpan' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Notes </h2>
+        <div>Restarts the Citrix Subscription Store Service to read new settings.The schedule can be re-occurring using a specific interval or at specific times of the day, not both.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Add an hourly synchronization schedule</h3>
+                <pre><code>Add-STFSubscriptionSynchronizationSchedule -ReccuringStartTime 12:00:00 -ReccuringInterval 60</code></pre>
+                <div>REMARKS<br>Adds a schedule that will commence at 12:00 and repeat hourly.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Add absolute times during the day to synchronize</h3>
+                <pre><code>Add-STFSubscriptionSynchronizationSchedule -DailySchedule 00:00:00,06:00:00,12:00:00,18:00:00</code></pre>
+                <div>REMARKS<br>Create a schedule to synchronize four times a day.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

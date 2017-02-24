@@ -1,0 +1,102 @@
+﻿<html>
+    <head>
+        <title>Add-STFAuthenticationService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Add-STFAuthenticationService</h1>
+        <div>Create a new Authentication service</div>
+
+        <h2> Syntax </h2>
+        <code>Add-STFAuthenticationService [-VirtualPath] &lt;String&gt; [[-SiteId] &lt;Int64&gt;] [[-FriendlyName] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Create a new Authentication service for Store and Receiver for Web authentication.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Remove-STFAuthenticationService.html'>Remove-STFAuthenticationService</a><br/>
+           * <a href='Get-STFAuthenticationService.html'>Get-STFAuthenticationService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>VirtualPath&nbsp;</td>
+                <td>The IIS virtual path to use for the service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>The IIS site to configure the Authentication service for&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FriendlyName&nbsp;</td>
+                <td>The friendly name the service should be known as&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter VirtualPath: The .NET 'System.String' reference type</div>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter FriendlyName: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>AuthenticationService</h3>
+        <div>A .NET class representing the configuration of a StoreFront Authentication service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Create a new Authentication service</h3>
+                <pre><code>Add-STFAuthenticationService /Citrix/Authentication</code></pre>
+                <div>REMARKS<br>Create a new Authentication service at the /Citrix/Authentication virtual path.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+ProducerService         : Authentication Token Producer
+ServiceTokenCertificate : ECC1138839039C2AE7DBA4B49CEA8984E0B4ABBD
+TokenValidationService  : Default Token Validation Service
+TokenIssuerUrl          : http://example.storefront.com/Citrix/Authentication/auth/v1/token
+AuthenticationOptions   : Logging Level:None, Hide Errors:False
+Authentication          : TokenServiceId:0f2216a5-4f82-4560-a5a7-2b7dd4ac5593, Protocol Choices:7
+AuthenticationProtocols : {[citrixAGBasicAuthentication,
+                          Citrix.StoreFront.Model.Authentication.NetscalerAuthentication], [formsProtocol,
+                          Citrix.StoreFront.Model.Authentication.FormsProtocol], [explicitBL,
+                          Citrix.StoreFront.Model.Authentication.ExplicitAuthentication],
+                          [delegatedDirectoryClaimFactory,
+                          Citrix.StoreFront.Model.Authentication.DelegatedDirectorySettings]}
+PnaAuthentication       : Citrix.StoreFront.Model.Authentication.PnaAuthentication
+SiteId                  : 1
+VirtualPath             : /Citrix/Authentication
+FriendlyName            : Authentication Service
+Hmacs                   : {}
+Certificates            : {ECC1138839039C2AE7DBA4B49CEA8984E0B4ABBD}
+TokenManagers           : {Authentication Token Producer, Default Token Validation Service}
+Routing                 : Authentication Service:http://example.storefront.com/
+ServiceRef              : 1__Citrix_Authentication
+ConfigurationFile       : C:\inetpub\wwwroot\Citrix\Authentication\web.config
+TenantId                : 860e9401-39c8-4f2c-928d-34251102b840</code></pre>
+    </body>
+</html>

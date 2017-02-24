@@ -1,0 +1,80 @@
+﻿<html>
+    <head>
+        <title>Get-STFWebReceiverPluginAssistant</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFWebReceiverPluginAssistant</h1>
+        <div>Get the WebReceiver Plug-in Assistant options</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFWebReceiverPluginAssistant [-WebReceiverService] &lt;WebReceiverService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the WebReceiver Plug-in Assistant client options.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Set-STFWebReceiverPluginAssistant.html'>Set-STFWebReceiverPluginAssistant</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h2> Return Values </h2>
+        <h3>PluginAssistant</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.PluginAssistant' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get WebReceiver Plug-in Assistant options</h3>
+                <pre><code>$receiver = Get-STFWebReceiverService
+Get-STFWebReceiverPluginAssistant -WebReceiverService $receiver</code></pre>
+                <div>REMARKS<br>Get the WebReceiver Plug-in Assistant client options of the only configured WebReceiver.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Enabled         : True
+UpgradeAtLogin  : False
+ShowAfterLogin  : False
+Win32           : Path : http://downloadplugins.citrix.com/Windows/CitrixReceiverWeb.exe
+
+MacOS           : Path                    : http://downloadplugins.citrix.com/Mac/CitrixReceiverWeb.dmg
+                  MinimumSupportedVersion : 10.6
+Html5           : Enabled              : Off
+                  Platforms            : Firefox;Chrome;Version/([6-9]|\d\d).*Safari;MSIE
+                  \d\d;Trident/([6-9]|\d\d);Android;iPad;iPhone;iPod;
+                  LaunchUrl            : clients/HTML5Client/src/SessionWindow.html
+                  Preferences          :
+                  SingleTabLaunch      : False
+                  ChromeAppOrigins     : chrome-extension://haiffjcadagjlijoggckpgfnoeiflnem
+                  ChromeAppPreferences :
+ProtocolHandler : Enabled                        : True
+                  Platforms                      : (Macintosh|Windows
+                  NT).*Chrome/((4[2-9]|[56789][0-9])|\d\d\d)(?!.*Edge)
+                  SkipDoubleHopCheckWhenDisabled : False</code></pre>
+    </body>
+</html>

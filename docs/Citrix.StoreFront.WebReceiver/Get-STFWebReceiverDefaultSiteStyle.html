@@ -1,0 +1,69 @@
+﻿<html>
+    <head>
+        <title>Get-STFWebReceiverDefaultSiteStyle</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFWebReceiverDefaultSiteStyle</h1>
+        <div>Gets the default site styles for the site defined in the default style sheet</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFWebReceiverDefaultSiteStyle [-WebReceiverService] &lt;WebReceiverService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>The default style information is retrieved from css file of Receiver for Web site. This style is limited to the non-classic experience.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Clear-STFWebReceiverSiteStyle.html'>Clear-STFWebReceiverSiteStyle</a><br/>
+           * <a href='Get-STFWebReceiverSiteStyle.html'>Get-STFWebReceiverSiteStyle</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>WebReceiver service to get the default style for&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h2> Return Values </h2>
+        <h3>SiteStyle</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.SiteStyle' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get the default site style</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService
+Get-STFWebReceiverDefaultSiteStyle</code></pre>
+                <div>REMARKS<br>Get the default site style for the specified WebReceiver service.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+HeaderLogoPath        : 
+C:\inetpub\wwwroot\Citrix\StoreWeb\receiver\images\2x\CitrixReceiverLogo_Home@2x_3FEDFD700D66DF42.png
+LogonLogoPath         : 
+C:\inetpub\wwwroot\Citrix\StoreWeb\receiver\images\2x\CitrixStoreFront_auth@2x_1B99A8ADCDDFD9AB.png
+HeaderBackgroundColor : #574f5b
+HeaderForegroundColor : #fff
+LinkColor             : #02a1c1</code></pre>
+    </body>
+</html>

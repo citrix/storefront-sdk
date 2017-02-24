@@ -1,0 +1,107 @@
+﻿<html>
+    <head>
+        <title>Get-STFWebReceiverService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFWebReceiverService</h1>
+        <div>Get Receiver for Web service</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFWebReceiverService [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Get-STFWebReceiverService [-StoreService] &lt;StoreService&gt; [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Get-STFWebReceiverService [-AuthenticationService] &lt;AuthenticationService&gt; [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the Receiver for Web services that match the supplied IIS site id, virtual path or are connected to the supplied Store or Authentication service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFWebReceiverService.html'>Add-STFWebReceiverService</a><br/>
+           * <a href='Remove-STFWebReceiverService.html'>Remove-STFWebReceiverService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>VirtualPath&nbsp;</td>
+                <td>Virtual path filter&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>IIS site id filter&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store service filter&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>Authentication service filter&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter VirtualPath: The .NET 'System.String' reference type</div>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h2> Return Values </h2>
+        <h3>WebReceiverService</h3>
+        <div>A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get Receiver for Web services</h3>
+                <pre><code>Get-STFWebReceiverService</code></pre>
+                <div>REMARKS<br>Get all configured Receiver for Web services.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+WebReceiver                      : Citrix.StoreFront.Model.ReceiverForWeb.WebReceiver
+ServiceId                        : 80fb5f9f-0d10-4cdf-ad1e-d36723afc33a
+ProducerService                  : Receiver for Web Token Producer
+ConsumerService                  : Receiver for Web Token Consumer
+ServiceTokenCertificate          : F968ABF7298DB23DF9B1446C01AE7886F1BD24C9
+AuthenticationServiceVirtualPath : /Citrix/StoreAuth
+StoreServiceVirtualPath          : /Citrix/Store
+SiteId                           : 1
+VirtualPath                      : /Citrix/StoreWeb
+FriendlyName                     : /Citrix/StoreWeb
+Hmacs                            : {appShortcuts:waN9widXd9HfoYgORoocOM5FvW8RwDKQcQlO+Nxu4RfDcJVBm5BKotkRn1M61AvBgQDRhX
+                                   y5vmfafC7XyvWKrw==, rfWebGeneric:3s49B/XhMQhzhmqcjV8O9qttDQM/91Syp7VMoe7vGx69ousmpd7
+                                   vag7qWjWj8IQuQO2+gQjawxaqQXDdsw9khw==}
+Certificates                     : {F968ABF7298DB23DF9B1446C01AE7886F1BD24C9, DED6AB26AF47C2A7AD8E33D00924B5019A6AA2AD}
+TokenManagers                    : {Receiver for Web Token Producer, Receiver for Web Token Consumer}
+Routing                          : :
+ServiceRef                       : 1__Citrix_StoreWeb
+ConfigurationFile                : C:\inetpub\wwwroot\Citrix\StoreWeb\web.config
+TenantId                         : 860e9401-39c8-4f2c-928d-34251102b840</code></pre>
+    </body>
+</html>

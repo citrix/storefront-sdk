@@ -1,0 +1,67 @@
+﻿<html>
+    <head>
+        <title>Revoke-STFComputerSynchronizationPermission</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Revoke-STFComputerSynchronizationPermission</h1>
+        <div>Revoke a computers synchronization permissions</div>
+
+        <h2> Syntax </h2>
+        <code>Revoke-STFComputerSynchronizationPermission [-RemoteServer] &lt;String[]&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Revoke-STFComputerSynchronizationPermission [-All] &lt;SwitchParameter&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Revoke permissions for a StoreFront server on the same domain permission to synchronize from the local Subscription Store.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Grant-STFComputerSynchronizationPermission.html'>Grant-STFComputerSynchronizationPermission</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RemoteServer&nbsp;</td>
+                <td>The Netbios name of the server to revoke permissions for&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>All&nbsp;</td>
+                <td>Revoke all permissions&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String[]</h3>
+        <div>Parameter RemoteServer: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter All: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Notes </h2>
+        <div>Restarts the Citrix Subscription Store Service to read new settings.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Revoke synchronization permissions for multiple servers</h3>
+                <pre><code>Revoke-STFComputerSynchronizationPermission -RemoteServer APACSF1,APACSF2</code></pre>
+                <div>REMARKS<br>Revoke StoreFront servers APACSF1 and APACSF2 from the APAC StoreFront group the permissions to synchronize.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

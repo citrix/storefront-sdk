@@ -1,0 +1,83 @@
+﻿<html>
+    <head>
+        <title>Test-STFSecureTicketAuthority</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Test-STFSecureTicketAuthority</h1>
+        <div>Validate a NetScaler gateway STA configuration</div>
+
+        <h2> Syntax </h2>
+        <code>Test-STFSecureTicketAuthority [-StaConfigurationObject] &lt;IStaServerData&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Validate a PowerShell object populated with a NetScaler gateway STA configuration.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Read-STFNetScalerConfiguration.html'>Read-STFNetScalerConfiguration</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StaConfigurationObject&nbsp;</td>
+                <td>A configuration object supporting validation of STA servers.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.IStaServerData</h3>
+        <div>Parameter StaConfigurationObject: The .NET 'Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.IStaServerData' reference type</div>
+        <h2> Return Values </h2>
+        <h3>StaValidationStatus</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Roaming.NetScalerConfiguration.StaValidationStatus' reference type</div>
+        <h2> Notes </h2>
+        <div>Any specified STA servers will be contacted during validation. A Secure Ticket Authority id is used to uniquely identify an STA server used for remote access.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Validate a NetScaler gateway STA configuration</h3>
+                <pre><code>$netscalerConfiguration = Read-STFNetScalerConfiguration –Path C:\NSG\Configuration.zip
+$stasToUpdate = Test-STFSecureTicketAuthority -StaConfigurationObject $netscalerConfiguration</code></pre>
+                <div>REMARKS<br>Returns a list of STA servers with a validation status indicating success or failure including incorrect STA <br>authorities.<br>The STA url provided by NetScaler may not resolve on an internal network so will need updating to a StoreFront local <br>address.<br>The STA authority must match that provided in the NetScaler configuration export.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Validate a NetScaler gateway STA configuration with incorrect Authority Id</h3>
+                <pre><code>$netscalerConfiguration = Read-STFNetScalerConfiguration –Path C:\NSG\Configuration.zip
+$stasToUpdate = Test-STFSecureTicketAuthority -StaConfigurationObject $netscalerConfiguration</code></pre>
+                <div>REMARKS<br>Returns a list of STA servers with a validation status indicating success or failure including incorrect STA <br>authorities.<br>The STA url provided by NetScaler may not resolve on an internal network so will need updating to a StoreFront local <br>address.<br>The STA authority must match that provided in the NetScaler configuration export. The expected output in the example <br>shows both a valid and invalid STA url location.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+WARNING: Cannot resolve the Sta server 'http://www.example.com/scripts/ctxsta.dll' to the authority id
+'STA0000'.
+
+
+StaUrl                      : http://www.example.com/scripts/ctxsta.dll
+ConfigurationStaAuthorityId : STA0000
+DetectedStaAuthorityId      : STACB1DA97D3546
+ResultCode                  : AuthorityId Mismatch
+IsValid                     : False
+
+StaUrl                      : http://xendesktop.company.com/scripts/ctxsta.dll
+ConfigurationStaAuthorityId :
+DetectedStaAuthorityId      : STA578994219
+ResultCode                  : Success
+IsValid                     : True</code></pre>
+    </body>
+</html>

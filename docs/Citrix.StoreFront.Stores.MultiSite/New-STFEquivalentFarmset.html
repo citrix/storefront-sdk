@@ -1,0 +1,107 @@
+﻿<html>
+    <head>
+        <title>New-STFEquivalentFarmset</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>New-STFEquivalentFarmset</h1>
+        <div>Create a new EquivalentFarmSet for a UserFarmMapping.</div>
+
+        <h2> Syntax </h2>
+        <code>New-STFEquivalentFarmset [-Name] &lt;String&gt; [-AggregationGroupName] &lt;String&gt; [-PrimaryFarms] &lt;String[]&gt; [[-BackupFarms] &lt;String[]&gt;] [-LoadBalanceMode] &lt;Failover | LoadBalanced&gt; [[-FarmsAreIdentical] &lt;Boolean&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>An EquivalentFarmSet is a set of PrimaryFarms that provide applications and desktops. When the applications and desktops available from each farm are identical, the experience of using any of them would be equivalent to an end user, so the EquivalentFarmSet should be marked as identical. If any of the farms are not identical the applications and desktops available during enumeration and launch would vary, so the EquivalentFarmSet should be marked as not identical. During enumeration, where the farms are not marked as identical, each is queried in parallel, whereas for farms that are marked as identical, only one is queried. The enumerated resources are de-duplicated according to the AggregationGroupName setting of this and other EquivalentFarmSets available to the same user. During launch, the farms to use are selected by UserFarmMapping, EquivalentFarmSet and AggregationGroupName. Once selected they are ordered and requests are load balanced or failed over between them. EquivalentFarmSets also define BackupFarms, they will only be used should all PrimaryFarms and EquivalentFarmSets with identical AggregationGroupName become unavailable.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='New-STFEquivalentFarmset.html'>New-STFEquivalentFarmset</a><br/>
+           * <a href='Get-STFUserFarmMapping.html'>Get-STFUserFarmMapping</a><br/>
+           * <a href='Clear-STFUserFarmMappings.html'>Clear-STFUserFarmMappings</a><br/>
+           * <a href='New-STFUserFarmMappingGroup.html'>New-STFUserFarmMappingGroup</a><br/>
+           * <a href='Set-STFUserFarmMapping.html'>Set-STFUserFarmMapping</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>The unique Name used to identify the EquivalentFarmSet.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AggregationGroupName&nbsp;</td>
+                <td>The AggregationGroupName used to de-duplicate applications and desktops that are available on multiple EquivalentFarmSets. Where multiple EquivalentFarmSets are defined the AggregationGroup will prevent the user seeing the application multiple times if it exists in both places.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PrimaryFarms&nbsp;</td>
+                <td>The PrimaryFarms. The farm names should match those defined in the Store service.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>BackupFarms&nbsp;</td>
+                <td>The BackupFarms. The farm names should match those defined in the Store Service.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LoadBalanceMode&nbsp;</td>
+                <td>The load balance mode either Failover or LoadBalanced.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FarmsAreIdentical&nbsp;</td>
+                <td>Whether the PrimaryFarms in the EquivalentFarmSet all publish identical resources. Set to true if all resources are identical on all primary farms. Set to false if the deployment has some unique resources per farm.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter AggregationGroupName: The .NET 'System.String' reference type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter PrimaryFarms: The .NET 'System.String' reference type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter BackupFarms: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.Store.LoadBalanceMode</h3>
+        <div>Parameter LoadBalanceMode: The .NET 'Citrix.StoreFront.Model.Store.LoadBalanceMode' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter FarmsAreIdentical: The .NET 'System.Boolean' value type</div>
+        <h2> Return Values </h2>
+        <h3>EquivalentFarmSet</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Store.EquivalentFarmSet' reference type</div>
+        <h2> Notes </h2>
+        <div>Must be added to a UserFarmMapping via the Set-STFUserFarmMapping cmdlet before it can be used.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Create a new EquivalentFarmSet</h3>
+                <pre><code>$eu1Farmset = New-STFEquivalentFarmset -Name "EU1" -AggregationGroupName "EUUsers" -PrimaryFarms XenApp1, XenApp2 -BackupFarms XenAppBackup -LoadBalanceMode LoadBalanced -FarmsAreIdentical $true</code></pre>
+                <div>REMARKS<br>Creates a new EquivalentFarmSet with two servers XenApp1 and XenApp2 that are identical and will be load balanced. <br>Should the primary server fail XenAppBackup will be used.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

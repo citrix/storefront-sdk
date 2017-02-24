@@ -1,0 +1,72 @@
+﻿<html>
+    <head>
+        <title>Get-STFWebReceiverFeature</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFWebReceiverFeature</h1>
+        <div>Gets the web receiver features</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFWebReceiverFeature [[-Name] &lt;String&gt;] [-WebReceiverService] &lt;WebReceiverService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Gets the feature instances that have been added to the specified WebReceiver service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFWebReceiverFeature.html'>Add-STFWebReceiverFeature</a><br/>
+           * <a href='Remove-STFWebReceiverFeature.html'>Remove-STFWebReceiverFeature</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>The name of the WebReceiver feature.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service for which to list the added features.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get all WebReceiver feature instances.</h3>
+                <pre><code>$rfw = Get-STFWebReceiverService -VirtualPath /Citrix/StoreWeb
+Get-STFWebReceiverFeature -WebReceiverService $rfw</code></pre>
+                <div></div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Get the AuthSDK U2F WebReceiver feature instance.</h3>
+                <pre><code>$rfw = Get-STFWebReceiverService -VirtualPath /Citrix/StoreWeb
+Get-STFWebReceiverFeature -Name U2FReceiverPlugin -WebReceiverService $rfw</code></pre>
+                <div></div>
+                <pre><code></code></pre>
+    </body>
+</html>

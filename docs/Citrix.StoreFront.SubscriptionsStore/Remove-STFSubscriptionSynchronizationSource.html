@@ -1,0 +1,81 @@
+﻿<html>
+    <head>
+        <title>Remove-STFSubscriptionSynchronizationSource</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Remove-STFSubscriptionSynchronizationSource</h1>
+        <div>Remove a synchronization source</div>
+
+        <h2> Syntax </h2>
+        <code>Remove-STFSubscriptionSynchronizationSource [-RemoteStoreFrontAddress] &lt;String&gt; [[-PassThru] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Remove-STFSubscriptionSynchronizationSource [-FriendlyName] &lt;String&gt; [[-PassThru] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Remove a remote StoreFront synchronization source, self service application and desktop subscriptions are pulled from.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFSubscriptionSynchronizationSource.html'>Get-STFSubscriptionSynchronizationSource</a><br/>
+           * <a href='Clear-STFSubscriptionSynchronizationSource.html'>Clear-STFSubscriptionSynchronizationSource</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RemoteStoreFrontAddress&nbsp;</td>
+                <td>Address of the remote source to remove&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FriendlyName&nbsp;</td>
+                <td>Friendly name of the source to remove&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PassThru&nbsp;</td>
+                <td>Output the resulting Subscription store&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter RemoteStoreFrontAddress: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter FriendlyName: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter PassThru: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Notes </h2>
+        <div>Restarts the Citrix Subscription Store Service to read new settings.<br><br><br>The name of the Store on the remote StoreFront must match that on the local StoreFront group for subscriptions to correctly update.Permissions must be configured using the Grant-STFSubscriptionSynchronization cmdlet on the remote StoreFront.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Remove a named source</h3>
+                <pre><code>Remove-STFSubscriptionSynchronizationSource -FriendlyName APACGroup</code></pre>
+                <div>REMARKS<br>Removes the source named APACGroup.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Remove a source by address</h3>
+                <pre><code>Remove-STFSubscriptionSynchronizationSource -RemoteStoreFrontAddress apac.example.com</code></pre>
+                <div>REMARKS<br>Remove the synchronization source with the address apac.example.com.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

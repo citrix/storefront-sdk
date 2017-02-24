@@ -1,0 +1,106 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverSiteStyle</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverSiteStyle</h1>
+        <div>Sets the Style info in the custom style sheet</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverSiteStyle [-WebReceiverService] &lt;WebReceiverService&gt; [[-HeaderLogoPath] &lt;String&gt;] [[-LogonLogoPath] &lt;String&gt;] [[-HeaderBackgroundColor] &lt;String&gt;] [[-HeaderForegroundColor] &lt;String&gt;] [[-LinkColor] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Sets the Style info in the custom style sheet for the unified experience Receiver.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Clear-STFWebReceiverSiteStyle.html'>Clear-STFWebReceiverSiteStyle</a><br/>
+           * <a href='Get-STFWebReceiverSiteStyle.html'>Get-STFWebReceiverSiteStyle</a><br/>
+           * <a href='Get-STFWebReceiverDefaultSiteStyle.html'>Get-STFWebReceiverDefaultSiteStyle</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service to style&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>HeaderLogoPath&nbsp;</td>
+                <td>Header logo path&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LogonLogoPath&nbsp;</td>
+                <td>Logon logo path&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>HeaderBackgroundColor&nbsp;</td>
+                <td>Background color of the Header&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>HeaderForegroundColor&nbsp;</td>
+                <td>Foreground color of the Header&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LinkColor&nbsp;</td>
+                <td>Link color of the page&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.String</h3>
+        <div>Parameter HeaderLogoPath: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter LogonLogoPath: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter HeaderBackgroundColor: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter HeaderForegroundColor: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter LinkColor: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Notes </h2>
+        <div>This cmdlet supports styling the following classes<br><br><br>1. Standard resolution icon path<br><br><br>2. High resolution icon path<br><br><br>3. Background color of the header<br><br><br>4. Foreground color of the header<br><br><br>5. Link color of the page</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Configure Receiver images</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService
+Set-STFWebReceiverSiteStyle -WebReceiverService $webReceiver -HeaderLogoPath "C:\images\header.jpg" -LogonLogoPath "C:\images\logon.jpg"</code></pre>
+                <div>REMARKS<br>Configure the Receiver header and logon images.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

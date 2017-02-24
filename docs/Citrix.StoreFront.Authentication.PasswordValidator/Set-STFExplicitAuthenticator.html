@@ -1,0 +1,80 @@
+﻿<html>
+    <head>
+        <title>Set-STFExplicitAuthenticator</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFExplicitAuthenticator</h1>
+        <div>Sets the password validator</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFExplicitAuthenticator [-AuthenticationService &lt;AuthenticationService&gt;] [-DefaultManagerFactory &lt;SwitchParameter&gt;] [-AuthenticationService] &lt;AuthenticationService&gt; [[-DefaultManagerFactory] &lt;SwitchParameter&gt;] [[-Name] &lt;String&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Set-STFExplicitAuthenticator [-AuthenticationService &lt;AuthenticationService&gt;] [-Name &lt;String&gt;] [-AuthenticationService] &lt;AuthenticationService&gt; [[-DefaultManagerFactory] &lt;SwitchParameter&gt;] [[-Name] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Sets the password validator used for explicit configuration.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFExplicitAuthenticator.html'>Get-STFExplicitAuthenticator</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>The Authentication service for which Explicit authentication settings will be configured.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DefaultManagerFactory&nbsp;</td>
+                <td>Set the default password validator to be Delegated Authentication.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>The name of the authenticator to use for Explicit authentication.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter DefaultManagerFactory: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set Password Validator</h3>
+                <pre><code>$auth = Get-STFAuthenticationService
+Set-STFExplicitAuthenticator -AuthenticationService $auth -Name "xmlServiceAuthenticator"</code></pre>
+                <div>REMARKS<br>Configure the single authentication service to use the XmlService authenticator for explict authentication.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Reset Password Validator</h3>
+                <pre><code>$auth = Get-STFAuthenticationService
+Set-STFExplicitAuthenticator -AuthenticationService $auth -DefaultManagerFactory</code></pre>
+                <div>REMARKS<br>Configure the single authentication service to use the default authenticator for explict authentication.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

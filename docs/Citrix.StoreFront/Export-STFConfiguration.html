@@ -1,0 +1,95 @@
+﻿<html>
+    <head>
+        <title>Export-STFConfiguration</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Export-STFConfiguration</h1>
+        <div>Exports a zip file containing configuration elements that form a Citrix StoreFront deployment. This zip file may be unencrypted in the form of a '.zip' file or encrypted in the form of a '.ctxzip'.</div>
+
+        <h2> Syntax </h2>
+        <code>Export-STFConfiguration -TargetFolder &lt;String&gt; -ZipFileName &lt;String&gt; [-Credential &lt;PSCredential&gt;] [-Force &lt;SwitchParameter&gt;] [-NoEncryption &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Exports a zip file containing configuration elements that form a Citrix StoreFront deployment. This zip file may be unencrypted in the form of a '.zip' file or encrypted in the form of a '.ctxzip'.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>TargetFolder&nbsp;</td>
+                <td>The folder to export the backup archive to.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ZipFileName&nbsp;</td>
+                <td>The name of the backup archive WITHOUT its file extension.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Credential&nbsp;</td>
+                <td>Use this parameter if you wish to encrypt the exported configuration.  The backup archive will have the file extension .ctxzip.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Force&nbsp;</td>
+                <td>Use the force parameter to silently overwrite any previous backups with the same name as the one you are currently exporting.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>NoEncryption&nbsp;</td>
+                <td>Use this parameter if you wish to export the configuration unencrypted.  The backup archive will have the file extension .zip.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter TargetFolder: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter ZipFileName: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.PSCredential</h3>
+        <div>Parameter Credential: The .NET 'System.Management.Automation.PSCredential' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter Force: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter NoEncryption: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Basic Config Export</h3>
+                <pre><code>Export-STFConfiguration -$targetFolder '$env:userprofile\desktop\' -zipFileName 'ConfigBackup' -NoEncryption</code></pre>
+                <div>REMARKS<br>This example creates an unencrypted '.zip' file at '$env:userprofile\desktop\' called ConfigBackup.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Encrypted Config Export</h3>
+                <pre><code>Export-STFConfiguration -$targetFolder '$env:userprofile\desktop' -zipFileName 'ConfigBackup' -credential $CredObject</code></pre>
+                <div>REMARKS<br>This example creates an encrypted .ctxzip file as above using a pre-defined PSCredential object.<br>Example PSCredential:<br>$User = Any non empty string will suffice here. The exported configuration is secured by only using the $Password.<br>$Password = 'Secret'<br>$Password = $Password | ConvertTo-SecureString -asPlainText -Force<br>$CredObject = New-Object System.Management.Automation.PSCredential($User,$Password)<br>Create a PowerShell credential object containing a username and password for symmetric encryption and decryption of <br>configuration backup archives. PowerShell credential objects store passwords as secure strings in memory.<br>The user is irrelevant but mandatory to create a PowerShell credential object. The example code uses the currently <br>logged in user.<br>The password is used for symmetric encryption/decryption of the backup archive. NOTE: The password DOES NOT need to <br>match the user's password to create a valid credential object.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

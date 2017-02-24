@@ -1,0 +1,59 @@
+﻿<html>
+    <head>
+        <title>Save-STFService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Save-STFService</h1>
+        <div>Save changes to a StoreFront service</div>
+
+        <h2> Syntax </h2>
+        <code>Save-STFService [-Service] &lt;IConfigBasedFeature&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Save changes made to a StoreFront service in memory object.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Service&nbsp;</td>
+                <td>StoreFront service to save the configuration of&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFrontConfiguration.Interfaces.IConfigBasedFeature</h3>
+        <div>Parameter Service: The .NET 'Citrix.StoreFrontConfiguration.Interfaces.IConfigBasedFeature' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Notes </h2>
+        <div>With the exception of those commands that state they don't in the help the save action is executed implicitly on a service when executing StoreFront PowerShell against that object.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Save changes to the Store service</h3>
+                <pre><code>$store = Get-STFStoreService
+$store.Service.AllowSessionReconnect = $false
+Save-STFService $store</code></pre>
+                <div>REMARKS<br>Disable session reconnect and save the changes.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

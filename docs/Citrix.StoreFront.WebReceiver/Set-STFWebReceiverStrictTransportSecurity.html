@@ -1,0 +1,75 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverStrictTransportSecurity</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverStrictTransportSecurity</h1>
+        <div>Set the WebReceiver HTTP Strict Transport Security options</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverStrictTransportSecurity [-WebReceiverService] &lt;WebReceiverService&gt; [[-Enabled] &lt;Boolean&gt;] [[-PolicyDuration] &lt;TimeSpan&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the WebReceiver HTTP Strict Transport Security options.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFWebReceiverStrictTransportSecurity.html'>Get-STFWebReceiverStrictTransportSecurity</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Enabled&nbsp;</td>
+                <td>Whether to enable the HTTP Strict Transport Security feature.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PolicyDuration&nbsp;</td>
+                <td>The time period for which browsers should apply HSTS to the RfWeb site.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter Enabled: The .NET 'System.Boolean' value type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter PolicyDuration: The .NET 'System.TimeSpan' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Enable WebReceiver HTTP Strict Transport Security</h3>
+                <pre><code>$receiver = Get-STFWebReceiverService
+Set-STFWebReceiverStrictTransportSecurity -WebReceiverService $receiver -Enabled $true</code></pre>
+                <div>REMARKS<br>Enable the HTTP Strict Transport Security feature on the only WebReceiver service.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

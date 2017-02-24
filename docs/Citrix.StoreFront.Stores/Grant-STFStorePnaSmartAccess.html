@@ -1,0 +1,88 @@
+﻿<html>
+    <head>
+        <title>Grant-STFStorePnaSmartAccess</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Grant-STFStorePnaSmartAccess</h1>
+        <div>Grant a server PNA SmartAccess</div>
+
+        <h2> Syntax </h2>
+        <code>Grant-STFStorePnaSmartAccess [-CertificatePath] &lt;String&gt; [-StoreService] &lt;StoreService&gt; [-ServerName] &lt;String&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Grant-STFStorePnaSmartAccess [-Certificate] &lt;X509Certificate2&gt; [-StoreService] &lt;StoreService&gt; [-ServerName] &lt;String&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configures a certificate to be used for the purpose of verifying signed data supplied in PNA SmartAccess headers.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Revoke-STFStorePnaSmartAccess.html'>Revoke-STFStorePnaSmartAccess</a><br/>
+           * <a href='Get-STFStorePnaSmartAccess.html'>Get-STFStorePnaSmartAccess</a><br/>
+           * <a href='Set-STFStorePnaSmartAccess.html'>Set-STFStorePnaSmartAccess</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Trust the certificate supplied for SmartAccess conditions in this Store.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ServerName&nbsp;</td>
+                <td>The name of the server requiring trust of the certificate.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>CertificatePath&nbsp;</td>
+                <td>The path of certificate to import and trust.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Certificate&nbsp;</td>
+                <td>The certificate to import and trust.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.String</h3>
+        <div>Parameter ServerName: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter CertificatePath: The .NET 'System.String' reference type</div>
+        <h3>System.Security.Cryptography.X509Certificates.X509Certificate2</h3>
+        <div>Parameter Certificate: The .NET 'System.Security.Cryptography.X509Certificates.X509Certificate2' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Notes </h2>
+        <div>Verifying the signed data of a PNA SmartAccess header ensures it was provided by a trusted source.</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Grant SmartAccess</h3>
+                <pre><code>$store = Get-STFStoreService -VirtualPath /Citrix/Store
+Grant-STFStorePnaSmartAccess -StoreService $store -ServerName "XenMobile" -CertificatePath C:\Certs\cert.cer</code></pre>
+                <div>REMARKS<br>Configures the certificate so it can be used for verfying signed headers.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

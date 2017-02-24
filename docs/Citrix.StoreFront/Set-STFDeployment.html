@@ -1,0 +1,64 @@
+﻿<html>
+    <head>
+        <title>Set-STFDeployment</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFDeployment</h1>
+        <div>Update the existing deployment</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFDeployment [-HostBaseUrl] &lt;String&gt; [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Update existing deployment settings including the host base url.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>HostBaseUrl&nbsp;</td>
+                <td>The host base url&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>The IIS site id of the deployment&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter HostBaseUrl: The .NET 'System.String' reference type</div>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h2> Return Values </h2>
+        <h3>StoreFrontDeployment</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.StoreFrontDeployment' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Update the host base url</h3>
+                <pre><code>Set-STFDeployment -HostBaseUrl http://new.storefront.com</code></pre>
+                <div>REMARKS<br>Change the host base url of the exsiting deployment to new.storefront.com.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

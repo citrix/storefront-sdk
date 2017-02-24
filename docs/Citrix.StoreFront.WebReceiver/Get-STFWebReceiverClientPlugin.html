@@ -1,0 +1,69 @@
+﻿<html>
+    <head>
+        <title>Get-STFWebReceiverClientPlugin</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFWebReceiverClientPlugin</h1>
+        <div>Gets the plug-in definitions configured within the WebReceiver service</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFWebReceiverClientPlugin [-WebReceiverService] &lt;WebReceiverService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Gets the Client plug-in definitions configured within the WebReceiver service</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='New-STFWebReceiverClientPlugin.html'>New-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Add-STFWebReceiverClientPlugin.html'>Add-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Clear-STFWebReceiverClientPlugin.html'>Clear-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Remove-STFWebReceiverClientPlugin.html'>Remove-STFWebReceiverClientPlugin</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>WebReceiver to get the plug-ins from&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h2> Return Values </h2>
+        <h3>ClientPlugin</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.ClientPlugin' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get the WebReceiver plugins</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService
+Get-STFWebReceiverClientPlugin -WebReceiverService $webReceiver</code></pre>
+                <div>REMARKS<br>Get the client plug-ins configured for the only WebReceiver service.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Name       : NetScaler
+Source     : /plugins/netscalar/script1.js
+Scripts    : {Citrix.StoreFront.Model.ReceiverForWeb.ClientScript, Citrix.StoreFront.Model.ReceiverForWeb.ClientScript}
+Styles     : {Citrix.StoreFront.Model.ReceiverForWeb.ClientStyle, Citrix.StoreFront.Model.ReceiverForWeb.ClientStyle}
+Parameters : {param1, param2}</code></pre>
+    </body>
+</html>

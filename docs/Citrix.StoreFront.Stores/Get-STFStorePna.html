@@ -1,0 +1,65 @@
+﻿<html>
+    <head>
+        <title>Get-STFStorePna</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFStorePna</h1>
+        <div>Get the PNA state of the Store</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFStorePna [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the PNA (Program Neighborhood Agent) state of the Store. Returns a summary indicating if PNA is enabled and if it is the default PNA site for the StoreFront deployment.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Enable-STFStorePna.html'>Enable-STFStorePna</a><br/>
+           * <a href='Disable-STFStorePna.html'>Disable-STFStorePna</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store to get the PNA state of&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h2> Return Values </h2>
+        <h3>StorePnaSummary</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Store.Summary.StorePnaSummary' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get PNA state</h3>
+                <pre><code>$store = Get-STFStoreService
+Get-STFStorePna -StoreService $store</code></pre>
+                <div>REMARKS<br>Gets the PNA state of the only configured Store service.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+StoreService                                                         PnaEnabled                       DefaultPnaService
+------------                                                         ----------                       -----------------
+Store: /Citrix/Store                                                       True                                    True</code></pre>
+    </body>
+</html>

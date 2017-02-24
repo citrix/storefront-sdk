@@ -1,0 +1,77 @@
+﻿<html>
+    <head>
+        <title>New-STFSessionManagerTrustedIssuer</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>New-STFSessionManagerTrustedIssuer</h1>
+        <div>Create a new in memory SessionManagerTrustedIssuer object that represents a trusted signer of session manager assertions.</div>
+
+        <h2> Syntax </h2>
+        <code>New-STFSessionManagerTrustedIssuer [-Name] &lt;String&gt; [-Thumbprint] &lt;String&gt; [[-TenantId] &lt;String&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>SessionManagerTrustedIssuers are added to the store configuration.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Remove-STFSessionManagerTrustedIssuer.html'>Remove-STFSessionManagerTrustedIssuer</a><br/>
+           * <a href='Add-STFSessionManagerTrustedIssuer.html'>Add-STFSessionManagerTrustedIssuer</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>The name of this trusted issuer. The name is associated with all claims that are validated by this issuer&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Thumbprint&nbsp;</td>
+                <td>The certificate thumbprint of the certificate that is used by the session manager to sign SAML assertions bound for this store&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>TenantId&nbsp;</td>
+                <td>Tokens sent to storefront from this trusted issuer must be intended for this TenantId if set&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Thumbprint: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter TenantId: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3>SessionManagerTrustedIssuer</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.SessionManager.SessionManagerTrustedIssuer' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Add a session manager trusted issuer to a store service.</h3>
+                <pre><code>$storeService = Get-STFStoreService
+$trustedIssuer = New-STFSessionManagerTrustedIssuer -Thumbprint '9ca5d6dbc06fc48cb0115d337c7b030aba56a835' -Name 'test issuer'
+Add-STFSessionManagerTrustedIssuer -StoreService $storeService -SessionManagerTrustedIssuer $trustedIssuer</code></pre>
+                <div>REMARKS<br>Add a session manager trusted issuer to a store service.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

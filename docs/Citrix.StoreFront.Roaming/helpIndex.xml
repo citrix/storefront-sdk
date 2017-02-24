@@ -1,0 +1,23 @@
+<helpIndex ModuleName="Citrix.StoreFront.Roaming" ModuleFullName="Citrix.StoreFront.Roaming" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Roaming.html">Citrix.StoreFront.Roaming</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Read-STFNetScalerConfiguration.html">Read-STFNetScalerConfiguration</reference>
+    <reference name="Import-STFNetScalerConfiguration.html">Import-STFNetScalerConfiguration</reference>
+    <reference name="Set-STFRoamingAccount.html">Set-STFRoamingAccount</reference>
+    <reference name="Get-STFRoamingAccount.html">Get-STFRoamingAccount</reference>
+    <reference name="Set-STFRoamingBeacon.html">Set-STFRoamingBeacon</reference>
+    <reference name="Get-STFRoamingBeacon.html">Get-STFRoamingBeacon</reference>
+    <reference name="Clear-STFRoamingBeacon.html">Clear-STFRoamingBeacon</reference>
+    <reference name="Set-STFRoamingGateway.html">Set-STFRoamingGateway</reference>
+    <reference name="Remove-STFRoamingGateway.html">Remove-STFRoamingGateway</reference>
+    <reference name="Get-STFRoamingGateway.html">Get-STFRoamingGateway</reference>
+    <reference name="Add-STFRoamingGateway.html">Add-STFRoamingGateway</reference>
+    <reference name="New-STFRoamingGateway.html">New-STFRoamingGateway</reference>
+    <reference name="Get-STFRoamingService.html">Get-STFRoamingService</reference>
+    <reference name="Get-STFRoamingServiceRecord.html">Get-STFRoamingServiceRecord</reference>
+    <reference name="Update-STFSecureTicketAuthority.html">Update-STFSecureTicketAuthority</reference>
+    <reference name="Test-STFSecureTicketAuthority.html">Test-STFSecureTicketAuthority</reference>
+  </cmdlets>
+</helpIndex>

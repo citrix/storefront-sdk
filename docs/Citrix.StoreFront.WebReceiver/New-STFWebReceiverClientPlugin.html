@@ -1,0 +1,99 @@
+﻿<html>
+    <head>
+        <title>New-STFWebReceiverClientPlugin</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>New-STFWebReceiverClientPlugin</h1>
+        <div>Create a WebReceiver client plug-in</div>
+
+        <h2> Syntax </h2>
+        <code>New-STFWebReceiverClientPlugin [-Name] &lt;String&gt; [[-Source] &lt;String&gt;] [[-Scripts] &lt;String[]&gt;] [[-Styles] &lt;String[]&gt;] [[-Parameters] &lt;Hashtable&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Create WebReceiver script and branding customizations.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFWebReceiverClientPlugin.html'>Add-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Set-STFWebReceiverClientPlugin.html'>Set-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Clear-STFWebReceiverClientPlugin.html'>Clear-STFWebReceiverClientPlugin</a><br/>
+           * <a href='Remove-STFWebReceiverClientPlugin.html'>Remove-STFWebReceiverClientPlugin</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Name&nbsp;</td>
+                <td>Name of plug-in. This should be unique across all the plug-ins&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Source&nbsp;</td>
+                <td>The script source location associated with the plug-in&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Scripts&nbsp;</td>
+                <td>List of script locations&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Styles&nbsp;</td>
+                <td>List of style locations&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Parameters&nbsp;</td>
+                <td>This is a list of name value pair for passing parameter to the source script&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter Name: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter Source: The .NET 'System.String' reference type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter Scripts: The .NET 'System.String' reference type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter Styles: The .NET 'System.String' reference type</div>
+        <h3>System.Collections.Hashtable</h3>
+        <div>Parameter Parameters: The .NET 'System.Collections.Hashtable' reference type</div>
+        <h2> Return Values </h2>
+        <h3>ClientPlugin</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.ClientPlugin' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Create a new client plugin</h3>
+                <pre><code>$plugin = New-STFWebReceiverClientPlugin -Name "NetScaler" `
+- Source "/plugins/netscalar/script1.js" `
+-Scripts @("/ plugins/netscalar/script2.js", "/ plugins/netscalar/script1.js") `
+-Styles @("/ plugins/netscalar/script2.css", "/ plugins/netscalar/script1.css") `
+-Parameters @{"param1" = "value1";"param2" = "value2"}</code></pre>
+                <div>REMARKS<br>Creates a new client plug-in for assignment to a WebReceiver.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

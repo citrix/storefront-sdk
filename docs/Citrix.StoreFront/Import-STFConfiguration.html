@@ -1,0 +1,86 @@
+﻿<html>
+    <head>
+        <title>Import-STFConfiguration</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Import-STFConfiguration</h1>
+        <div>Imports a zip file containing configuration elements that form a Citrix StoreFront deployment. This zip file may be unencrypted in the form of a '.zip' file or encrypted in the form of a '.ctxzip'.</div>
+
+        <h2> Syntax </h2>
+        <code>Import-STFConfiguration -ConfigurationZip &lt;String&gt; [-Credential &lt;PSCredential&gt;] [-HostBaseUrl &lt;String&gt;] [-SiteId &lt;Int64&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Imports a zip file containing configuration elements that form a Citrix StoreFront deployment. This zip file may be unencrypted in the form of a '.zip' file or encrypted in the form of a '.ctxzip'.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ConfigurationZip&nbsp;</td>
+                <td>The name of the backup archive WITH its correct file extension such as .ctxzip or .zip.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Credential&nbsp;</td>
+                <td>A predefined PowerShell credential object containing the same password that was used to export the backup archive.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>HostBaseUrl&nbsp;</td>
+                <td>Specify if you wish to use a HostBaseURL other than the one contained in the configuration backup you are importing. Mandatory if importing onto a factory default Storefront installation.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>(DEPRECATED - The -siteId parameter is deprecated as of StoreFront 3.6 and is no longer required.) The IIS SiteID for the Storefront website. Typically 1.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter ConfigurationZip: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.PSCredential</h3>
+        <div>Parameter Credential: The .NET 'System.Management.Automation.PSCredential' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter HostBaseUrl: The .NET 'System.String' reference type</div>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Basic Config Import</h3>
+                <pre><code>Import-STFConfiguration -configurationZip '$env:userprofile\desktop\ConfigBackup.zip'</code></pre>
+                <div>REMARKS<br>This will import the ConfigBackup.zip configuration archive using the host base url and site id from the exported <br>configuration.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Import Config to Configure an Unconfigured Machine</h3>
+                <pre><code>Import-STFConfiguration -configurationZip '$env:userprofile\desktop\ConfigBackup.zip' -hostBaseUrl 'https://storefront.example.com'</code></pre>
+                <div>REMARKS<br>Using the password supplied in $CredObject this cmdlet will decrypt and import the ConfigBackup.ctxzip backup archive <br>using the host base url and site id from the exported configuration.<br>Example PSCredential:<br>$User = Any non empty string will suffice here. The exported configuration is secured by only using the $Password.<br>$Password = 'Secret'<br>$Password = $Password | ConvertTo-SecureString -asPlainText -Force<br>$CredObject = New-Object System.Management.Automation.PSCredential($User,$Password)<br>Create a PowerShell credential object containing a username and password for symmetric encryption and decryption of <br>configuration backup archives. PowerShell credential objects store passwords as secure strings in memory.<br>The user is irrelevant but mandatory to create a PowerShell credential object. The example code uses the currently <br>logged in user.<br>The password is used for symmetric encryption/decryption of the backup archive. NOTE: The password DOES NOT need to <br>match the user's password to create a valid credential object.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

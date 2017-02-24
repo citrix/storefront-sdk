@@ -1,0 +1,75 @@
+﻿<html>
+    <head>
+        <title>Set-STFStoreSubscriptionsDatabase</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFStoreSubscriptionsDatabase</h1>
+        <div>Sets the location of the subscription data storage for the specified Store</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFStoreSubscriptionsDatabase [-ConnectionString] &lt;String&gt; [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Set-STFStoreSubscriptionsDatabase [-UseLocalStorage] &lt;SwitchParameter&gt; [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Sets the connection string for the SQL Server database currently used for subscription data for the specified Store.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFStoreSubscriptionsDatabase.html'>Get-STFStoreSubscriptionsDatabase</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store service to set the subscriptions storage for&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ConnectionString&nbsp;</td>
+                <td>The connection string for a SQL Server database which should be used for subscription data storage&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>UseLocalStorage&nbsp;</td>
+                <td>Specifies that the Store should use StoreFront's default local storage. Local storage is created and managed automatically across all members of the server group&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.String</h3>
+        <div>Parameter ConnectionString: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter UseLocalStorage: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Configure Sql database connection</h3>
+                <pre><code>$store = Get-STFStoreService
+Set-STFStoreStoreSubscriptionsDatabase -StoreService $store -ConnectionString 'Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;'</code></pre>
+                <div>REMARKS<br>Configure the store to use a SQL Server database for subscription data storage.<br>The connection string in this example specifies the server name, instance name and<br>database name of the SQL Server database and that StoreFront should using Windows<br>integrated authentication.The connection string format for SQL Server databases is<br>described in detail in SQL Server documentation.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

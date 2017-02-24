@@ -1,0 +1,114 @@
+﻿<html>
+    <head>
+        <title>Set-STFDiagnostics</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFDiagnostics</h1>
+        <div>Configure StoreFront diagnostics</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFDiagnostics [-Service] &lt;IConfigBasedFeature&gt; [-TraceLevel] &lt;Off | Error | Warning | Info | Verbose&gt; [-FileSizeKb &lt;Int32&gt;] [-FileCount &lt;Int32&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Set-STFDiagnostics [-All] &lt;SwitchParameter&gt; [-TraceLevel] &lt;Off | Error | Warning | Info | Verbose&gt; [-FileSizeKb &lt;Int32&gt;] [-FileCount &lt;Int32&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Set-STFDiagnostics [-AllUserFacingServices] &lt;SwitchParameter&gt; [-TraceLevel] &lt;Off | Error | Warning | Info | Verbose&gt; [-FileSizeKb &lt;Int32&gt;] [-FileCount &lt;Int32&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Set-STFDiagnostics [-ConfigFile] &lt;String&gt; [-TraceLevel] &lt;Off | Error | Warning | Info | Verbose&gt; [-FileSizeKb &lt;Int32&gt;] [-FileCount &lt;Int32&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configure StoreFront service tracing and logging.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Service&nbsp;</td>
+                <td>The StoreFront service for which tracing should be updated. For example: StoreService, AuthenticationService, WebReceiver.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>All&nbsp;</td>
+                <td>A flag indicating that tracing should be updated for all instances and services.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AllUserFacingServices&nbsp;</td>
+                <td>A flag indicating that tracing should be updated for all instances and services except the credential Wallet.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ConfigFile&nbsp;</td>
+                <td>A specific configuration file for which tracing should be updated.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>TraceLevel&nbsp;</td>
+                <td>The trace level to set.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FileSizeKb&nbsp;</td>
+                <td>The trace file size in KB.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FileCount&nbsp;</td>
+                <td>The number of trace files to maintain.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFrontConfiguration.Interfaces.IConfigBasedFeature</h3>
+        <div>Parameter Service: The .NET 'Citrix.StoreFrontConfiguration.Interfaces.IConfigBasedFeature' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter All: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter AllUserFacingServices: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter ConfigFile: The .NET 'System.String' reference type</div>
+        <h3>System.Diagnostics.TraceLevel</h3>
+        <div>Parameter TraceLevel: The .NET 'System.Diagnostics.TraceLevel' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter FileSizeKb: The .NET 'System.Int32' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter FileCount: The .NET 'System.Int32' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Enable all tracing</h3>
+                <pre><code>Set-STFDiagnostics -All 'Verbose'</code></pre>
+                <div>REMARKS<br>Configures all StoreFront services to perform verbose level tracing useful for identifying configuration issues.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Enable tracing on the Store</h3>
+                <pre><code>$store = Get-STFStoreService /Citrix/Store
+Set-STFDiagnostics -Service $store -TraceLevel Verbose</code></pre>
+                <div>REMARKS<br>Configures the Store service at /Citrix/Store to perform verbose level tracing useful for identifying configuration <br>issues.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

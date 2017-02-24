@@ -1,0 +1,183 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverUserInterface</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverUserInterface</h1>
+        <div>Set the WebReceiver User Interface options</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverUserInterface [-WebReceiverService] &lt;WebReceiverService&gt; [[-AutoLaunchDesktop] &lt;Boolean&gt;] [[-MultiClickTimeout] &lt;Int32&gt;] [[-EnableAppsFolderView] &lt;Boolean&gt;] [[-ShowAppsView] &lt;Boolean&gt;] [[-ShowDesktopsView] &lt;Boolean&gt;] [[-DefaultView] &lt;Auto | Desktops | Apps&gt;] [[-WorkspaceControlEnabled] &lt;Boolean&gt;] [[-WorkspaceControlAutoReconnectAtLogon] &lt;Boolean&gt;] [[-WorkspaceControlLogoffAction] &lt;Disconnect | Terminate | None&gt;] [[-WorkspaceControlShowReconnectButton] &lt;Boolean&gt;] [[-WorkspaceControlShowDisconnectButton] &lt;Boolean&gt;] [[-ReceiverConfigurationEnabled] &lt;Boolean&gt;] [[-AppShortcutsEnabled] &lt;Boolean&gt;] [[-AppShortcutsAllowSessionReconnect] &lt;Boolean&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the WebReceiver User Interface client options.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFWebReceiverUserInterface.html'>Get-STFWebReceiverUserInterface</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AutoLaunchDesktop&nbsp;</td>
+                <td>Whether to auto-launch desktop at login if there is only one desktop available for the user.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>MultiClickTimeout&nbsp;</td>
+                <td>The time period for which the spinner control is displayed, after the user clicks on the App/Desktop icon within Receiver for Web.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>EnableAppsFolderView&nbsp;</td>
+                <td>Allows the user to turn off folder view when in a locked-down store or unauthenticated store.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ShowAppsView&nbsp;</td>
+                <td>Whether to show the apps view tab.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ShowDesktopsView&nbsp;</td>
+                <td>Whether to show the desktops tab.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DefaultView&nbsp;</td>
+                <td>The view to show after logon.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WorkspaceControlEnabled&nbsp;</td>
+                <td>Whether to enable workspace control.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WorkspaceControlAutoReconnectAtLogon&nbsp;</td>
+                <td>Whether to perform auto-reconnect at login.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WorkspaceControlLogoffAction&nbsp;</td>
+                <td>Whether to disconnect or terminate HDX sessions when actively logging off Receiver for Web.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WorkspaceControlShowReconnectButton&nbsp;</td>
+                <td>Whether to show the reconnect button/link.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WorkspaceControlShowDisconnectButton&nbsp;</td>
+                <td>Whether to show the disconnect button/link.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ReceiverConfigurationEnabled&nbsp;</td>
+                <td>Enable the Receiver Configuration .CR download file.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AppShortcutsEnabled&nbsp;</td>
+                <td>Enable App Shortcuts.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AppShortcutsAllowSessionReconnect&nbsp;</td>
+                <td>Enable App Shortcuts to support session reconnect.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter AutoLaunchDesktop: The .NET 'System.Boolean' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter MultiClickTimeout: The .NET 'System.Int32' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter EnableAppsFolderView: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter ShowAppsView: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter ShowDesktopsView: The .NET 'System.Boolean' value type</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.DefaultUIView</h3>
+        <div>Parameter DefaultView: The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.DefaultUIView' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter WorkspaceControlEnabled: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter WorkspaceControlAutoReconnectAtLogon: The .NET 'System.Boolean' value type</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.LogoffAction</h3>
+        <div>Parameter WorkspaceControlLogoffAction: The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.LogoffAction' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter WorkspaceControlShowReconnectButton: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter WorkspaceControlShowDisconnectButton: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter ReceiverConfigurationEnabled: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter AppShortcutsEnabled: The .NET 'System.Boolean' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter AppShortcutsAllowSessionReconnect: The .NET 'System.Boolean' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set WebReceiver multi-click timeout and desktop auto launch User Interface options</h3>
+                <pre><code>$receiver = Get-STFWebReceiverService
+Set-STFWebReceiverUserInterface -WebReceiverService $receiver -AutoLaunchDesktop $false -MultiClickTimeout 10</code></pre>
+                <div>REMARKS<br>Set WebReceiver multi-click timeout to 10 seconds and disable desktop auto launch in the User Interface options.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

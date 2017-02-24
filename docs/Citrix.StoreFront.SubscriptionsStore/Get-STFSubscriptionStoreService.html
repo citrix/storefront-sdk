@@ -1,0 +1,50 @@
+﻿<html>
+    <head>
+        <title>Get-STFSubscriptionStoreService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFSubscriptionStoreService</h1>
+        <div>Get the Subscription Store Service</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFSubscriptionStoreService [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the Subscription Store Service. The Subscription Store Service is the data store for self-service application and desktop subscriptions.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        <h2> Input Type </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Return Values </h2>
+        <h3>SubscriptionStoreService</h3>
+        <div>A .NET class representing the configuration of a StoreFront Subscriptions Store service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get Subscription Store Service</h3>
+                <pre><code>Get-STFSubscriptionStoreService</code></pre>
+                <div>REMARKS<br>Get the Subscription Store service.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+HostedServices              : {subscriptionsManagementService: Enabled, LocalDataStore: Enabled, RemoteDataStore: 
+Enabled,
+SubscriptionsSynchronisation: Enabled...}
+SubscriptionDataStores      : {Name:1__Citrix_Store,Location:%APPDATA%\Citrix\SubscriptionsStore\1__Citrix_Store,EP:net
+.p2p://citrix-subscriptions-1__citrix_store/}
+SubscriptionSynchronisation : Citrix.StoreFront.Model.WindowsServices.SubscriptionStore.SubscriptionSynchronization
+ConfigurationFile           : C:\Program Files\Citrix\Receiver 
+StoreFront\Services\SubscriptionsStoreService\Citrix.DeliveryServices.SubscriptionsStore.ServiceHost.exe.config
+TenantId                    : 860e9401-39c8-4f2c-928d-34251102b840</code></pre>
+    </body>
+</html>

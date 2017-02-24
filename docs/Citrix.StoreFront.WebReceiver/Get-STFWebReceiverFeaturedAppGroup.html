@@ -1,0 +1,75 @@
+﻿<html>
+    <head>
+        <title>Get-STFWebReceiverFeaturedAppGroup</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFWebReceiverFeaturedAppGroup</h1>
+        <div>Gets the Featured App groups definitions configured within the Receiver for Web</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFWebReceiverFeaturedAppGroup [-WebReceiverService] &lt;WebReceiverService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>The cmdlet gets the Featured App groups definitions as configured within the Receiver for Web</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFWebReceiverFeaturedAppGroup.html'>Add-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Clear-STFWebReceiverFeaturedAppGroup.html'>Clear-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Remove-STFWebReceiverFeaturedAppGroup.html'>Remove-STFWebReceiverFeaturedAppGroup</a><br/>
+           * <a href='Set-STFWebReceiverFeaturedAppGroup.html'>Set-STFWebReceiverFeaturedAppGroup</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>WebReceiver to get the FeaturedAppGroups from&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h2> Return Values </h2>
+        <h3>FeaturedAppGroups</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.ReceiverForWeb.FeaturedAppGroups' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get the FeaturedAppGroups</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService
+$group = New-STFWebReceiverFeaturedAppGroup -Title "Worx Suite" `
+-Description "Improve productivity with a suite of secure mobile apps made for business." `
+-TileId appBundle1 `
+-ContentType Keyword `
+-Contents Worx
+Add - STFWebReceiverFeaturedAppGroup - WebReceiverService $webReceiver - FeaturedAppGroup $group
+Get-STFWebReceiverFeaturedAppGroup -WebReceiverService $webReceiver</code></pre>
+                <div>REMARKS<br>Get the featured application groups<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Title       : Worx Suite
+Description : Improve productivity with a suite of secure mobile apps made for business.
+TileId      : appBundle1
+ContentType : Keyword
+Contents    : {Worx}</code></pre>
+    </body>
+</html>

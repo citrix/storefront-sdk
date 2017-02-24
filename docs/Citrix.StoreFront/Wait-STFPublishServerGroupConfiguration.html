@@ -1,0 +1,56 @@
+﻿<html>
+    <head>
+        <title>Wait-STFPublishServerGroupConfiguration</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Wait-STFPublishServerGroupConfiguration</h1>
+        <div>Wait for the Server Group configuration to be published</div>
+
+        <h2> Syntax </h2>
+        <code>Wait-STFPublishServerGroupConfiguration [[-WaitTimeout] &lt;Int32&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Waits for the Server Group configuration to be published showing a status bar to indicate activity is ongoing.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Publish-STFServerGroupConfiguration.html'>Publish-STFServerGroupConfiguration</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WaitTimeout&nbsp;</td>
+                <td>The length of time in minutes to wait for the configuration publish to complete. The default is to wait indefinitely.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.Int32</h3>
+        <div>Parameter WaitTimeout: The .NET 'System.Int32' value type</div>
+        <h2> Return Values </h2>
+        <h3>SynchronisationState</h3>
+        <div>The .NET 'Citrix.DeliveryServices.ConfigurationReplication.Contract.ServiceStatus.SynchronisationState' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Wait for Publish to complete</h3>
+                <pre><code>Wait-STFPublishServerGroupConfiguration  -Confirm:$false</code></pre>
+                <div>REMARKS<br>Wait for the server group publish to complete. The command can be terminated before completion using the key <br>combination CTRL+C.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

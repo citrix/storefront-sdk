@@ -1,0 +1,57 @@
+﻿<html>
+    <head>
+        <title>Clear-STFDefaultPnaStore</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Clear-STFDefaultPnaStore</h1>
+        <div>Clear the default PNA store</div>
+
+        <h2> Syntax </h2>
+        <code>Clear-STFDefaultPnaStore [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Clears the default PNA store hosted at the default PNA url, http://example.storefront.com/Citrix/Store/PNAgent/config.xml.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Enable-STFStorePna.html'>Enable-STFStorePna</a><br/>
+           * <a href='Disable-STFStorePna.html'>Disable-STFStorePna</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>The IIS Site to clear the default Pna store from&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Clear the default PNA store</h3>
+                <pre><code>Clear-STFDefaultPnaStore</code></pre>
+                <div>REMARKS<br>Clears the default PNA store.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

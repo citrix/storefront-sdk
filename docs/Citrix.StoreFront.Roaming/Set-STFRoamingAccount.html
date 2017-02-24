@@ -1,0 +1,74 @@
+﻿<html>
+    <head>
+        <title>Set-STFRoamingAccount</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFRoamingAccount</h1>
+        <div>Set the roaming account properties</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFRoamingAccount [-StoreService] &lt;StoreService&gt; [[-Published] &lt;Boolean&gt;] [[-RoamingService] &lt;RoamingService&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configure the roaming account properties for a given Store.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Published&nbsp;</td>
+                <td>Publish the Store service account record.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RoamingService&nbsp;</td>
+                <td>The Roaming service&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter Published: The .NET 'System.Boolean' value type</div>
+        <h3>Citrix.StoreFront.Model.Roaming.RoamingService</h3>
+        <div>Parameter RoamingService: A .NET class representing the configuration of a StoreFront Roaming service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set the roaming account properties to hide the Store</h3>
+                <pre><code>$store = Get-STFStoreService
+Set-STFRoamingAccount -StoreService $store -Published $false</code></pre>
+                <div>REMARKS<br>Set the Roaming account for the only configured Store service to hide the Store from Receivers.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

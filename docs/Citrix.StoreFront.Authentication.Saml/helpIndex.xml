@@ -1,0 +1,16 @@
+<helpIndex ModuleName="Citrix.StoreFront.Authentication.Saml" ModuleFullName="Citrix.StoreFront.Authentication.Saml" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.Authentication.Saml.html">Citrix.StoreFront.Authentication.Saml</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Import-STFSamlEncryptionCertificate.html">Import-STFSamlEncryptionCertificate</reference>
+    <reference name="New-STFSamlEncryptionCertificate.html">New-STFSamlEncryptionCertificate</reference>
+    <reference name="Export-STFSamlEncryptionCertificate.html">Export-STFSamlEncryptionCertificate</reference>
+    <reference name="New-STFSamlIdPCertificate.html">New-STFSamlIdPCertificate</reference>
+    <reference name="Update-STFSamlIdPFromMetadata.html">Update-STFSamlIdPFromMetadata</reference>
+    <reference name="Set-STFSamlRequireArtifactResolution.html">Set-STFSamlRequireArtifactResolution</reference>
+    <reference name="Export-STFSamlSigningCertificate.html">Export-STFSamlSigningCertificate</reference>
+    <reference name="Import-STFSamlSigningCertificate.html">Import-STFSamlSigningCertificate</reference>
+    <reference name="New-STFSamlSigningCertificate.html">New-STFSamlSigningCertificate</reference>
+  </cmdlets>
+</helpIndex>

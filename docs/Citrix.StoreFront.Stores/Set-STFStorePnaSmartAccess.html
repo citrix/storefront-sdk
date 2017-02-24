@@ -1,0 +1,68 @@
+﻿<html>
+    <head>
+        <title>Set-STFStorePnaSmartAccess</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFStorePnaSmartAccess</h1>
+        <div>Set the SmartAccess settings</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFStorePnaSmartAccess [-StoreService] &lt;StoreService&gt; [-HeaderValidity] &lt;Int32&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configure the settings related to the verification of PNA SmartAccess HTTP headers.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Grant-STFStorePnaSmartAccess.html'>Grant-STFStorePnaSmartAccess</a><br/>
+           * <a href='Revoke-STFStorePnaSmartAccess.html'>Revoke-STFStorePnaSmartAccess</a><br/>
+           * <a href='Get-STFStorePnaSmartAccess.html'>Get-STFStorePnaSmartAccess</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store to set the SmartAccess conditions for.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>HeaderValidity&nbsp;</td>
+                <td>The PNA SmartAccess HTTP header validity period in seconds. PNA SmartAccess requests will be invalidated if the current server UTC date time plus the HeaderValidity is older than the time stamp in the request.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.Int32</h3>
+        <div>Parameter HeaderValidity: The .NET 'System.Int32' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set SmartAccess trust settings</h3>
+                <pre><code>$store = Get-STFStoreService
+Set-STFStorePnaSmartAccess -StoreService $store -HeaderValidity 60</code></pre>
+                <div>REMARKS<br>Sets the http headers to be trusted for up to 60 seconds after the current server date time.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

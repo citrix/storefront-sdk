@@ -1,0 +1,89 @@
+﻿<html>
+    <head>
+        <title>Get-STFStoreService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFStoreService</h1>
+        <div>Gets the StoreFront Store Services matching the supplied parameter criteria.</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFStoreService [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Get-STFStoreService [-AuthenticationService] &lt;AuthenticationService&gt; [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]<br><br><br><br>Get-STFStoreService [-WebReceiverService] &lt;WebReceiverService&gt; [[-VirtualPath] &lt;String&gt;] [[-SiteId] &lt;Int64&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>StoreFront Store Services are deployed to specific IIS virtual paths and sites. The command will return all Store Services if no IIS VirtualPath or SiteId is specified.StoreFront Stores aggregate desktops and applications, making them available to users.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFStoreService.html'>Add-STFStoreService</a><br/>
+           * <a href='Remove-STFStoreService.html'>Remove-STFStoreService</a><br/>
+           * <a href='Set-STFStoreService.html'>Set-STFStoreService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>VirtualPath&nbsp;</td>
+                <td>Virtual path of the Store to return&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SiteId&nbsp;</td>
+                <td>The IIS Site to which the Store should belong&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>Stores used by an Authentication service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>Stores used by a Web Receiver service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>System.String</h3>
+        <div>Parameter VirtualPath: The .NET 'System.String' reference type</div>
+        <h3>System.Int64</h3>
+        <div>Parameter SiteId: The .NET 'System.Int64' value type</div>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h2> Return Values </h2>
+        <h3>StoreService</h3>
+        <div>A .NET class representing the configuration of a StoreFront Store service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get all Stores</h3>
+                <pre><code>Get-STFStoreService</code></pre>
+                <div>REMARKS<br>Gets all Stores on the StoreFront server.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Get Specific Store</h3>
+                <pre><code>Get-STFStoreService -VirtualPath /Citrix/Store</code></pre>
+                <div>REMARKS<br>Get the Store at the /Citrix/Store IIS Virtual Path.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

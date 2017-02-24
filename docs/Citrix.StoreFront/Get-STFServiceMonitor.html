@@ -1,0 +1,54 @@
+﻿<html>
+    <head>
+        <title>Get-STFServiceMonitor</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFServiceMonitor</h1>
+        <div>Get the Service Monitor service</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFServiceMonitor [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the Server Monitor service used by NetScaler Gateway to perform health checks.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Set-STFServiceMonitor.html'>Set-STFServiceMonitor</a><br/>
+        <h2> Input Type </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Return Values </h2>
+        <h3>MonitorService</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.WindowsServices.ServiceMonitor.MonitorService' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get the Service Monitor service</h3>
+                <pre><code>Get-STFServiceMonitor</code></pre>
+                <div>REMARKS<br>Gets the Service Monitor service configuration.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+HostedServices                ServiceUrl                    ConfigurationFile             TenantId
+--------------                ----------                    -----------------             --------
+{serviceMonitorService: En... http://localhost:8000/Stor... C:\Program Files\Citrix\Re... 860e9401-39c8-4f2c-928d-34...</code></pre>
+        <h3> EXAMPLE 2 Get the Service Monitor service url</h3>
+                <pre><code>(Get-STFServiceMonitor).ServiceUrl.AbsoluteUri</code></pre>
+                <div>REMARKS<br>Gets the Service Monitor listening endpoint used by NetScaler.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+http://localhost:8000/StorefrontMonitor</code></pre>
+    </body>
+</html>

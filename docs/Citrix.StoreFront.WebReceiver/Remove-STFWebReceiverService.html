@@ -1,0 +1,58 @@
+﻿<html>
+    <head>
+        <title>Remove-STFWebReceiverService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Remove-STFWebReceiverService</h1>
+        <div>Remove a Receiver for Web service</div>
+
+        <h2> Syntax </h2>
+        <code>Remove-STFWebReceiverService [-WebReceiverService] &lt;WebReceiverService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Removes an existing Receiver for Web service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFWebReceiverService.html'>Get-STFWebReceiverService</a><br/>
+           * <a href='Add-STFWebReceiverService.html'>Add-STFWebReceiverService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>Receiver for Web to remove&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Remove Receiver for Web service</h3>
+                <pre><code>$rfw = Get-STFWebReceiverService
+Remove-STFWebReceiverService -WebReceiverService $rfw</code></pre>
+                <div>REMARKS<br>Remove the only Receiver for Web service</div>
+                <pre><code></code></pre>
+    </body>
+</html>

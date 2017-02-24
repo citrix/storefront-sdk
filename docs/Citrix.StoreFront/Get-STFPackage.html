@@ -1,0 +1,59 @@
+﻿<html>
+    <head>
+        <title>Get-STFPackage</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFPackage</h1>
+        <div>Get the details of the Storefront packages on the system</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFPackage [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the details of the Storefront packages on the system. This includes, the package location, exposed properties and Feature class details.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        <h2> Input Type </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Return Values </h2>
+        <h3>PackageInfo</h3>
+        <div>The .NET 'Citrix.DeliveryServices.Framework.Install.ZipPackage.PackageInfo' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get all feature packages</h3>
+                <pre><code>Get-STFPackage</code></pre>
+                <div>REMARKS<br>Get all on disk feature packages.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+Identifier       : f604acd2-dba2-4ea9-9f30-b12a5fdfad32
+FileLocation     : AGDiscover.zip
+Title            : AGDiscover
+Version          : 3.5.0.0
+FeatureClass     : Citrix.DeliveryServices.Framework.Feature.FeatureClass
+ParentIdentifier : 1a6f66d6-1128-4c79-ad96-a7a0589f2d58
+Dependencies     : {}
+Properties       : {[parent, 1a6f66d6-1128-4c79-ad96-a7a0589f2d58]}
+
+Identifier       : 3722c484-d4a6-4bc1-84a6-270d74f9704a
+FileLocation     : AnonymousStore.zip
+Title            : AnonymousStore
+Version          : 3.5.0.0
+FeatureClass     : Citrix.DeliveryServices.Framework.Feature.FeatureClass
+ParentIdentifier : 5af80ac4-488f-43bb-a162-3cfef90ea5ff
+Dependencies     : {}
+Properties       : {[parent, 5af80ac4-488f-43bb-a162-3cfef90ea5ff]}
+...</code></pre>
+    </body>
+</html>

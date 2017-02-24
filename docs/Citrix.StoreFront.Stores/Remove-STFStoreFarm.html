@@ -1,0 +1,82 @@
+﻿<html>
+    <head>
+        <title>Remove-STFStoreFarm</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Remove-STFStoreFarm</h1>
+        <div>Remove Farm from a Store</div>
+
+        <h2> Syntax </h2>
+        <code>Remove-STFStoreFarm [-Farm] &lt;Farm[]&gt; [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Remove-STFStoreFarm [-FarmName] &lt;String[]&gt; [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Removes a XenDesktop\XenApp farm from a Store service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFStoreFarm.html'>Add-STFStoreFarm</a><br/>
+           * <a href='Set-STFStoreFarm.html'>Set-STFStoreFarm</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Farm&nbsp;</td>
+                <td>Farm object to remove&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FarmName&nbsp;</td>
+                <td>Name of farm to remove from the Store service&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store service from which to remove the named farm&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.Farm[]</h3>
+        <div>Parameter Farm: A .NET class representing the configuration of a Farm in StoreFront Store service</div>
+        <h3>System.String[]</h3>
+        <div>Parameter FarmName: The .NET 'System.String' reference type</div>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Remove Farm from Store by name</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Remove-STFStoreFarm -FarmName XenDesktop75 -StoreService $storeService</code></pre>
+                <div>REMARKS<br>Remove the Farm XenDesktop75 with the specified name from the Store service.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Remove a Farm from the Store service</h3>
+                <pre><code>$storeService = Get-STFStoreService
+$farm = Get-STFStoreFarm -StoreService $storeService -FarmName XenDesktop75
+Remove-STFStoreFarm $farm -StoreService $storeService</code></pre>
+                <div>REMARKS<br>Remove the Farm XenDesktop75 from the Store service.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

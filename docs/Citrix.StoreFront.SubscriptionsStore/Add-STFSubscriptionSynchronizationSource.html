@@ -1,0 +1,91 @@
+﻿<html>
+    <head>
+        <title>Add-STFSubscriptionSynchronizationSource</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Add-STFSubscriptionSynchronizationSource</h1>
+        <div>Add a Synchronization source</div>
+
+        <h2> Syntax </h2>
+        <code>Add-STFSubscriptionSynchronizationSource [-StoreService] &lt;StoreService[]&gt; [-RemoteStoreFrontAddress] &lt;String&gt; [-FriendlyName] &lt;String&gt; [&lt;CommonParameters&gt;]<br><br><br><br>Add-STFSubscriptionSynchronizationSource [-StoreName] &lt;String[]&gt; [-RemoteStoreFrontAddress] &lt;String&gt; [-FriendlyName] &lt;String&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Add a remote StoreFront synchronization source to pull self service application and desktop subscriptions from.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Clear-STFSubscriptionSynchronizationSource.html'>Clear-STFSubscriptionSynchronizationSource</a><br/>
+           * <a href='Get-STFSubscriptionSynchronizationSource.html'>Get-STFSubscriptionSynchronizationSource</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store service to synchronize subscriptions to. Requires a matching store on the remote StoreFront&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreName&nbsp;</td>
+                <td>Store service to synchronize subscriptions to. Requires a matching store on the remote StoreFront&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>RemoteStoreFrontAddress&nbsp;</td>
+                <td>A remote hostbase url of a StoreFront server group, server hostname, IP address or server FQDN&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>FriendlyName&nbsp;</td>
+                <td>Friendly name of the synchronization source&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService[]</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.String[]</h3>
+        <div>Parameter StoreName: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter RemoteStoreFrontAddress: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter FriendlyName: The .NET 'System.String' reference type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Notes </h2>
+        <div>Restarts the Citrix Subscription Store Service to read new settings.<br><br><br>The name of the Store on the remote StoreFront must match that on the local StoreFront group for subscriptions to correctly update.<br><br><br>Permissions must be configured using the Grant-STFSubscriptionSynchronization cmdlet on the remote StoreFront.<br><br><br>Stores to be synchronized require identical XenApp \ XenDesktop Controller configurations and Store names on both the receiving and publishing StoreFront server</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Synchronize subscriptions from a StoreFront group</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Add-STFSubscriptionSynchronizationSource -StoreService $storeService -RemoteStoreFrontAddress http://another.storefront.com -FriendlyName "EU located StoreFront"</code></pre>
+                <div>REMARKS<br>Synchronize the subscriptions from server group another.storefront.com to the only configured store.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Synchronize Store subscriptions by Store name</h3>
+                <pre><code>Add-STFSubscriptionSynchronizationSource -StoreName "MyStore" -RemoteStoreFrontAddress http://another.storefront.com -FriendlyName "EU located StoreFront"</code></pre>
+                <div>REMARKS<br>Synchronize the subscriptions from server group another.storefront.com for the Store name "MyStore".</div>
+                <pre><code></code></pre>
+    </body>
+</html>

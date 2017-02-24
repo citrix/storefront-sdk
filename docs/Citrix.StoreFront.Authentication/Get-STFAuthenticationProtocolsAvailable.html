@@ -1,0 +1,49 @@
+﻿<html>
+    <head>
+        <title>Get-STFAuthenticationProtocolsAvailable</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFAuthenticationProtocolsAvailable</h1>
+        <div>Get the installed authentication protocols</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFAuthenticationProtocolsAvailable [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>An authentication service can support a number of authentication methods. The command gets a list of the methods that can be added or removed to\from an authentication service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFAuthenticationServiceProtocol.html'>Add-STFAuthenticationServiceProtocol</a><br/>
+           * <a href='Get-STFAuthenticationServiceProtocol.html'>Get-STFAuthenticationServiceProtocol</a><br/>
+        <h2> Input Type </h2>
+        <h3></h3>
+        <div></div>
+        <h2> Return Values </h2>
+        <h3>String</h3>
+        <div>The .NET 'System.String' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get the available authentication protocols</h3>
+                <pre><code>Get-STFAuthenticationProtocolsAvailable</code></pre>
+                <div>REMARKS<br>Get the authentication protocols currently installed.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+CitrixAGBasic
+HttpBasic
+CitrixFederation
+Certificate
+IntegratedWindows
+ExplicitForms</code></pre>
+    </body>
+</html>

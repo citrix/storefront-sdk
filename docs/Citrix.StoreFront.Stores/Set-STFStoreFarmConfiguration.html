@@ -1,0 +1,163 @@
+﻿<html>
+    <head>
+        <title>Set-STFStoreFarmConfiguration</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFStoreFarmConfiguration</h1>
+        <div>Configure common Store farm options</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFStoreFarmConfiguration [-StoreService] &lt;StoreService&gt; [[-EnableFileTypeAssociation] &lt;Boolean&gt;] [[-CommunicationTimeout] &lt;TimeSpan&gt;] [[-ConnectionTimeout] &lt;TimeSpan&gt;] [[-LeasingStatusExpiryFailed] &lt;TimeSpan&gt;] [[-LeasingStatusExpiryLeasing] &lt;TimeSpan&gt;] [[-LeasingStatusExpiryPending] &lt;TimeSpan&gt;] [[-PooledSockets] &lt;Boolean&gt;] [[-ServerCommunicationAttempts] &lt;Int32&gt;] [[-BackgroundHealthCheckPollingPeriod] &lt;TimeSpan&gt;] [[-AdvancedHealthCheck] &lt;Boolean&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configure Store wide settings common to all configured farms.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Set-STFStoreLaunchOptions.html'>Set-STFStoreLaunchOptions</a><br/>
+           * <a href='Get-STFStoreLaunchOptions.html'>Get-STFStoreLaunchOptions</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>Store service to configure global farm options for&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>EnableFileTypeAssociation&nbsp;</td>
+                <td>Enable file type association&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>CommunicationTimeout&nbsp;</td>
+                <td>Communication timeout when using to the Xml service in seconds or timespan format&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ConnectionTimeout&nbsp;</td>
+                <td>Connection timeout when connecting to the Xml service in seconds or timespan format&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LeasingStatusExpiryFailed&nbsp;</td>
+                <td>Period of time before retrying a XenDesktop 7 and greater farm in failed leasing mode in seconds or timespan format&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LeasingStatusExpiryLeasing&nbsp;</td>
+                <td>Period of time before retrying a XenDesktop 7 and greater farm in leasing mode in seconds or timespan format&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>LeasingStatusExpiryPending&nbsp;</td>
+                <td>Period of time before retrying a XenDesktop 7 and greater farm pending leasing mode in seconds or timespan format&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PooledSockets&nbsp;</td>
+                <td>Use pooled sockets&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ServerCommunicationAttempts&nbsp;</td>
+                <td>Number of server connection attempts before failing&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>BackgroundHealthCheckPollingPeriod&nbsp;</td>
+                <td>Period of time between polling XenApp\XenDesktop server health in seconds or timespan format&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AdvancedHealthCheck&nbsp;</td>
+                <td>Indicates whether an advanced health-check should be performed. The advanced health-check should spot more potential server health issues but may not be compatible with servers older than XenApp 6.5.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter EnableFileTypeAssociation: The .NET 'System.Boolean' value type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter CommunicationTimeout: The .NET 'System.TimeSpan' value type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter ConnectionTimeout: The .NET 'System.TimeSpan' value type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter LeasingStatusExpiryFailed: The .NET 'System.TimeSpan' value type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter LeasingStatusExpiryLeasing: The .NET 'System.TimeSpan' value type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter LeasingStatusExpiryPending: The .NET 'System.TimeSpan' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter PooledSockets: The .NET 'System.Boolean' value type</div>
+        <h3>System.Int32</h3>
+        <div>Parameter ServerCommunicationAttempts: The .NET 'System.Int32' value type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter BackgroundHealthCheckPollingPeriod: The .NET 'System.TimeSpan' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter AdvancedHealthCheck: The .NET 'System.Boolean' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Enable pooled sockets</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Set-STFStoreFarmConfiguration $storeService -PooledSockets $true</code></pre>
+                <div>REMARKS<br>Enable pooled sockets on the only configured store service</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 2 Disable file type association</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Set-STFStoreFarmConfiguration $storeService -EnableFileTypeAssociation $false</code></pre>
+                <div>REMARKS<br>Disables FTA, file type association for the only configured Store service.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 3 Set communication timeout in seconds</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Set-STFStoreFarmConfiguration $storeService -CommunicationTimeout 30</code></pre>
+                <div>REMARKS<br>Sets the connection timeout to 30 seconds.</div>
+                <pre><code></code></pre>
+        <h3> EXAMPLE 4 Set communication timeout as timespan</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Set-STFStoreFarmConfiguration $storeService -CommunicationTimeout 00:00:30</code></pre>
+                <div>REMARKS<br>Sets the connection timeout to 30 seconds.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

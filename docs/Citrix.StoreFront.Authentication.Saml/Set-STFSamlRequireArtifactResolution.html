@@ -1,0 +1,65 @@
+﻿<html>
+    <head>
+        <title>Set-STFSamlRequireArtifactResolution</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFSamlRequireArtifactResolution</h1>
+        <div>Configure whether the SAML Artifact Resolution protocol is required for Single Signle Sign-on</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFSamlRequireArtifactResolution [-AuthenticationService] &lt;AuthenticationService&gt; [-Required] &lt;Boolean&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configure whether the SAML Artifact Resolution protocol is required for Single Signle Sign-on, for the specified authentication service</div>
+
+        <h2> Related Commands </h2>
+        <div>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationService&nbsp;</td>
+                <td>The Authentication Service to set the property for.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Required&nbsp;</td>
+                <td>Whether or not Artifact Resolution is required.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Authentication.AuthenticationService</h3>
+        <div>Parameter AuthenticationService: A .NET class representing the configuration of a StoreFront Authentication service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter Required: The .NET 'System.Boolean' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Require Artifact Resolution</h3>
+                <pre><code>$authentication = Get-STFAuthenticationService
+Set-STFSamlRequire -AuthenticationService $authentication -Required $true</code></pre>
+                <div>REMARKS<br>Configure the SAML Service Provider in the specified authentication service, to require the use of the Artifact <br>Resolution protocol.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

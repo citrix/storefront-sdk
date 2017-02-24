@@ -1,0 +1,76 @@
+﻿<html>
+    <head>
+        <title>Get-STFStoreRegisteredGateway</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Get-STFStoreRegisteredGateway</h1>
+        <div>Get the gateways for Store used for authentication</div>
+
+        <h2> Syntax </h2>
+        <code>Get-STFStoreRegisteredGateway [-StoreService] &lt;StoreService&gt; [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Get the gateways that have been registered to a Store for authentication.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Register-STFStoreGateway.html'>Register-STFStoreGateway</a><br/>
+           * <a href='Unregister-STFStoreGateway.html'>Unregister-STFStoreGateway</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store service from which to obtain the registered gateways.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h2> Return Values </h2>
+        <h3>RegisteredGatewaySummary</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Store.RegisteredGatewaySummary' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Get gateways for a Store</h3>
+                <pre><code>$storeService = Get-STFStoreService
+Get-STFStoreRegisteredGateway -StoreService $storeService</code></pre>
+                <div>REMARKS<br>Get gateways used for authentication for a Store.<br>OUTPUT</div>
+                <pre><code>
+
+
+
+
+EnabledOnDirectAccess     : False
+Farms                     : {}
+NeverLaunchThroughGateway : False
+Id                        : 9ecdb90c-3bf8-4d77-9401-4a39584ae882
+Name                      : Netscaler9
+IPAddress                 : 255.255.240.0
+SessionReliability        : True
+RequestTicketTwoSTAs      : True
+Hostnames                 : {https://eunetscaler.storefront.com/}
+SecureTicketAuthorityUrls : {https://XA1/scripts/ctxsta.dll}
+StasBypassDuration        : 01:00:00
+StasUseLoadBalancing      : False
+AuthenticationCapable     : True
+HDXRoutingCapable         : True</code></pre>
+    </body>
+</html>

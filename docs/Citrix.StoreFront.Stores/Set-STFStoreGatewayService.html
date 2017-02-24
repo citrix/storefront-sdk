@@ -1,0 +1,164 @@
+﻿<html>
+    <head>
+        <title>Set-STFStoreGatewayService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFStoreGatewayService</h1>
+        <div>Set the gateway service settings for a Store</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFStoreGatewayService [-StoreService] &lt;StoreService&gt; [[-Enabled] &lt;Boolean&gt;] [[-CustomerId] &lt;String&gt;] [[-GetGatewayServiceUrl] &lt;String&gt;] [[-PrivateKey] &lt;String&gt;] [[-ServiceName] &lt;String&gt;] [[-InstanceId] &lt;String&gt;] [[-SecureTicketAuthorityUrl] &lt;String&gt;] [[-SecureTicketLifetime] &lt;TimeSpan&gt;] [[-SessionReliability] &lt;Boolean&gt;] [[-IgnoreZones] &lt;String[]&gt;] [[-HandleZones] &lt;String[]&gt;] [[-PassThru] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Set the gateway service settings for a Store.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFStoreGatewayService.html'>Get-STFStoreGatewayService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>StoreService&nbsp;</td>
+                <td>The Store service from which to get the gateway service settings&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>Enabled&nbsp;</td>
+                <td>Enable use of the gateway service&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>CustomerId&nbsp;</td>
+                <td>The CWC customer id&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>GetGatewayServiceUrl&nbsp;</td>
+                <td>The URL of the service used to retrieve gateway address (FQDN)&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PrivateKey&nbsp;</td>
+                <td>The private key for CWC trust&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>ServiceName&nbsp;</td>
+                <td>The service name for CWC trust&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>InstanceId&nbsp;</td>
+                <td>The instance id for CWC trust&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SecureTicketAuthorityUrl&nbsp;</td>
+                <td>The URL of the CWC STA service&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SecureTicketLifetime&nbsp;</td>
+                <td>The lifetime requested for CWC STA service tickets&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>SessionReliability&nbsp;</td>
+                <td>A value indicating whether session reliability should be enabled&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>IgnoreZones&nbsp;</td>
+                <td>A value indicating that the gateway service should not be used for the specified zones&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>HandleZones&nbsp;</td>
+                <td>A value indicating that the gateway service should be used for the specified zones&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>PassThru&nbsp;</td>
+                <td>The result is written to the pipeline&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.Store.StoreService</h3>
+        <div>Parameter StoreService: A .NET class representing the configuration of a StoreFront Store service</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter Enabled: The .NET 'System.Boolean' value type</div>
+        <h3>System.String</h3>
+        <div>Parameter CustomerId: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter GetGatewayServiceUrl: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter PrivateKey: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter ServiceName: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter InstanceId: The .NET 'System.String' reference type</div>
+        <h3>System.String</h3>
+        <div>Parameter SecureTicketAuthorityUrl: The .NET 'System.String' reference type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter SecureTicketLifetime: The .NET 'System.TimeSpan' value type</div>
+        <h3>System.Boolean</h3>
+        <div>Parameter SessionReliability: The .NET 'System.Boolean' value type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter IgnoreZones: The .NET 'System.String' reference type</div>
+        <h3>System.String[]</h3>
+        <div>Parameter HandleZones: The .NET 'System.String' reference type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter PassThru: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3>StoreGateway</h3>
+        <div>The .NET 'Citrix.StoreFront.Model.Store.StoreGateway' reference type</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set gateway service settings for a Store</h3>
+                <pre><code>$storeService = Set-STFStoreGatewayServiceSettings -StoreService $storeService -Enabled $True -CustomerId $customerId -GetGatewayServiceUrl https://controlpane/Control/PopDnsAddress -PrivateKey $privateKey -ServiceName StoreFront -SecureTicketAuthorityUrl https://cwcstaservice</code></pre>
+                <div></div>
+                <pre><code></code></pre>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<helpIndex ModuleName="Citrix.StoreFront.SubscriptionsStore" ModuleFullName="Citrix.StoreFront.SubscriptionsStore" ModuleVersion="V1.0">
+  <aboutTopics>
+    <reference name="Citrix.StoreFront.SubscriptionsStore.html">Citrix.StoreFront.SubscriptionsStore</reference>
+  </aboutTopics>
+  <cmdlets>
+    <reference name="Get-STFComputerSynchronizationPermission.html">Get-STFComputerSynchronizationPermission</reference>
+    <reference name="Grant-STFComputerSynchronizationPermission.html">Grant-STFComputerSynchronizationPermission</reference>
+    <reference name="Revoke-STFComputerSynchronizationPermission.html">Revoke-STFComputerSynchronizationPermission</reference>
+    <reference name="Import-STFStoreSubscriptions.html">Import-STFStoreSubscriptions</reference>
+    <reference name="Export-STFStoreSubscriptions.html">Export-STFStoreSubscriptions</reference>
+    <reference name="Restore-STFStoreSubscriptions.html">Restore-STFStoreSubscriptions</reference>
+    <reference name="Get-STFSubscriptionStoreService.html">Get-STFSubscriptionStoreService</reference>
+    <reference name="Clear-STFSubscriptionSynchronizationSchedule.html">Clear-STFSubscriptionSynchronizationSchedule</reference>
+    <reference name="Add-STFSubscriptionSynchronizationSchedule.html">Add-STFSubscriptionSynchronizationSchedule</reference>
+    <reference name="Get-STFSubscriptionSynchronizationSchedule.html">Get-STFSubscriptionSynchronizationSchedule</reference>
+    <reference name="Add-STFSubscriptionSynchronizationSource.html">Add-STFSubscriptionSynchronizationSource</reference>
+    <reference name="Clear-STFSubscriptionSynchronizationSource.html">Clear-STFSubscriptionSynchronizationSource</reference>
+    <reference name="Get-STFSubscriptionSynchronizationSource.html">Get-STFSubscriptionSynchronizationSource</reference>
+    <reference name="Remove-STFSubscriptionSynchronizationSource.html">Remove-STFSubscriptionSynchronizationSource</reference>
+  </cmdlets>
+</helpIndex>

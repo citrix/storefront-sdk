@@ -1,0 +1,94 @@
+﻿<html>
+    <head>
+        <title>Set-STFDesktopApplianceService</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFDesktopApplianceService</h1>
+        <div>Configure a Desktop Appliance site</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFDesktopApplianceService [-DesktopApplianceService] &lt;DesktopApplianceService&gt; [[-MultiDesktop] &lt;SwitchParameter&gt;] [[-EnableExplicit] &lt;SwitchParameter&gt;] [[-EnableSmartCard] &lt;SwitchParameter&gt;] [[-EnableEmbeddedSmartcardSSO] &lt;SwitchParameter&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Configure options on the supplied Desktop Appliance site.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Add-STFDesktopApplianceService.html'>Add-STFDesktopApplianceService</a><br/>
+           * <a href='Remove-STFDesktopApplianceService.html'>Remove-STFDesktopApplianceService</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>DesktopApplianceService&nbsp;</td>
+                <td>Desktop Appliance service to configure&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>MultiDesktop&nbsp;</td>
+                <td>Enable multi-desktops&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>EnableExplicit&nbsp;</td>
+                <td>Enable explicit authentication&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>EnableSmartCard&nbsp;</td>
+                <td>Enable smart card authentication&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>EnableEmbeddedSmartcardSSO&nbsp;</td>
+                <td>Enable pass-through with smart card authentication&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.DesktopAppliance.DesktopApplianceService</h3>
+        <div>Parameter DesktopApplianceService: A .NET class representing the configuration of a StoreFront Desktop Appliance service</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter MultiDesktop: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter EnableExplicit: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter EnableSmartCard: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h3>System.Management.Automation.SwitchParameter</h3>
+        <div>Parameter EnableEmbeddedSmartcardSSO: The .NET 'System.Management.Automation.SwitchParameter' value type</div>
+        <h2> Return Values </h2>
+        <h3>DesktopApplianceService</h3>
+        <div>A .NET class representing the configuration of a StoreFront Desktop Appliance service</div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Configure Desktop Appliance site</h3>
+                <pre><code>$appliance = Get-STFDesktopApplianceService
+Set-STFDesktopApplianceService -DesktopApplianceService $appliance -MultiDesktop:$false</code></pre>
+                <div>REMARKS<br>Turn off multi-desktops on the only configured Desktop Appliance site.</div>
+                <pre><code></code></pre>
+    </body>
+</html>

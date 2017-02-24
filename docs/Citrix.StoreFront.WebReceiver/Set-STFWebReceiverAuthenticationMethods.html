@@ -1,0 +1,76 @@
+﻿<html>
+    <head>
+        <title>Set-STFWebReceiverAuthenticationMethods</title>
+        <style>
+            body {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 14px;
+            }
+            h1 {font-size: 20px; font-weight: bold;}
+            h2 {font-size: 15px; font-weight: bold;}
+            table {font-size: 14px;}
+        </style>
+    </head>
+    <body>
+        <h1>Set-STFWebReceiverAuthenticationMethods</h1>
+        <div>Set the WebReceiver authentication methods</div>
+
+        <h2> Syntax </h2>
+        <code>Set-STFWebReceiverAuthenticationMethods [-WebReceiverService] &lt;WebReceiverService&gt; [[-AuthenticationMethods] &lt;String[]&gt;] [[-TokenLifeTime] &lt;TimeSpan&gt;] [&lt;CommonParameters&gt;]</code>
+
+        <h2> Detailed Description </h2>
+        <div>Sets the list of allowed authentication methods for a given Web Receiver site. The accepted authentication method names are:<br><br><br>"ExplicitForms" - explicit authentication with user credentials<br><br><br>"IntegratedWindows" - domain pass - through authentication<br><br><br>"Certificate" - smart card authentication<br><br><br>"CitrixAGBasic" - NetScaler Gateway single sign - on<br><br><br><br><br>This cmdlet is typically used to restrict the authentication methods enabled for a Web Receiver<br><br><br>site to a subset of those enabled for its associated Authentication service.<br><br><br><br><br>Note, a Web Receiver authentication method is only effective when enabled for both the Web Receiver<br><br><br>site and its associated Authentication service.</div>
+
+        <h2> Related Commands </h2>
+        <div>
+           * <a href='Get-STFWebReceiverAuthenticationMethods.html'>Get-STFWebReceiverAuthenticationMethods</a><br/>
+           * <a href='Get-STFWebReceiverAuthenticationMethodsAvailable.html'>Get-STFWebReceiverAuthenticationMethodsAvailable</a><br/>
+        </div>
+        <h2> Parameters </h2>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Required?</th>
+                <th>Pipeline Input</th>
+                
+            </tr>
+            <tr valign='top'>
+                <td>WebReceiverService&nbsp;</td>
+                <td>The WebReceiver service.&nbsp;</td>
+                <td>true&nbsp;</td>
+                <td>true (ByValue)&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>AuthenticationMethods&nbsp;</td>
+                <td>Authentication methods to support&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+            <tr valign='top'>
+                <td>TokenLifeTime&nbsp;</td>
+                <td>The lifetime of the authentication token before it expiries.&nbsp;</td>
+                <td>false&nbsp;</td>
+                <td>false&nbsp;</td>
+                
+            </tr>
+       </table>
+        <h2> Input Type </h2>
+        <h3>Citrix.StoreFront.Model.ReceiverForWeb.WebReceiverService</h3>
+        <div>Parameter WebReceiverService: A .NET class representing the configuration of a StoreFront Web Receiver service</div>
+        <h3>System.String[]</h3>
+        <div>Parameter AuthenticationMethods: The .NET 'System.String' reference type</div>
+        <h3>System.TimeSpan</h3>
+        <div>Parameter TokenLifeTime: The .NET 'System.TimeSpan' value type</div>
+        <h2> Return Values </h2>
+        <h3></h3>
+        <div></div>
+       <h2> Examples </h2>
+        <h3> EXAMPLE 1 Set authentication methods</h3>
+                <pre><code>$webReceiver = Get-STFWebReceiverService "/Citrix/StoreWeb"
+Set-STFWebReceiverAuthenticationMethods -WebReceiverService $webReceiver -AuthenticationMethods Get-STFWebReceiverAuthenticationMethodsAvailable</code></pre>
+                <div>REMARKS<br>Set the current WebReceiver authentication methods for /Citrix/StoreWeb to be all those available.</div>
+                <pre><code></code></pre>
+    </body>
+</html>
