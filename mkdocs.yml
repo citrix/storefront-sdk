@@ -1,6 +1,6 @@
 site_name: StoreFront SDK Documentation
 site_description: StoreFront SDK Reference
-theme_dir: theme_multi
+theme_dir: citrix-sdk
 markdown_extensions:
   - admonition
   - codehilite(guess_lang=false)
